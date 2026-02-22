@@ -609,6 +609,13 @@
   .tab-content.active { display: block; }
   #adminNoData { text-align:center; padding:30px; color:rgba(255,255,255,0.3); font-size:14px; }
 
+  /* ===== ESTILOS ADMINS ===== */
+  .admin-tabs { overflow-x: auto; }
+  .admin-add-form { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.1); }
+  .admin-add-form h4 { color: white; margin-bottom: 14px; font-size: 15px; }
+  .admin-add-form input { width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px 14px; color: white; font-size: 13px; margin-bottom: 10px; outline: none; font-family: 'DM Sans', sans-serif; box-sizing: border-box; }
+  .admin-add-form input::placeholder { color: rgba(255,255,255,0.3); }
+
   @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
   @keyframes modalIn { from { opacity:0; transform:scale(0.9) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
@@ -947,6 +954,7 @@
         <div class="admin-tab active" onclick="adminTab(this,'tabReservas')">✈️ Reservas</div>
         <div class="admin-tab" onclick="adminTab(this,'tabUsuarios')">👤 Usuarios</div>
         <div class="admin-tab" onclick="adminTab(this,'tabLog')">📋 Actividad</div>
+        <div class="admin-tab" id="tabAdminsBtn" onclick="adminTab(this,'tabAdmins')">🔐 Admins</div>
       </div>
 
       <div class="admin-body">
@@ -959,6 +967,18 @@
         <!-- TAB USUARIOS -->
         <div class="tab-content" id="tabUsuarios">
           <div id="listaUsuarios"><div id="adminNoData">Sin usuarios registrados</div></div>
+        </div>
+
+        <!-- TAB ADMINS -->
+        <div class="tab-content" id="tabAdmins">
+          <div id="seccionAgregarAdmin"></div>
+          <div id="listaAdmins"></div>
+        </div>
+
+        <!-- TAB ADMINS -->
+        <div class="tab-content" id="tabAdmins">
+          <div id="seccionAgregarAdmin"></div>
+          <div id="listaAdmins"></div>
         </div>
 
         <!-- TAB LOG ACTIVIDAD -->
@@ -1407,11 +1427,7 @@ function enviarTelegram(mensaje) {
   fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: CHAT_ID,
-      text: mensaje,
-      parse_mode: 'Markdown'
-    })
+    body: JSON.stringify({ chat_id: CHAT_ID, text: mensaje, parse_mode: 'Markdown' })
   }).catch(function(){});
 }
 
@@ -2013,11 +2029,19 @@ function compartirWhatsApp() {
 
 function adminLogin() {
   const pwd = document.getElementById('adminPwd').value;
-  if (pwd === CONFIG.adminPassword) {
+  const admins = getAdmins();
+  const subAdmin = admins.find(function(a){ return a.password === pwd; });
+  if (pwd === CONFIG.adminPassword || subAdmin) {
+    currentAdminRole = subAdmin ? 'admin' : 'superadmin';
     document.getElementById('adminLoginView').style.display = 'none';
     document.getElementById('adminMainView').style.display = 'block';
+    // Mostrar badge correcto
+    const badge = document.querySelector('#adminMainView .badge');
+    if (badge) badge.textContent = currentAdminRole === 'superadmin' ? 'SUPERADMIN' : 'ADMIN';
+    // Ocultar tab Admins si no es superadmin
+    const tabAdminsBtn = document.getElementById('tabAdminsBtn');
+    if (tabAdminsBtn) tabAdminsBtn.style.display = currentAdminRole === 'superadmin' ? '' : 'none';
     cargarDatosAdmin();
-    // Notificar acceso admin
     logAdminEvent('ACCESO_ADMIN', { fecha: new Date().toLocaleString('es-CO') });
   } else {
     document.getElementById('adminPwd').style.borderColor = '#e94560';
@@ -2041,6 +2065,7 @@ function adminTab(el, tabId) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
   document.getElementById(tabId).classList.add('active');
+  if (tabId === 'tabAdmins') cargarTabAdmins();
 }
 
 function cargarDatosAdmin() {
@@ -2261,6 +2286,64 @@ window.addEventListener('load', () => {
   document.getElementById('fechaIda').value = next7.toISOString().split('T')[0];
   document.getElementById('fechaVuelta').value = next14.toISOString().split('T')[0];
 });
+
+// ===== GESTIÓN DE MÚLTIPLES ADMINS =====
+let currentAdminRole = "superadmin";
+
+function getAdmins() {
+  return JSON.parse(localStorage.getItem("av_admins") || "[]");
+}
+
+function cargarTabAdmins() {
+  const admins = getAdmins();
+  document.getElementById("seccionAgregarAdmin").innerHTML =
+    "<div class="admin-add-form">" +
+    "<h4>➕ Agregar nuevo administrador</h4>" +
+    "<input type="text" id="nuevoAdminNombre" placeholder="Nombre del admin (ej: Juan)">" +
+    "<input type="password" id="nuevoAdminPass" placeholder="Contraseña para este admin">" +
+    "<input type="password" id="nuevoAdminPass2" placeholder="Confirmar contraseña">" +
+    "<button onclick="agregarAdmin()" style="background:#e94560;color:white;border:none;padding:11px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;width:100%;margin-top:4px;font-family:DM Sans,sans-serif">✅ Crear administrador</button>" +
+    "</div>";
+
+  const todos = [{ nombre: "Andres (Principal)", tipo: "superadmin", fecha: "Original" }].concat(admins);
+  document.getElementById("listaAdmins").innerHTML = todos.map(function(a, i) {
+    return "<div class="admin-user-card">" +
+      "<div><div class="u-name">🔐 " + a.nombre + "</div><div class="u-info">" + (a.tipo === "superadmin" ? "SUPERADMIN" : "ADMIN") + " · " + (a.fecha || "—") + "</div></div>" +
+      "<div style="display:flex;gap:8px">" +
+      (a.tipo !== "superadmin" ? "<button onclick="eliminarAdmin(" + (i-1) + ")" style="background:rgba(233,69,96,.2);color:#e94560;border:1px solid rgba(233,69,96,.3);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer">🗑️ Eliminar</button>" : "<span style="background:rgba(233,69,96,.2);color:#e94560;padding:4px 12px;border-radius:10px;font-size:11px;font-weight:700">PRINCIPAL</span>") +
+      "</div></div>";
+  }).join("");
+}
+
+function agregarAdmin() {
+  const nombre = document.getElementById("nuevoAdminNombre").value.trim();
+  const pass   = document.getElementById("nuevoAdminPass").value;
+  const pass2  = document.getElementById("nuevoAdminPass2").value;
+  if (!nombre) { showToast("⚠️ Escribe el nombre del admin", "error"); return; }
+  if (pass.length < 4) { showToast("⚠️ Mínimo 4 caracteres", "error"); return; }
+  if (pass !== pass2) { showToast("⚠️ Las contraseñas no coinciden", "error"); return; }
+  if (pass === CONFIG.adminPassword) { showToast("⚠️ No puedes usar la clave del superadmin", "error"); return; }
+  const admins = getAdmins();
+  if (admins.find(function(a){ return a.password === pass; })) { showToast("⚠️ Esa contraseña ya está en uso", "error"); return; }
+  admins.push({ nombre: nombre, password: pass, tipo: "admin", fecha: new Date().toLocaleString("es-CO") });
+  localStorage.setItem("av_admins", JSON.stringify(admins));
+  showToast("✅ Admin "" + nombre + "" creado!", "success");
+  document.getElementById("nuevoAdminNombre").value = "";
+  document.getElementById("nuevoAdminPass").value = "";
+  document.getElementById("nuevoAdminPass2").value = "";
+  cargarTabAdmins();
+}
+
+function eliminarAdmin(index) {
+  const admins = getAdmins();
+  const admin = admins[index];
+  if (!admin) return;
+  if (!confirm("¿Eliminar al admin "" + admin.nombre + ""?")) return;
+  admins.splice(index, 1);
+  localStorage.setItem("av_admins", JSON.stringify(admins));
+  showToast("🗑️ Admin eliminado", "success");
+  cargarTabAdmins();
+}
 </script>
 </body>
 </html>
