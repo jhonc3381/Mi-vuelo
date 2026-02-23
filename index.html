@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AeroVuelos Colombia \u2014 Descubre el mundo</title>
+<title>AeroVuelos Colombia - Descubre el mundo</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -15,404 +15,311 @@
     --text: #1a1a1a;
     --muted: #666;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    overflow-x: hidden;
-  }
+  body { font-family: 'DM Sans', sans-serif; color: var(--text); overflow-x: hidden; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; width: 100%; z-index: 100;
-    background: rgba(211,47,47,0.97);
-    backdrop-filter: blur(10px);
+    background: rgba(211,47,47,0.97); backdrop-filter: blur(10px);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 40px; height: 64px;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    padding: 0 40px; height: 64px; box-shadow: 0 2px 20px rgba(0,0,0,0.2);
   }
-
   .nav-logo {
-    font-family: 'Playfair Display', serif;
-    color: white; font-size: 22px; font-weight: 900;
-    letter-spacing: -0.5px; text-decoration: none;
+    font-family: 'Playfair Display', serif; color: white;
+    font-size: 22px; font-weight: 900; letter-spacing: -0.5px; text-decoration: none;
   }
-
   .nav-links { display: flex; gap: 28px; }
   .nav-links a {
     color: rgba(255,255,255,0.9); text-decoration: none;
-    font-size: 14px; font-weight: 500; letter-spacing: 0.3px;
-    transition: color 0.2s;
+    font-size: 14px; font-weight: 500; transition: color 0.2s;
   }
   .nav-links a:hover { color: white; }
-
   .nav-buttons { display: flex; gap: 12px; }
-
   .btn-outline {
-    border: 1.5px solid rgba(255,255,255,0.7);
-    color: white; background: transparent;
-    padding: 8px 18px; border-radius: 6px;
-    font-size: 13px; font-weight: 500; cursor: pointer;
-    transition: all 0.2s;
+    border: 1.5px solid rgba(255,255,255,0.7); color: white; background: transparent;
+    padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s;
   }
   .btn-outline:hover { background: rgba(255,255,255,0.15); border-color: white; }
-
   .btn-white {
-    background: white; color: var(--red);
-    border: none; padding: 8px 18px; border-radius: 6px;
-    font-size: 13px; font-weight: 600; cursor: pointer;
-    transition: all 0.2s;
+    background: white; color: var(--red); border: none;
+    padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s;
   }
   .btn-white:hover { background: #f0f0f0; transform: translateY(-1px); }
 
   /* HERO */
   .hero {
     background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 50%, var(--red-light) 100%);
-    min-height: 100vh;
-    display: flex; flex-direction: column;
+    min-height: 100vh; display: flex; flex-direction: column;
     align-items: center; justify-content: center;
-    padding: 80px 20px 60px;
-    position: relative; overflow: hidden;
+    padding: 80px 20px 60px; position: relative; overflow: hidden;
   }
-
   .hero::before {
-    content: '';
-    position: absolute; top: -50%; right: -20%;
+    content: ''; position: absolute; top: -50%; right: -20%;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%); border-radius: 50%;
   }
-
   .hero::after {
-    content: '';
-    position: absolute; bottom: -30%; left: -10%;
+    content: ''; position: absolute; bottom: -30%; left: -10%;
     width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
-    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%); border-radius: 50%;
   }
-
   .hero-badge {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
     color: white; padding: 6px 16px; border-radius: 20px;
-    font-size: 12px; font-weight: 500; letter-spacing: 1px;
-    text-transform: uppercase; margin-bottom: 24px;
-    backdrop-filter: blur(5px);
-    animation: fadeInDown 0.8s ease;
+    font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 24px; backdrop-filter: blur(5px); animation: fadeInDown 0.8s ease;
   }
-
   .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 7vw, 72px);
-    color: white; text-align: center;
-    line-height: 1.1; font-weight: 900;
-    margin-bottom: 16px;
-    animation: fadeInUp 0.8s ease 0.1s both;
+    font-family: 'Playfair Display', serif; font-size: clamp(40px, 7vw, 72px);
+    color: white; text-align: center; line-height: 1.1; font-weight: 900;
+    margin-bottom: 16px; animation: fadeInUp 0.8s ease 0.1s both;
   }
-
   .hero p {
-    color: rgba(255,255,255,0.85); font-size: 17px;
-    text-align: center; margin-bottom: 40px;
-    animation: fadeInUp 0.8s ease 0.2s both;
+    color: rgba(255,255,255,0.85); font-size: 17px; text-align: center;
+    margin-bottom: 40px; animation: fadeInUp 0.8s ease 0.2s both;
   }
 
   /* SEARCH BOX */
   .search-box {
-    background: white;
-    border-radius: 16px;
-    padding: 28px 32px;
-    width: 100%; max-width: 780px;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.25);
-    animation: fadeInUp 0.8s ease 0.3s both;
-    position: relative; z-index: 2;
+    background: white; border-radius: 16px; padding: 28px 32px;
+    width: 100%; max-width: 780px; box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    animation: fadeInUp 0.8s ease 0.3s both; position: relative; z-index: 2;
   }
-
   .tab-btns { display: flex; gap: 8px; margin-bottom: 24px; }
   .tab-btn {
     padding: 8px 20px; border-radius: 20px; border: none;
     font-size: 13px; font-weight: 500; cursor: pointer;
-    background: var(--gray); color: var(--muted);
-    transition: all 0.2s;
+    background: var(--gray); color: var(--muted); transition: all 0.2s;
   }
   .tab-btn.active { background: var(--red); color: white; }
-
-  .search-fields {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 12px; margin-bottom: 16px;
-  }
-
+  .search-fields { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
   .field-group { display: flex; flex-direction: column; }
   .field-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
   .field-input {
-    border: 1.5px solid #e0e0e0; border-radius: 8px;
-    padding: 10px 14px; font-size: 14px; font-family: 'DM Sans', sans-serif;
-    transition: border-color 0.2s; outline: none;
-    background: #fafafa;
+    border: 1.5px solid #e0e0e0; border-radius: 8px; padding: 10px 14px;
+    font-size: 14px; font-family: 'DM Sans', sans-serif; transition: border-color 0.2s; outline: none; background: #fafafa;
   }
   .field-input:focus { border-color: var(--red); background: white; }
-
-  .search-bottom {
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 12px;
-  }
-
+  .search-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   .pax-cabin { display: flex; gap: 12px; }
-
   .btn-search {
-    background: var(--red); color: white;
-    border: none; padding: 14px 32px; border-radius: 10px;
-    font-size: 15px; font-weight: 600; cursor: pointer;
-    transition: all 0.2s; display: flex; align-items: center; gap: 8px;
-    font-family: 'DM Sans', sans-serif;
+    background: var(--red); color: white; border: none; padding: 14px 32px; border-radius: 10px;
+    font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    display: flex; align-items: center; gap: 8px; font-family: 'DM Sans', sans-serif;
   }
   .btn-search:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211,47,47,0.4); }
 
-  /* FEATURES STRIP */
+  /* FEATURES */
   .features {
-    padding: 60px 40px 0;
-    display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
-    background: white;
+    padding: 60px 40px 0; display: flex; gap: 32px; justify-content: center;
+    flex-wrap: wrap; background: white;
   }
   .feature-card { text-align: center; max-width: 190px; }
   .feature-icon {
-    width: 56px; height: 56px; margin: 0 auto 14px;
-    background: #fff0f0; border-radius: 16px;
-    display: flex; align-items: center; justify-content: center; font-size: 26px;
+    width: 56px; height: 56px; margin: 0 auto 14px; background: #fff0f0;
+    border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 26px;
   }
   .feature-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
   .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-  /* ===== SECCI\u00d3N DESTINOS DESTACADOS ===== */
-  .section-destinos {
-    padding: 80px 40px;
-    background: white;
-  }
-  .section-header {
-    text-align: center; margin-bottom: 48px;
-  }
+  /* DESTINOS */
+  .section-destinos { padding: 80px 40px; background: white; }
+  .section-header { text-align: center; margin-bottom: 48px; }
   .section-header .badge {
-    display: inline-block;
-    background: #fff0f0; color: var(--red);
-    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
-    margin-bottom: 14px;
+    display: inline-block; background: #fff0f0; color: var(--red);
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; margin-bottom: 14px;
   }
   .section-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px,4vw,42px); font-weight: 900;
-    color: var(--text); margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,42px);
+    font-weight: 900; color: var(--text); margin-bottom: 10px;
   }
   .section-header p { font-size: 16px; color: var(--muted); }
-
-  /* Grid de destinos */
   .destinos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 20px;
-    max-width: 1100px; margin: 0 auto 80px;
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto;
+    gap: 20px; max-width: 1100px; margin: 0 auto 80px;
   }
   .destino-card {
     position: relative; border-radius: 20px; overflow: hidden;
-    cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   }
   .destino-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.2); }
   .destino-card.big { grid-row: span 2; }
-
-  .destino-img {
-    width: 100%; height: 100%; object-fit: cover;
-    display: block; transition: transform 0.5s;
-    min-height: 200px;
-  }
+  .destino-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; min-height: 200px; }
   .destino-card.big .destino-img { min-height: 440px; }
   .destino-card:hover .destino-img { transform: scale(1.05); }
-
   .destino-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
-    display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 22px;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 22px;
   }
   .destino-tag {
     display: inline-block; background: var(--red); color: white;
-    font-size: 10px; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
-    margin-bottom: 6px; width: fit-content;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 10px; margin-bottom: 6px; width: fit-content;
   }
   .destino-nombre { font-family: 'Playfair Display', serif; font-size: 22px; color: white; font-weight: 700; margin-bottom: 3px; }
   .destino-card.big .destino-nombre { font-size: 30px; }
   .destino-pais { font-size: 12px; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
   .destino-precio {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: white; color: var(--red);
-    font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 20px;
-    width: fit-content;
+    display: inline-flex; align-items: center; gap: 6px; background: white; color: var(--red);
+    font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 20px; width: fit-content;
   }
 
-  /* ===== SECCI\u00d3N PLAYAS ===== */
+  /* PLAYAS */
   .section-playas { padding: 0 40px 80px; background: white; }
   .playas-scroll {
     display: flex; gap: 20px; overflow-x: auto; padding-bottom: 12px;
-    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
-    max-width: 1100px; margin: 0 auto;
+    scroll-snap-type: x mandatory; max-width: 1100px; margin: 0 auto;
   }
   .playas-scroll::-webkit-scrollbar { height: 4px; }
   .playas-scroll::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 4px; }
   .playas-scroll::-webkit-scrollbar-thumb { background: var(--red); border-radius: 4px; }
-
   .playa-card {
-    flex: 0 0 260px; border-radius: 18px; overflow: hidden;
-    position: relative; scroll-snap-align: start;
-    cursor: pointer; transition: transform 0.3s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    flex: 0 0 260px; border-radius: 18px; overflow: hidden; position: relative;
+    scroll-snap-align: start; cursor: pointer; transition: transform 0.3s; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   }
   .playa-card:hover { transform: translateY(-5px); }
   .playa-img { width: 100%; height: 320px; object-fit: cover; display: block; transition: transform 0.4s; }
   .playa-card:hover .playa-img { transform: scale(1.06); }
   .playa-overlay {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%);
+    position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%);
     padding: 20px; display: flex; flex-direction: column; justify-content: flex-end;
   }
   .playa-badge {
-    display: inline-block; background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.4); backdrop-filter: blur(4px);
-    color: white; font-size: 10px; font-weight: 600; letter-spacing: 1px;
-    text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
+    display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);
+    backdrop-filter: blur(4px); color: white; font-size: 10px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 10px;
     margin-bottom: 6px; width: fit-content;
   }
   .playa-nombre { font-family: 'Playfair Display', serif; font-size: 20px; color: white; font-weight: 700; margin-bottom: 2px; }
   .playa-pais { font-size: 12px; color: rgba(255,255,255,0.75); margin-bottom: 8px; }
-  .playa-temp {
-    display: flex; align-items: center; gap: 6px;
-    font-size: 12px; color: white; font-weight: 600;
-  }
+  .playa-temp { display: flex; align-items: center; gap: 6px; font-size: 12px; color: white; font-weight: 600; }
   .playa-temp span { background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 10px; }
 
-  /* ===== BANNER OFERTA ===== */
-  .oferta-banner {
-    margin: 0 40px 80px; border-radius: 24px; overflow: hidden;
-    position: relative; max-width: 1100px; margin-left: auto; margin-right: auto;
-  }
-  .oferta-banner img {
-    width: 100%; height: 280px; object-fit: cover; display: block;
-    filter: brightness(0.55);
-  }
+  /* BANNER */
+  .oferta-banner { border-radius: 24px; overflow: hidden; position: relative; }
+  .oferta-banner img { width: 100%; height: 280px; object-fit: cover; display: block; filter: brightness(0.55); }
   .oferta-content {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column; justify-content: center;
-    align-items: center; text-align: center; padding: 40px;
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center; padding: 40px;
   }
   .oferta-content h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px,4vw,48px); color: white; font-weight: 900;
-    margin-bottom: 12px; line-height: 1.1;
+    font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px);
+    color: white; font-weight: 900; margin-bottom: 12px; line-height: 1.1;
   }
   .oferta-content p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; }
   .btn-oferta {
-    background: white; color: var(--red);
-    padding: 13px 32px; border-radius: 40px;
-    font-size: 15px; font-weight: 700; cursor: pointer;
-    border: none; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    background: white; color: var(--red); padding: 13px 32px; border-radius: 40px;
+    font-size: 15px; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
   }
-  .btn-oferta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
-
-  @media (max-width: 768px) {
-    .destinos-grid { grid-template-columns: 1fr 1fr; }
-    .destino-card.big { grid-row: span 1; }
-    .destino-card.big .destino-img { min-height: 220px; }
-    .section-destinos, .section-playas { padding-left: 20px; padding-right: 20px; }
-    .oferta-banner { margin-left: 20px; margin-right: 20px; }
-  }
-  @media (max-width: 500px) {
-    .destinos-grid { grid-template-columns: 1fr; }
-  }
+  .btn-oferta:hover { transform: translateY(-2px); }
 
   /* MODALS */
   .modal-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
-    z-index: 1000; align-items: center; justify-content: center;
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px); z-index: 1000; align-items: center; justify-content: center;
   }
   .modal-overlay.active { display: flex; }
-
   .modal {
-    background: white; border-radius: 20px;
-    padding: 40px; width: 90%; max-width: 480px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
-    animation: modalIn 0.3s ease;
+    background: white; border-radius: 20px; padding: 40px; width: 90%; max-width: 480px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3); animation: modalIn 0.3s ease;
     position: relative; max-height: 90vh; overflow-y: auto;
   }
-
   .modal-close {
-    position: absolute; top: 16px; right: 16px;
-    background: var(--gray); border: none; width: 32px; height: 32px;
-    border-radius: 50%; cursor: pointer; font-size: 18px;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted);
+    position: absolute; top: 16px; right: 16px; background: var(--gray); border: none;
+    width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center; color: var(--muted);
   }
   .modal-close:hover { background: #e0e0e0; }
-
-  .modal h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px; margin-bottom: 8px;
-  }
+  .modal h2 { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 8px; }
   .modal .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 28px; }
-
   .form-group { margin-bottom: 18px; }
   .form-label { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; display: block; }
   .form-input {
-    width: 100%; border: 1.5px solid #e0e0e0; border-radius: 10px;
-    padding: 12px 16px; font-size: 14px; font-family: 'DM Sans', sans-serif;
-    outline: none; transition: border-color 0.2s;
+    width: 100%; border: 1.5px solid #e0e0e0; border-radius: 10px; padding: 12px 16px;
+    font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s;
   }
   .form-input:focus { border-color: var(--red); }
-
   .btn-red {
-    width: 100%; background: var(--red); color: white;
-    border: none; padding: 14px; border-radius: 10px;
-    font-size: 15px; font-weight: 600; cursor: pointer;
-    transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-    margin-top: 8px;
+    width: 100%; background: var(--red); color: white; border: none; padding: 14px;
+    border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: all 0.2s; font-family: 'DM Sans', sans-serif; margin-top: 8px;
   }
   .btn-red:hover { background: var(--red-dark); }
-
-  .switch-text {
-    text-align: center; margin-top: 16px; font-size: 13px; color: var(--muted);
-  }
+  .switch-text { text-align: center; margin-top: 16px; font-size: 13px; color: var(--muted); }
   .switch-text a { color: var(--red); cursor: pointer; font-weight: 600; text-decoration: none; }
 
-  /* PAYMENT MODAL */
-  .payment-methods { display: flex; gap: 10px; margin-bottom: 20px; }
-  .pay-method {
-    flex: 1; border: 2px solid #e0e0e0; border-radius: 10px;
-    padding: 12px; text-align: center; cursor: pointer;
-    transition: all 0.2s; font-size: 13px; font-weight: 500;
-  }
-  .pay-method.selected { border-color: var(--red); background: #fff5f5; color: var(--red); }
-  .pay-method-icon { font-size: 24px; margin-bottom: 4px; }
-
-  .info-box {
-    background: #fff8e1; border: 1px solid #ffe082;
-    border-radius: 10px; padding: 14px; font-size: 13px;
-    color: #795548; margin-bottom: 16px; line-height: 1.5;
-  }
-  .info-box strong { display: block; margin-bottom: 4px; color: #5D4037; }
-
-  .price-summary {
-    background: var(--gray); border-radius: 10px; padding: 16px;
-    margin-bottom: 20px;
-  }
+  /* PRICE SUMMARY */
+  .price-summary { background: var(--gray); border-radius: 10px; padding: 16px; margin-bottom: 20px; }
   .price-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px; }
   .price-row.total { font-weight: 700; font-size: 16px; border-top: 1px solid #ddd; padding-top: 10px; margin-top: 4px; }
 
+  /* BANK SELECTION */
+  .bank-selector { margin-bottom: 20px; }
+  .bank-selector label { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 10px; display: block; }
+  .bank-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .bank-card {
+    border: 2px solid #e0e0e0; border-radius: 12px; padding: 12px 10px; text-align: center;
+    cursor: pointer; transition: all 0.2s; background: white;
+  }
+  .bank-card:hover { border-color: var(--red); background: #fff5f5; }
+  .bank-card.selected { border-color: var(--red); background: #fff5f5; }
+  .bank-card .bank-logo { font-size: 28px; margin-bottom: 4px; }
+  .bank-card .bank-name { font-size: 12px; font-weight: 700; color: var(--text); }
+  .bank-card .bank-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+  /* PAYMENT FORM STEPS */
+  .payment-step { display: none; }
+  .payment-step.active { display: block; }
+  .step-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
+    padding-bottom: 14px; border-bottom: 1px solid #f0f0f0;
+  }
+  .step-num {
+    width: 28px; height: 28px; background: var(--red); color: white;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; flex-shrink: 0;
+  }
+  .step-title { font-size: 15px; font-weight: 700; }
+  .step-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .bank-info-box {
+    border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    border: 1.5px solid; font-size: 13px;
+  }
+  .bank-info-box .bib-header { font-weight: 700; font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .bib-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 13px; }
+  .bib-row:last-child { border-bottom: none; }
+  .bib-row span:first-child { color: var(--muted); }
+  .bib-row strong { font-weight: 700; font-size: 14px; }
+  .copy-btn {
+    background: none; border: 1px solid currentColor; border-radius: 6px;
+    padding: 2px 8px; font-size: 11px; font-weight: 700; cursor: pointer; margin-left: 6px;
+  }
+
+  .credential-field { position: relative; margin-bottom: 14px; }
+  .credential-field .form-input { padding-right: 44px; }
+  .eye-btn {
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; cursor: pointer; font-size: 18px; color: var(--muted);
+  }
+
+  .dynamic-hint {
+    background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 10px;
+    padding: 12px 14px; font-size: 12px; color: #2e7d32; margin-bottom: 14px; line-height: 1.6;
+  }
+  .dynamic-hint strong { display: block; margin-bottom: 4px; font-size: 13px; }
+
+  .steps-progress { display: flex; gap: 6px; margin-bottom: 20px; }
+  .prog-step {
+    flex: 1; height: 4px; border-radius: 4px; background: #e0e0e0; transition: background 0.3s;
+  }
+  .prog-step.done { background: var(--red); }
+
   /* RESULTS */
-  .results-modal .modal { max-width: 640px; }
   .flight-card {
     border: 1.5px solid #e0e0e0; border-radius: 12px; padding: 16px;
     margin-bottom: 12px; transition: all 0.2s; cursor: pointer;
@@ -424,21 +331,7 @@
   .flight-price { font-size: 20px; font-weight: 700; color: var(--red); }
   .flight-details { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
-  .toast {
-    position: fixed; bottom: 30px; right: 30px; z-index: 9999;
-    background: #333; color: white; padding: 14px 22px;
-    border-radius: 10px; font-size: 14px; font-weight: 500;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    animation: slideUp 0.3s ease;
-    display: none;
-  }
-  .toast.show { display: block; }
-  .toast.success { background: #2e7d32; }
-  .toast.error { background: #c62828; }
-
-  /* TICKET MODAL */
-  .ticket-modal .modal { max-width: 560px; }
-
+  /* TICKET */
   .ticket-header {
     background: linear-gradient(135deg, var(--red-dark), var(--red));
     color: white; border-radius: 14px; padding: 24px 28px; margin-bottom: 0;
@@ -447,86 +340,55 @@
   .ticket-header .airline { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; }
   .ticket-header .code-label { font-size: 11px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
   .ticket-header .code-val { font-size: 24px; font-weight: 700; letter-spacing: 2px; }
-
   .ticket-body {
-    border: 2px dashed #e0e0e0; border-top: none;
-    border-radius: 0 0 14px 14px; padding: 24px 28px;
-    background: #fafafa;
+    border: 2px dashed #e0e0e0; border-top: none; border-radius: 0 0 14px 14px;
+    padding: 24px 28px; background: #fafafa;
   }
-
-  .ticket-route {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 20px;
-  }
+  .ticket-route { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
   .ticket-city { text-align: center; }
   .ticket-city .iata { font-size: 32px; font-weight: 700; font-family: 'Playfair Display', serif; }
   .ticket-city .name { font-size: 12px; color: var(--muted); }
   .ticket-arrow { font-size: 24px; color: var(--red); }
-
-  .ticket-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 14px; margin-bottom: 16px;
-  }
+  .ticket-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
   .ticket-field .t-label { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
   .ticket-field .t-val { font-size: 14px; font-weight: 600; color: var(--text); }
-
-  .ticket-divider {
-    border: none; border-top: 2px dashed #ddd; margin: 16px 0;
-  }
-
+  .ticket-divider { border: none; border-top: 2px dashed #ddd; margin: 16px 0; }
   .ticket-extras {
-    background: white; border-radius: 10px; border: 1px solid #e8e8e8;
-    padding: 14px; margin-bottom: 16px;
+    background: white; border-radius: 10px; border: 1px solid #e8e8e8; padding: 14px; margin-bottom: 16px;
   }
   .ticket-extras h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 10px; }
   .extras-row { display: flex; justify-content: space-between; font-size: 13px; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
   .extras-row:last-child { border-bottom: none; }
   .extras-row span:first-child { color: var(--muted); }
   .extras-row span:last-child { font-weight: 600; }
-
   .ticket-conditions {
     background: #fff8e1; border: 1px solid #ffe082; border-radius: 10px;
-    padding: 12px 14px; font-size: 12px; color: #795548; line-height: 1.6;
-    margin-bottom: 16px;
+    padding: 12px 14px; font-size: 12px; color: #795548; line-height: 1.6; margin-bottom: 16px;
   }
-  .ticket-conditions strong { display: block; color: #5D4037; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
-
+  .ticket-conditions strong { display: block; color: #5D4037; margin-bottom: 4px; font-size: 11px; text-transform: uppercase; }
   .ticket-actions { display: flex; gap: 10px; }
   .btn-download {
-    flex: 1; background: var(--red); color: white; border: none;
-    padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    flex: 1; background: var(--red); color: white; border: none; padding: 12px; border-radius: 10px;
+    font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif;
     display: flex; align-items: center; justify-content: center; gap: 6px;
   }
   .btn-download:hover { background: var(--red-dark); }
   .btn-share {
-    flex: 1; background: #f0f0f0; color: var(--text); border: none;
-    padding: 12px; border-radius: 10px; font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
+    flex: 1; background: #f0f0f0; color: var(--text); border: none; padding: 12px; border-radius: 10px;
+    font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif;
     display: flex; align-items: center; justify-content: center; gap: 6px;
   }
   .btn-share:hover { background: #e0e0e0; }
 
-  #ticketPrintArea { display: none; }
-
-  @media print {
-    body > *:not(#ticketPrintArea) { display: none !important; }
-    #ticketPrintArea { display: block !important; }
-  }
-
-  /* ===== PANEL ADMIN ===== */
+  /* ADMIN PANEL */
   .admin-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(0,0,0,0.85); z-index: 2000;
-    align-items: flex-start; justify-content: center;
-    overflow-y: auto; padding: 20px;
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+    z-index: 2000; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 20px;
   }
   .admin-overlay.active { display: flex; }
   .admin-panel {
-    background: #1a1a2e; color: white;
-    border-radius: 20px; width: 100%; max-width: 780px;
-    margin: auto; overflow: hidden;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    background: #1a1a2e; color: white; border-radius: 20px; width: 100%; max-width: 780px;
+    margin: auto; overflow: hidden; box-shadow: 0 40px 80px rgba(0,0,0,0.6);
   }
   .admin-header {
     background: linear-gradient(135deg, #16213e, #0f3460);
@@ -536,9 +398,8 @@
   .admin-header .badge { background: #e94560; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
   .admin-tabs { display: flex; background: #16213e; border-bottom: 1px solid rgba(255,255,255,0.1); overflow-x: auto; }
   .admin-tab {
-    flex: 1; padding: 12px; text-align: center; font-size: 13px; font-weight: 600;
-    cursor: pointer; color: rgba(255,255,255,0.5); transition: all 0.2s;
-    border-bottom: 3px solid transparent; white-space: nowrap;
+    flex: 1; padding: 12px; text-align: center; font-size: 13px; font-weight: 600; cursor: pointer;
+    color: rgba(255,255,255,0.5); transition: all 0.2s; border-bottom: 3px solid transparent; white-space: nowrap;
   }
   .admin-tab.active { color: #e94560; border-bottom-color: #e94560; background: rgba(233,69,96,0.08); }
   .admin-tab:hover { color: white; }
@@ -552,8 +413,7 @@
   .admin-stat .lbl { font-size: 11px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
   .admin-event {
     background: rgba(255,255,255,0.05); border-radius: 10px; padding: 14px 16px;
-    margin-bottom: 10px; border-left: 3px solid #e94560;
-    font-size: 13px;
+    margin-bottom: 10px; border-left: 3px solid #e94560; font-size: 13px;
   }
   .admin-event .ev-type { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #e94560; margin-bottom: 4px; }
   .admin-event .ev-fecha { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 6px; }
@@ -569,9 +429,8 @@
   .admin-user-card .u-name { font-weight: 700; font-size: 14px; }
   .admin-user-card .u-info { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 3px; }
   .admin-wpp-btn {
-    background: #25d366; color: white; border: none;
-    padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 700;
-    cursor: pointer; white-space: nowrap;
+    background: #25d366; color: white; border: none; padding: 8px 14px;
+    border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap;
   }
   .admin-res-card {
     background: rgba(255,255,255,0.05); border-radius: 10px; padding: 14px 16px;
@@ -585,7 +444,6 @@
     font-size: 11px; font-weight: 700; text-transform: uppercase;
   }
   .res-estado.pendiente { background: rgba(255,193,7,0.2); color: #ffc107; }
-  .res-estado.confirmado { background: rgba(76,175,80,0.2); color: #4caf50; }
   .admin-close {
     background: rgba(255,255,255,0.1); border: none; color: white;
     width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px;
@@ -594,20 +452,15 @@
   .admin-login h3 { color: white; margin-bottom: 20px; font-size: 18px; }
   .admin-login input {
     width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 10px; padding: 12px 16px; color: white; font-size: 14px;
-    margin-bottom: 12px; outline: none;
+    border-radius: 10px; padding: 12px 16px; color: white; font-size: 14px; margin-bottom: 12px; outline: none;
   }
   .admin-login input::placeholder { color: rgba(255,255,255,0.3); }
   .btn-admin-login {
-    width: 100%; background: #e94560; color: white; border: none;
-    padding: 13px; border-radius: 10px; font-size: 15px; font-weight: 700;
-    cursor: pointer; font-family: 'DM Sans', sans-serif;
+    width: 100%; background: #e94560; color: white; border: none; padding: 13px;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: 'DM Sans', sans-serif;
   }
   .tab-content { display: none; }
   .tab-content.active { display: block; }
-  #adminNoData { text-align:center; padding:30px; color:rgba(255,255,255,0.3); font-size:14px; }
-
-  /* ===== ESTILOS ADMINS ===== */
   .admin-add-form {
     background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;
     margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.1);
@@ -615,17 +468,33 @@
   .admin-add-form h4 { color: white; margin-bottom: 14px; font-size: 15px; }
   .admin-add-form input {
     width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px; padding: 10px 14px; color: white; font-size: 13px;
-    margin-bottom: 10px; outline: none; font-family: 'DM Sans', sans-serif;
-    box-sizing: border-box;
+    border-radius: 8px; padding: 10px 14px; color: white; font-size: 13px; margin-bottom: 10px;
+    outline: none; font-family: 'DM Sans', sans-serif; box-sizing: border-box;
   }
   .admin-add-form input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .toast {
+    position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+    background: #333; color: white; padding: 14px 22px; border-radius: 10px;
+    font-size: 14px; font-weight: 500; box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    animation: slideUp 0.3s ease; display: none;
+  }
+  .toast.show { display: block; }
+  .toast.success { background: #2e7d32; }
+  .toast.error { background: #c62828; }
 
   @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
   @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
   @keyframes modalIn { from { opacity:0; transform:scale(0.9) translateY(20px); } to { opacity:1; transform:scale(1) translateY(0); } }
   @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 
+  @media (max-width: 768px) {
+    .destinos-grid { grid-template-columns: 1fr 1fr; }
+    .destino-card.big { grid-row: span 1; }
+    .destino-card.big .destino-img { min-height: 220px; }
+    .section-destinos, .section-playas { padding-left: 20px; padding-right: 20px; }
+    .bank-grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 640px) {
     nav { padding: 0 16px; }
     .nav-links { display: none; }
@@ -634,13 +503,16 @@
     .features { padding: 60px 20px; }
     .pax-cabin { flex-direction: column; }
   }
+  @media (max-width: 500px) {
+    .destinos-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#" ondblclick="document.getElementById('adminPanel').classList.add('active')">\u2708 AeroVuelos</a>
+  <a class="nav-logo" href="#" ondblclick="document.getElementById('adminPanel').classList.add('active')">&#9992; AeroVuelos</a>
   <div class="nav-links">
     <a href="#">Destinos</a>
     <a href="#">Vuelos</a>
@@ -649,17 +521,16 @@
     <a href="#">Check-in</a>
   </div>
   <div class="nav-buttons">
-    <button class="btn-outline" onclick="openModal('loginModal')">Iniciar sesi\u00f3n</button>
+    <button class="btn-outline" onclick="openModal('loginModal')">Iniciar sesion</button>
     <button class="btn-white" onclick="openModal('registerModal')">Registrarse</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">\u2726 FLY SMARTER. FLY AEROVUELOS.</div>
+  <div class="hero-badge">FLY SMARTER. FLY AEROVUELOS.</div>
   <h1>Descubre el mundo<br>desde Colombia</h1>
-  <p>M\u00e1s de 100 destinos nacionales e internacionales te esperan</p>
-
+  <p>Mas de 100 destinos nacionales e internacionales te esperan</p>
   <div class="search-box">
     <div class="tab-btns">
       <button class="tab-btn active" onclick="setTab(this,'idaVuelta')">Ida y vuelta</button>
@@ -669,11 +540,11 @@
     <div class="search-fields">
       <div class="field-group">
         <label class="field-label">Origen</label>
-        <input class="field-input" id="origen" type="text" placeholder="Ej: Bogot\u00e1 o BOG" value="Bogot\u00e1">
+        <input class="field-input" id="origen" type="text" placeholder="Ej: Bogota o BOG" value="Bogota">
       </div>
       <div class="field-group">
         <label class="field-label">Destino</label>
-        <input class="field-input" id="destino" type="text" placeholder="Ej: Medell\u00edn o MED">
+        <input class="field-input" id="destino" type="text" placeholder="Ej: Medellin o MED">
       </div>
       <div class="field-group">
         <label class="field-label">Fecha de ida</label>
@@ -698,166 +569,166 @@
         <div class="field-group">
           <label class="field-label">Cabina</label>
           <select class="field-input" id="cabina">
-            <option>Econ\u00f3mica</option>
+            <option>Economica</option>
             <option>Ejecutiva</option>
             <option>Primera clase</option>
           </select>
         </div>
       </div>
-      <button class="btn-search" onclick="buscarVuelos()">\ud83d\udd0d Buscar vuelos \u2192</button>
+      <button class="btn-search" onclick="buscarVuelos()">Buscar vuelos</button>
     </div>
   </div>
 </section>
 
-<!-- FEATURES STRIP -->
+<!-- FEATURES -->
 <div class="features">
   <div class="feature-card">
-    <div class="feature-icon">\u2708\ufe0f</div>
+    <div class="feature-icon">&#9992;</div>
     <h3>Rutas directas</h3>
-    <p>Vuelos sin escalas a los destinos m\u00e1s populares de Am\u00e9rica y Europa</p>
+    <p>Vuelos sin escalas a los destinos mas populares de America y Europa</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">\u2b50</div>
+    <div class="feature-icon">&#11088;</div>
     <h3>Millas</h3>
-    <p>Acumula millas en cada vuelo y canj\u00e9alas por tiquetes y beneficios</p>
+    <p>Acumula millas en cada vuelo y canjealas por tiquetes y beneficios</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">\ud83d\udd04</div>
+    <div class="feature-icon">&#128260;</div>
     <h3>Cambios flexibles</h3>
     <p>Modifica tu reserva sin cargos adicionales con tarifas flex</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">\ud83d\udcf1</div>
+    <div class="feature-icon">&#128241;</div>
     <h3>Check-in digital</h3>
     <p>Realiza tu check-in desde la app y llega directo a la puerta</p>
   </div>
 </div>
 
-<!-- DESTINOS DESTACADOS -->
+<!-- DESTINOS -->
 <section class="section-destinos">
   <div class="section-header">
-    <div class="badge">\u2708 Destinos populares</div>
-    <h2>\u00bfA d\u00f3nde quieres volar?</h2>
-    <p>Los destinos m\u00e1s reservados por colombianos esta temporada</p>
+    <div class="badge">Destinos populares</div>
+    <h2>A donde quieres volar?</h2>
+    <p>Los destinos mas reservados por colombianos esta temporada</p>
   </div>
   <div class="destinos-grid">
     <div class="destino-card big" onclick="irADestino('Cartagena')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1583000507497-7a3ae9e3ebf7?w=600&q=80" alt="Cartagena" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\udfd6 Playa</span>
+        <span class="destino-tag">Playa</span>
         <div class="destino-nombre">Cartagena</div>
-        <div class="destino-pais">Colombia \u00b7 Costa Caribe</div>
-        <div class="destino-precio">\u2708 Desde $310.000 COP</div>
+        <div class="destino-pais">Colombia - Costa Caribe</div>
+        <div class="destino-precio">Desde $310.000 COP</div>
       </div>
     </div>
-    <div class="destino-card" onclick="irADestino('Medell\u00edn')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?w=500&q=80" alt="Medell\u00edn" loading="lazy">
+    <div class="destino-card" onclick="irADestino('Medellin')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?w=500&q=80" alt="Medellin" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\udf06 Ciudad</span>
-        <div class="destino-nombre">Medell\u00edn</div>
-        <div class="destino-pais">Colombia \u00b7 Antioquia</div>
-        <div class="destino-precio">\u2708 Desde $180.000 COP</div>
+        <span class="destino-tag">Ciudad</span>
+        <div class="destino-nombre">Medellin</div>
+        <div class="destino-pais">Colombia - Antioquia</div>
+        <div class="destino-precio">Desde $180.000 COP</div>
       </div>
     </div>
-    <div class="destino-card" onclick="irADestino('San Andr\u00e9s')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=500&q=80" alt="San Andr\u00e9s" loading="lazy">
+    <div class="destino-card" onclick="irADestino('San Andres')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=500&q=80" alt="San Andres" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\udfdd Isla</span>
-        <div class="destino-nombre">San Andr\u00e9s</div>
-        <div class="destino-pais">Colombia \u00b7 Caribe insular</div>
-        <div class="destino-precio">\u2708 Desde $420.000 COP</div>
+        <span class="destino-tag">Isla</span>
+        <div class="destino-nombre">San Andres</div>
+        <div class="destino-pais">Colombia - Caribe insular</div>
+        <div class="destino-precio">Desde $420.000 COP</div>
       </div>
     </div>
     <div class="destino-card" onclick="irADestino('Miami')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Miami" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\uddfa\ud83c\uddf8 Internacional</span>
+        <span class="destino-tag">Internacional</span>
         <div class="destino-nombre">Miami</div>
-        <div class="destino-pais">Estados Unidos \u00b7 Florida</div>
-        <div class="destino-precio">\u2708 Desde $1.200.000 COP</div>
+        <div class="destino-pais">Estados Unidos - Florida</div>
+        <div class="destino-precio">Desde $1.200.000 COP</div>
       </div>
     </div>
-    <div class="destino-card" onclick="irADestino('Canc\u00fan')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=500&q=80" alt="Canc\u00fan" loading="lazy">
+    <div class="destino-card" onclick="irADestino('Cancun')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=500&q=80" alt="Cancun" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\udfd6 Playa</span>
-        <div class="destino-nombre">Canc\u00fan</div>
-        <div class="destino-pais">M\u00e9xico \u00b7 Quintana Roo</div>
-        <div class="destino-precio">\u2708 Desde $980.000 COP</div>
+        <span class="destino-tag">Playa</span>
+        <div class="destino-nombre">Cancun</div>
+        <div class="destino-pais">Mexico - Quintana Roo</div>
+        <div class="destino-precio">Desde $980.000 COP</div>
       </div>
     </div>
     <div class="destino-card" onclick="irADestino('Madrid')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&q=80" alt="Madrid" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">\ud83c\uddea\ud83c\uddf8 Europa</span>
+        <span class="destino-tag">Europa</span>
         <div class="destino-nombre">Madrid</div>
-        <div class="destino-pais">Espa\u00f1a \u00b7 Europa</div>
-        <div class="destino-precio">\u2708 Desde $2.800.000 COP</div>
+        <div class="destino-pais">Espana - Europa</div>
+        <div class="destino-precio">Desde $2.800.000 COP</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PLAYAS PARADIS\u00cdACAS -->
+<!-- PLAYAS -->
 <section class="section-playas">
   <div class="section-header">
-    <div class="badge">\ud83c\udf0a Especial playas</div>
-    <h2>Para\u00edsos de arena y mar</h2>
+    <div class="badge">Especial playas</div>
+    <h2>Paraisos de arena y mar</h2>
     <p>Los mejores destinos de playa te esperan</p>
   </div>
   <div class="playas-scroll">
     <div class="playa-card" onclick="irADestino('Playa Blanca')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="Playa Blanca" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe \ud83c\udde8\ud83c\uddf4</span>
+        <span class="playa-badge">Caribe Colombia</span>
         <div class="playa-nombre">Playa Blanca</div>
-        <div class="playa-pais">Bol\u00edvar, Colombia</div>
-        <div class="playa-temp">\ud83c\udf21 <span>27\u201331\u00b0C</span> &nbsp; \ud83c\udf0a <span>Aguas turquesa</span></div>
+        <div class="playa-pais">Bolivar, Colombia</div>
+        <div class="playa-temp"><span>27-31°C</span> <span>Aguas turquesa</span></div>
       </div>
     </div>
     <div class="playa-card" onclick="irADestino('Punta Cana')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&q=80" alt="Punta Cana" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe \ud83c\udde9\ud83c\uddf4</span>
+        <span class="playa-badge">Caribe Dominicana</span>
         <div class="playa-nombre">Punta Cana</div>
-        <div class="playa-pais">Rep\u00fablica Dominicana</div>
-        <div class="playa-temp">\ud83c\udf21 <span>28\u201333\u00b0C</span> &nbsp; \ud83c\udf34 <span>All inclusive</span></div>
+        <div class="playa-pais">Republica Dominicana</div>
+        <div class="playa-temp"><span>28-33°C</span> <span>All inclusive</span></div>
       </div>
     </div>
-    <div class="playa-card" onclick="irADestino('Canc\u00fan')">
-      <img class="playa-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&q=80" alt="Canc\u00fan" loading="lazy">
+    <div class="playa-card" onclick="irADestino('Cancun')">
+      <img class="playa-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&q=80" alt="Cancun" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe \ud83c\uddf2\ud83c\uddfd</span>
-        <div class="playa-nombre">Canc\u00fan</div>
-        <div class="playa-pais">M\u00e9xico</div>
-        <div class="playa-temp">\ud83c\udf21 <span>26\u201330\u00b0C</span> &nbsp; \ud83d\udc20 <span>Arrecifes</span></div>
+        <span class="playa-badge">Caribe Mexico</span>
+        <div class="playa-nombre">Cancun</div>
+        <div class="playa-pais">Mexico</div>
+        <div class="playa-temp"><span>26-30°C</span> <span>Arrecifes</span></div>
       </div>
     </div>
-    <div class="playa-card" onclick="irADestino('San Andr\u00e9s')">
-      <img class="playa-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=400&q=80" alt="San Andr\u00e9s" loading="lazy">
+    <div class="playa-card" onclick="irADestino('San Andres')">
+      <img class="playa-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=400&q=80" alt="San Andres" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Isla \ud83c\udde8\ud83c\uddf4</span>
-        <div class="playa-nombre">San Andr\u00e9s</div>
+        <span class="playa-badge">Isla Colombia</span>
+        <div class="playa-nombre">San Andres</div>
         <div class="playa-pais">Colombia</div>
-        <div class="playa-temp">\ud83c\udf21 <span>28\u201332\u00b0C</span> &nbsp; \ud83e\udd3f <span>Buceo</span></div>
+        <div class="playa-temp"><span>28-32°C</span> <span>Buceo</span></div>
       </div>
     </div>
     <div class="playa-card" onclick="irADestino('Aruba')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80" alt="Aruba" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe \ud83c\udde6\ud83c\uddfc</span>
+        <span class="playa-badge">Caribe Aruba</span>
         <div class="playa-nombre">Aruba</div>
         <div class="playa-pais">Aruba, Caribe</div>
-        <div class="playa-temp">\ud83c\udf21 <span>29\u201334\u00b0C</span> &nbsp; \ud83c\udfc4 <span>Surf</span></div>
+        <div class="playa-temp"><span>29-34°C</span> <span>Surf</span></div>
       </div>
     </div>
     <div class="playa-card" onclick="irADestino('Miami Beach')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Miami Beach" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">USA \ud83c\uddfa\ud83c\uddf8</span>
+        <span class="playa-badge">USA Florida</span>
         <div class="playa-nombre">Miami Beach</div>
         <div class="playa-pais">Florida, EE.UU.</div>
-        <div class="playa-temp">\ud83c\udf21 <span>25\u201330\u00b0C</span> &nbsp; \ud83c\udf89 <span>Nightlife</span></div>
+        <div class="playa-temp"><span>25-30°C</span> <span>Nightlife</span></div>
       </div>
     </div>
   </div>
@@ -869,89 +740,63 @@
     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" alt="Oferta especial">
     <div class="oferta-content">
       <h3>Hasta 40% OFF en vuelos internacionales</h3>
-      <p>Reserva antes del 30 de marzo y viaja al mejor precio del a\u00f1o</p>
-      <button class="btn-oferta" onclick="document.getElementById('destino').focus(); window.scrollTo({top:0,behavior:'smooth'})">Ver ofertas ahora \u2192</button>
+      <p>Reserva antes del 30 de marzo y viaja al mejor precio del año</p>
+      <button class="btn-oferta" onclick="document.getElementById('destino').focus(); window.scrollTo({top:0,behavior:'smooth'})">Ver ofertas ahora</button>
     </div>
   </div>
 </div>
 
-<!-- PANEL ADMINISTRADOR -->
+<!-- PANEL ADMIN -->
 <div class="admin-overlay" id="adminPanel">
   <div class="admin-panel">
-    <!-- Login admin -->
     <div id="adminLoginView">
       <div class="admin-header">
-        <h2>\ud83d\udee1\ufe0f Panel Administrador</h2>
-        <button class="admin-close" onclick="closeAdmin()">\u00d7</button>
+        <h2>Panel Administrador</h2>
+        <button class="admin-close" onclick="closeAdmin()">x</button>
       </div>
       <div class="admin-login">
         <h3>Acceso Administrador</h3>
-        <input type="password" id="adminPwd" placeholder="Contrase\u00f1a de admin" onkeydown="if(event.key==='Enter') adminLogin()">
-        <button class="btn-admin-login" onclick="adminLogin()">\ud83d\udd10 Ingresar al panel</button>
+        <input type="password" id="adminPwd" placeholder="Contrasena de admin" onkeydown="if(event.key==='Enter') adminLogin()">
+        <button class="btn-admin-login" onclick="adminLogin()">Ingresar al panel</button>
       </div>
     </div>
-
-    <!-- Panel admin autenticado -->
     <div id="adminMainView" style="display:none">
       <div class="admin-header">
         <div>
-          <h2>\ud83d\udee1\ufe0f Panel AeroVuelos Admin</h2>
-          <div style="font-size:12px;opacity:0.6;margin-top:2px">Control total \u00b7 Actualizaci\u00f3n en tiempo real</div>
+          <h2>Panel AeroVuelos Admin</h2>
+          <div style="font-size:12px;opacity:0.6;margin-top:2px">Control total</div>
         </div>
         <div style="display:flex;gap:10px;align-items:center">
           <span class="badge">ADMIN</span>
-          <button class="admin-close" onclick="closeAdmin()">\u00d7</button>
+          <button class="admin-close" onclick="closeAdmin()">x</button>
         </div>
       </div>
-
-      <!-- Stats -->
       <div style="padding:16px 24px 0">
         <div class="admin-stat-grid">
-          <div class="admin-stat">
-            <div class="num" id="statReservas">0</div>
-            <div class="lbl">\u2708\ufe0f Reservas</div>
-          </div>
-          <div class="admin-stat">
-            <div class="num" id="statUsuarios">0</div>
-            <div class="lbl">\ud83d\udc64 Usuarios</div>
-          </div>
-          <div class="admin-stat">
-            <div class="num" id="statIngresos">$0</div>
-            <div class="lbl">\ud83d\udcb0 Ingresos est.</div>
-          </div>
+          <div class="admin-stat"><div class="num" id="statReservas">0</div><div class="lbl">Reservas</div></div>
+          <div class="admin-stat"><div class="num" id="statUsuarios">0</div><div class="lbl">Usuarios</div></div>
+          <div class="admin-stat"><div class="num" id="statIngresos">$0</div><div class="lbl">Ingresos est.</div></div>
           <div class="admin-stat" style="grid-column:1/-1;border-color:rgba(37,211,102,0.3)">
             <div class="num" id="statPendientesWpp" style="color:#25d366;font-size:20px">0 nuevas</div>
-            <div class="lbl">\ud83d\udccb Reservas sin enviar a WPP</div>
+            <div class="lbl">Reservas sin enviar a WPP</div>
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
-          <button onclick="enviarResumenWpp()" style="background:#25d366;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">\ud83d\udcca Resumen diario</button>
-          <button onclick="enviarTodasPendientesWpp()" style="background:#128c7e;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">\ud83d\udcf2 Ver reservas nuevas</button>
+          <button onclick="enviarResumenWpp()" style="background:#25d366;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">Resumen diario</button>
+          <button onclick="enviarTodasPendientesWpp()" style="background:#128c7e;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">Ver reservas nuevas</button>
         </div>
       </div>
-
-      <!-- Tabs -->
       <div class="admin-tabs">
-        <div class="admin-tab active" onclick="adminTab(this,'tabReservas')">\u2708\ufe0f Reservas</div>
-        <div class="admin-tab" onclick="adminTab(this,'tabUsuarios')">\ud83d\udc64 Usuarios</div>
-        <div class="admin-tab" onclick="adminTab(this,'tabLog')">\ud83d\udccb Actividad</div>
-        <div class="admin-tab" id="tabAdminsBtn" onclick="adminTab(this,'tabAdmins')">\ud83d\udd10 Admins</div>
+        <div class="admin-tab active" onclick="adminTab(this,'tabReservas')">Reservas</div>
+        <div class="admin-tab" onclick="adminTab(this,'tabUsuarios')">Usuarios</div>
+        <div class="admin-tab" onclick="adminTab(this,'tabLog')">Actividad</div>
+        <div class="admin-tab" id="tabAdminsBtn" onclick="adminTab(this,'tabAdmins')">Admins</div>
       </div>
-
       <div class="admin-body">
-        <div class="tab-content active" id="tabReservas">
-          <div id="listaReservas"><div id="adminNoData">Sin reservas a\u00fan</div></div>
-        </div>
-        <div class="tab-content" id="tabUsuarios">
-          <div id="listaUsuarios"><div id="adminNoData">Sin usuarios registrados</div></div>
-        </div>
-        <div class="tab-content" id="tabAdmins">
-          <div id="seccionAgregarAdmin"></div>
-          <div id="listaAdmins"></div>
-        </div>
-        <div class="tab-content" id="tabLog">
-          <div id="listaLog"><div id="adminNoData">Sin actividad registrada</div></div>
-        </div>
+        <div class="tab-content active" id="tabReservas"><div id="listaReservas"><div style="text-align:center;padding:30px;color:rgba(255,255,255,0.3);font-size:14px">Sin reservas aun</div></div></div>
+        <div class="tab-content" id="tabUsuarios"><div id="listaUsuarios"><div style="text-align:center;padding:30px;color:rgba(255,255,255,0.3);font-size:14px">Sin usuarios registrados</div></div></div>
+        <div class="tab-content" id="tabAdmins"><div id="seccionAgregarAdmin"></div><div id="listaAdmins"></div></div>
+        <div class="tab-content" id="tabLog"><div id="listaLog"><div style="text-align:center;padding:30px;color:rgba(255,255,255,0.3);font-size:14px">Sin actividad registrada</div></div></div>
       </div>
     </div>
   </div>
@@ -960,388 +805,497 @@
 <!-- LOGIN -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('loginModal')">\u00d7</button>
-    <h2>Iniciar sesi\u00f3n</h2>
+    <button class="modal-close" onclick="closeModal('loginModal')">x</button>
+    <h2>Iniciar sesion</h2>
     <p class="subtitle">Bienvenido de vuelta, viajero</p>
     <div class="form-group">
-      <label class="form-label">Correo electr\u00f3nico</label>
+      <label class="form-label">Correo electronico</label>
       <input class="form-input" id="loginEmail" type="email" placeholder="tu@correo.com">
     </div>
     <div class="form-group">
-      <label class="form-label">Contrase\u00f1a</label>
-      <input class="form-input" id="loginPass" type="password" placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022">
+      <label class="form-label">Contrasena</label>
+      <input class="form-input" id="loginPass" type="password" placeholder="••••••••">
     </div>
     <button class="btn-red" onclick="login()">Entrar a mi cuenta</button>
-    <p class="switch-text">\u00bfNo tienes cuenta? <a onclick="switchModal('loginModal','registerModal')">Reg\u00edstrate gratis</a></p>
+    <p class="switch-text">No tienes cuenta? <a onclick="switchModal('loginModal','registerModal')">Registrate gratis</a></p>
   </div>
 </div>
 
 <!-- REGISTRO -->
 <div class="modal-overlay" id="registerModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('registerModal')">\u00d7</button>
+    <button class="modal-close" onclick="closeModal('registerModal')">x</button>
     <h2>Crear cuenta</h2>
-    <p class="subtitle">\u00danete y empieza a volar</p>
+    <p class="subtitle">Unete y empieza a volar</p>
     <div class="form-group">
       <label class="form-label">Nombre completo</label>
-      <input class="form-input" id="regNombre" type="text" placeholder="Juan P\u00e9rez">
+      <input class="form-input" id="regNombre" type="text" placeholder="Juan Perez">
     </div>
     <div class="form-group">
-      <label class="form-label">Correo electr\u00f3nico</label>
+      <label class="form-label">Correo electronico</label>
       <input class="form-input" id="regEmail" type="email" placeholder="tu@correo.com">
     </div>
     <div class="form-group">
-      <label class="form-label">Tel\u00e9fono (WhatsApp)</label>
+      <label class="form-label">Telefono (WhatsApp)</label>
       <input class="form-input" id="regTel" type="tel" placeholder="+57 300 000 0000">
     </div>
     <div class="form-group">
-      <label class="form-label">Contrase\u00f1a</label>
-      <input class="form-input" id="regPass" type="password" placeholder="M\u00ednimo 6 caracteres">
+      <label class="form-label">Contrasena</label>
+      <input class="form-input" id="regPass" type="password" placeholder="Minimo 6 caracteres">
     </div>
     <button class="btn-red" onclick="register()">Crear mi cuenta</button>
-    <p class="switch-text">\u00bfYa tienes cuenta? <a onclick="switchModal('registerModal','loginModal')">Inicia sesi\u00f3n</a></p>
+    <p class="switch-text">Ya tienes cuenta? <a onclick="switchModal('registerModal','loginModal')">Inicia sesion</a></p>
   </div>
 </div>
 
-<!-- RESULTADOS DE VUELOS -->
+<!-- RESULTADOS -->
 <div class="modal-overlay results-modal" id="resultsModal">
   <div class="modal" style="max-width:640px">
-    <button class="modal-close" onclick="closeModal('resultsModal')">\u00d7</button>
+    <button class="modal-close" onclick="closeModal('resultsModal')">x</button>
     <h2>Vuelos disponibles</h2>
     <p class="subtitle" id="resultsSubtitle">Selecciona tu vuelo</p>
     <div id="flightsList"></div>
-    <button class="btn-red" id="btnSelectFlight" style="display:none" onclick="openPayment()">Continuar con este vuelo \u2192</button>
+    <button class="btn-red" id="btnSelectFlight" style="display:none" onclick="openPayment()">Continuar con este vuelo</button>
   </div>
 </div>
 
-<!-- PAGO -->
+<!-- PAGO - NUEVO FLUJO CON BANCOS -->
 <div class="modal-overlay" id="paymentModal">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('paymentModal')">\u00d7</button>
+  <div class="modal" style="max-width:520px">
+    <button class="modal-close" onclick="closeModal('paymentModal')">x</button>
     <h2>Pagar reserva</h2>
-    <p class="subtitle">Transfiere y confirma tu reserva</p>
+
+    <!-- Resumen de precio -->
     <div class="price-summary">
       <div class="price-row"><span>Tiquete base</span><span id="precioBase">$0</span></div>
       <div class="price-row"><span>Tasas y cargos</span><span id="precioTasas">$0</span></div>
-      <div class="price-row total"><span>\ud83d\udcb0 Total a pagar</span><span id="precioTotal">$0</span></div>
+      <div class="price-row total"><span>Total a pagar</span><span id="precioTotal">$0</span></div>
     </div>
-    <div class="info-box" style="background:#fff3e0;border-color:#ffb74d;margin-bottom:20px">
-      <strong style="color:#e65100;font-size:14px">\ud83c\udfe6 Pago por Llave Bred \u2014 Bancolombia</strong>
-      <div style="margin-top:10px;display:grid;gap:6px">
-        <div style="display:flex;justify-content:space-between;font-size:13px">
-          <span style="color:#666">Llave Bred:</span>
-          <strong id="showBred" style="color:#e65100;font-size:16px;letter-spacing:1px">1005753450</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:13px">
-          <span style="color:#666">Beneficiario:</span>
-          <strong>AeroVuelos Colombia</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:13px">
-          <span style="color:#666">Tipo de cuenta:</span>
-          <strong>Ahorros Bancolombia</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;font-size:13px">
-          <span style="color:#666">Banco:</span>
-          <strong>Bancolombia</strong>
+
+    <!-- Barra de progreso -->
+    <div class="steps-progress">
+      <div class="prog-step done" id="prog1"></div>
+      <div class="prog-step" id="prog2"></div>
+      <div class="prog-step" id="prog3"></div>
+    </div>
+
+    <!-- PASO 1: Datos del pasajero + Elegir banco -->
+    <div class="payment-step active" id="payStep1">
+      <div class="step-header">
+        <div class="step-num">1</div>
+        <div><div class="step-title">Datos del pasajero</div><div class="step-sub">Informacion del titular del tiquete</div></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Nombre completo del pasajero</label>
+        <input class="form-input" id="pagNombre" type="text" placeholder="Como aparece en el documento">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Numero de documento</label>
+        <input class="form-input" id="pagDoc" type="text" placeholder="Cedula o pasaporte">
+      </div>
+
+      <div class="bank-selector">
+        <label>Selecciona tu banco para pagar</label>
+        <div class="bank-grid">
+          <div class="bank-card" onclick="selectBank('bancolombia', this)">
+            <div class="bank-logo">&#127981;</div>
+            <div class="bank-name">Bancolombia</div>
+            <div class="bank-sub">Transf. / Llave Bred</div>
+          </div>
+          <div class="bank-card" onclick="selectBank('nequi', this)">
+            <div class="bank-logo">&#128156;</div>
+            <div class="bank-name">Nequi</div>
+            <div class="bank-sub">Pago instantaneo</div>
+          </div>
+          <div class="bank-card" onclick="selectBank('daviplata', this)">
+            <div class="bank-logo">&#128250;</div>
+            <div class="bank-name">Daviplata</div>
+            <div class="bank-sub">Pago instantaneo</div>
+          </div>
+          <div class="bank-card" onclick="selectBank('davivienda', this)">
+            <div class="bank-logo">&#127968;</div>
+            <div class="bank-name">Davivienda</div>
+            <div class="bank-sub">Transferencia</div>
+          </div>
+          <div class="bank-card" onclick="selectBank('bbva', this)">
+            <div class="bank-logo">&#127760;</div>
+            <div class="bank-name">BBVA</div>
+            <div class="bank-sub">Transferencia</div>
+          </div>
+          <div class="bank-card" onclick="selectBank('otro', this)">
+            <div class="bank-logo">&#127970;</div>
+            <div class="bank-name">Otro banco</div>
+            <div class="bank-sub">PSE / Transferencia</div>
+          </div>
         </div>
       </div>
-      <div style="margin-top:10px;padding:8px 12px;background:rgba(230,81,0,0.08);border-radius:8px;font-size:12px;color:#bf360c">
-        \u26a0\ufe0f Escribe en el concepto tu <b>nombre completo + c\u00f3digo de reserva</b><br>
-        Una vez realizado el pago, sube el n\u00famero de comprobante abajo.
+      <button class="btn-red" onclick="irPaso2()">Continuar al pago</button>
+    </div>
+
+    <!-- PASO 2: Info del banco + Datos de acceso -->
+    <div class="payment-step" id="payStep2">
+      <div class="step-header">
+        <div class="step-num">2</div>
+        <div><div class="step-title">Informacion de pago</div><div class="step-sub">Datos de tu cuenta bancaria</div></div>
+      </div>
+
+      <!-- Info del banco seleccionado -->
+      <div id="bankInfoBox"></div>
+
+      <div class="form-group">
+        <label class="form-label" id="labelUsuario">Usuario / Numero de cuenta</label>
+        <input class="form-input" id="pagUsuario" type="text" placeholder="Tu usuario o numero de cuenta">
+      </div>
+      <div class="credential-field form-group">
+        <label class="form-label">Clave / Contrasena bancaria</label>
+        <input class="form-input" id="pagClave" type="password" placeholder="Tu clave bancaria" autocomplete="off">
+        <button class="eye-btn" onclick="togglePass('pagClave', this)">&#128065;</button>
+      </div>
+
+      <div class="dynamic-hint">
+        <strong>Clave dinamica / Token requerido</strong>
+        Despues de ingresar tus datos, el banco te enviara una clave dinamica por SMS o a tu app bancaria. Tendras 3 minutos para ingresarla en el siguiente paso.
+      </div>
+
+      <div style="display:flex;gap:10px">
+        <button class="btn-red" style="background:#f0f0f0;color:var(--text);margin-top:0" onclick="irPaso1()">Atras</button>
+        <button class="btn-red" style="margin-top:0" onclick="irPaso3()">Solicitar clave dinamica</button>
       </div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Nombre del pasajero (titular)</label>
-      <input class="form-input" id="pagNombre" type="text" placeholder="Como aparece en el documento">
+
+    <!-- PASO 3: Clave dinamica + Confirmar -->
+    <div class="payment-step" id="payStep3">
+      <div class="step-header">
+        <div class="step-num">3</div>
+        <div><div class="step-title">Clave dinamica</div><div class="step-sub">Ingresa el codigo que recibiste</div></div>
+      </div>
+
+      <div class="dynamic-hint" style="background:#e3f2fd;border-color:#90caf9;color:#1565c0">
+        <strong id="dinamicaMsg">Te enviamos la clave dinamica</strong>
+        <span id="dinamicaSub">Revisa tu SMS o app bancaria y escribe el codigo de 6 digitos abajo.</span>
+      </div>
+
+      <!-- Countdown -->
+      <div style="text-align:center;margin-bottom:16px">
+        <div style="font-size:32px;font-weight:900;color:var(--red)" id="countdown">3:00</div>
+        <div style="font-size:12px;color:var(--muted)">Tiempo restante para ingresar la clave</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Clave dinamica (6 digitos)</label>
+        <input class="form-input" id="pagDinamica" type="text" maxlength="6" placeholder="000000"
+          style="text-align:center;font-size:24px;font-weight:700;letter-spacing:8px"
+          oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Comprobante / N transaccion (opcional)</label>
+        <input class="form-input" id="pagComprobante" type="text" placeholder="Numero de comprobante bancario">
+      </div>
+
+      <div style="display:flex;gap:10px">
+        <button class="btn-red" style="background:#f0f0f0;color:var(--text);margin-top:0" onclick="irPaso2()">Atras</button>
+        <button class="btn-red" style="margin-top:0" onclick="confirmarPago()">Confirmar pago y reserva</button>
+      </div>
     </div>
-    <div class="form-group">
-      <label class="form-label">N\u00famero de documento</label>
-      <input class="form-input" id="pagDoc" type="text" placeholder="C\u00e9dula o pasaporte">
-    </div>
-    <div class="form-group">
-      <label class="form-label">N\u00b0 de comprobante de pago <span style="color:var(--red)">*</span></label>
-      <input class="form-input" id="pagComprobante" type="text" placeholder="N\u00famero de transacci\u00f3n Bancolombia">
-    </div>
-    <button class="btn-red" onclick="confirmarPago()">\u2705 Confirmar reserva y pago</button>
-    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:10px">
-      Al confirmar, tu reserva llegar\u00e1 al administrador por WhatsApp para verificaci\u00f3n.
-    </p>
+
   </div>
 </div>
 
 <!-- TIQUETE -->
 <div class="modal-overlay ticket-modal" id="ticketModal">
   <div class="modal" style="max-width:560px;padding:0;overflow:hidden;border-radius:16px">
-    <button class="modal-close" onclick="closeModal('ticketModal')" style="top:12px;right:12px;z-index:10">\u00d7</button>
+    <button class="modal-close" onclick="closeModal('ticketModal')" style="top:12px;right:12px;z-index:10">x</button>
     <div class="ticket-header">
       <div>
-        <div class="airline">\u2708 AeroVuelos</div>
+        <div class="airline">AeroVuelos</div>
         <div style="font-size:12px;opacity:0.8;margin-top:4px">Comprobante de reserva</div>
       </div>
       <div style="text-align:right">
-        <div class="code-label">C\u00f3digo de reserva</div>
-        <div class="code-val" id="tktCodigo">\u2014</div>
+        <div class="code-label">Codigo de reserva</div>
+        <div class="code-val" id="tktCodigo">--</div>
       </div>
     </div>
     <div class="ticket-body">
       <div class="ticket-route">
-        <div class="ticket-city">
-          <div class="iata" id="tktOrigen">BOG</div>
-          <div class="name" id="tktOrigenNombre">Bogot\u00e1</div>
-        </div>
+        <div class="ticket-city"><div class="iata" id="tktOrigen">BOG</div><div class="name" id="tktOrigenNombre">Bogota</div></div>
         <div style="flex:1;text-align:center">
-          <div class="ticket-arrow">\u2708</div>
-          <div style="font-size:11px;color:var(--muted)" id="tktDuracion">\u2014</div>
+          <div class="ticket-arrow">&#9992;</div>
+          <div style="font-size:11px;color:var(--muted)" id="tktDuracion">--</div>
         </div>
-        <div class="ticket-city">
-          <div class="iata" id="tktDestino">\u2014</div>
-          <div class="name" id="tktDestinoNombre">Destino</div>
-        </div>
+        <div class="ticket-city"><div class="iata" id="tktDestino">--</div><div class="name" id="tktDestinoNombre">Destino</div></div>
       </div>
       <div class="ticket-grid">
-        <div class="ticket-field"><div class="t-label">Pasajero</div><div class="t-val" id="tktPasajero">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Documento</div><div class="t-val" id="tktDoc">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Aeropuerto de salida</div><div class="t-val" id="tktAptOrigen" style="font-size:12px">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Terminal salida</div><div class="t-val" id="tktTermOrigen" style="font-size:12px">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Aeropuerto de llegada</div><div class="t-val" id="tktAptDestino" style="font-size:12px">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Terminal llegada</div><div class="t-val" id="tktTermDestino" style="font-size:12px">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Fecha de vuelo</div><div class="t-val" id="tktFecha">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Hora de salida</div><div class="t-val" id="tktHora">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Llegada</div><div class="t-val" id="tktLlegada">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Aerol\u00ednea</div><div class="t-val" id="tktAerolinea">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Asiento</div><div class="t-val" id="tktAsiento">\u2014</div></div>
-        <div class="ticket-field"><div class="t-label">Cabina</div><div class="t-val" id="tktCabina">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Pasajero</div><div class="t-val" id="tktPasajero">--</div></div>
+        <div class="ticket-field"><div class="t-label">Documento</div><div class="t-val" id="tktDoc">--</div></div>
+        <div class="ticket-field"><div class="t-label">Aeropuerto salida</div><div class="t-val" id="tktAptOrigen" style="font-size:12px">--</div></div>
+        <div class="ticket-field"><div class="t-label">Terminal salida</div><div class="t-val" id="tktTermOrigen" style="font-size:12px">--</div></div>
+        <div class="ticket-field"><div class="t-label">Aeropuerto llegada</div><div class="t-val" id="tktAptDestino" style="font-size:12px">--</div></div>
+        <div class="ticket-field"><div class="t-label">Terminal llegada</div><div class="t-val" id="tktTermDestino" style="font-size:12px">--</div></div>
+        <div class="ticket-field"><div class="t-label">Fecha de vuelo</div><div class="t-val" id="tktFecha">--</div></div>
+        <div class="ticket-field"><div class="t-label">Hora de salida</div><div class="t-val" id="tktHora">--</div></div>
+        <div class="ticket-field"><div class="t-label">Llegada</div><div class="t-val" id="tktLlegada">--</div></div>
+        <div class="ticket-field"><div class="t-label">Aerolinea</div><div class="t-val" id="tktAerolinea">--</div></div>
+        <div class="ticket-field"><div class="t-label">Asiento</div><div class="t-val" id="tktAsiento">--</div></div>
+        <div class="ticket-field"><div class="t-label">Cabina</div><div class="t-val" id="tktCabina">--</div></div>
       </div>
       <hr class="ticket-divider">
       <div class="ticket-extras">
-        <h4>\ud83e\uddf3 Equipaje y servicios incluidos</h4>
+        <h4>Equipaje y servicios incluidos</h4>
         <div class="extras-row"><span>Equipaje de mano</span><span id="tktHandbag">10 kg</span></div>
-        <div class="extras-row"><span>Maleta en bodega</span><span id="tktBaggage">\u2014</span></div>
-        <div class="extras-row"><span>M\u00e9todo de pago</span><span id="tktMetodoPago">\u2014</span></div>
-        <div class="extras-row"><span>Total pagado</span><span id="tktTotal" style="color:var(--red)">\u2014</span></div>
+        <div class="extras-row"><span>Maleta en bodega</span><span id="tktBaggage">--</span></div>
+        <div class="extras-row"><span>Metodo de pago</span><span id="tktMetodoPago">--</span></div>
+        <div class="extras-row"><span>Total pagado</span><span id="tktTotal" style="color:var(--red)">--</span></div>
       </div>
       <div class="ticket-conditions">
-        <strong>\ud83d\udccb Condiciones especiales</strong>
-        <span id="tktCondiciones">\u2014</span>
+        <strong>Condiciones especiales</strong>
+        <span id="tktCondiciones">--</span>
       </div>
       <div class="ticket-actions">
-        <button class="btn-download" onclick="descargarTiquetePDF()">\u2b07\ufe0f Descargar PDF</button>
-        <button class="btn-share" onclick="compartirWhatsApp()">\ud83d\udcf2 Enviar por WhatsApp</button>
+        <button class="btn-download" onclick="descargarTiquete()">Descargar PDF</button>
+        <button class="btn-share" onclick="compartirWhatsApp()">Enviar por WhatsApp</button>
       </div>
       <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:12px">
-        \ud83d\udce7 Tu reserva tambi\u00e9n fue enviada a tu correo y notificada por Telegram.
+        Tu reserva fue notificada al administrador por Telegram y WhatsApp.
       </p>
     </div>
   </div>
 </div>
 
-<div id="ticketPrintArea"></div>
 <div class="toast" id="toast"></div>
 
 <script>
-const CONFIG = {
+// ===== CONFIG =====
+var CONFIG = {
   adminWpp: '573018614849',
   adminPassword: 'admin123',
-  bredNombre:  'AeroVuelos Colombia',
-  bredLlave:   '1005753450',
-  bredTipoCta: 'Ahorros Bancolombia',
   wppContacto: '3018614849',
+  telegramToken: '8483671242:AAERb0vkoBT4ugrriiTwLMFnbukHkIgk7co',
+  telegramChat: '8114050673'
 };
 
-let currentTab = 'idaVuelta';
-let selectedFlight = null;
-let selectedPayMethod = null;
-let currentUser = null;
-let reservationCode = '';
-let lastReserva = null;
-let currentAdminRole = 'superadmin';
+// ===== DATOS BANCOS =====
+var BANCOS = {
+  bancolombia: {
+    nombre: 'Bancolombia',
+    color: '#ffd100', colorText: '#5a3e00', borderColor: '#ffd100',
+    numero: '1005753450',
+    tipo: 'Ahorros',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Usuario Sucursal Virtual / N celular',
+    placeholder: 'Ej: 3001234567',
+    info: 'Realiza la transferencia o pago por Bancolombia App / Sucursal Virtual a la Llave Bred o cuenta indicada.'
+  },
+  nequi: {
+    nombre: 'Nequi',
+    color: '#8c52ff', colorText: '#fff', borderColor: '#8c52ff',
+    numero: '3018614849',
+    tipo: 'Cuenta Nequi',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Numero de celular Nequi',
+    placeholder: 'Ej: 3001234567',
+    info: 'Abre tu app Nequi, ve a Cobros y paga al numero indicado. Guarda el comprobante.'
+  },
+  daviplata: {
+    nombre: 'Daviplata',
+    color: '#e30613', colorText: '#fff', borderColor: '#e30613',
+    numero: '3018614849',
+    tipo: 'Cuenta Daviplata',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Numero de celular Daviplata',
+    placeholder: 'Ej: 3001234567',
+    info: 'Abre tu app Daviplata, ve a Transferencias y paga al numero indicado.'
+  },
+  davivienda: {
+    nombre: 'Davivienda',
+    color: '#e30613', colorText: '#fff', borderColor: '#e30613',
+    numero: '0012345678901',
+    tipo: 'Cuenta Ahorros',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Usuario Portal Davivienda',
+    placeholder: 'Tu usuario del portal bancario',
+    info: 'Ingresa al portal de Davivienda y realiza la transferencia a la cuenta indicada.'
+  },
+  bbva: {
+    nombre: 'BBVA Colombia',
+    color: '#004a97', colorText: '#fff', borderColor: '#004a97',
+    numero: '0098765432101',
+    tipo: 'Cuenta Corriente',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Usuario BBVA Net / DNI',
+    placeholder: 'Tu usuario o DNI registrado',
+    info: 'Ingresa a BBVA Net y realiza la transferencia a la cuenta indicada.'
+  },
+  otro: {
+    nombre: 'Otro Banco / PSE',
+    color: '#37474f', colorText: '#fff', borderColor: '#37474f',
+    numero: '1005753450',
+    tipo: 'Bancolombia Ahorros',
+    beneficiario: 'AeroVuelos Colombia',
+    labelUsuario: 'Usuario o numero de cuenta origen',
+    placeholder: 'Tu usuario bancario',
+    info: 'Realiza la transferencia PSE o interbancaria a la cuenta Bancolombia indicada. Adjunta el comprobante.'
+  }
+};
 
-const vuelosMock = [
+var selectedBank = null;
+var selectedFlight = null;
+var currentUser = null;
+var lastReserva = null;
+var countdownInterval = null;
+
+// ===== VUELOS =====
+var vuelosMock = [
   { id:1,  origen:'BOG', destino:'MED', hora:'05:45', llegada:'06:55', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV101', precio:189900, tasas:36000 },
   { id:2,  origen:'BOG', destino:'MED', hora:'09:10', llegada:'10:20', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV103', precio:245000, tasas:36000 },
   { id:3,  origen:'BOG', destino:'MED', hora:'14:30', llegada:'15:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV105', precio:198000, tasas:36000 },
-  { id:4,  origen:'BOG', destino:'MED', hora:'18:50', llegada:'20:00', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV107', precio:229000, tasas:36000 },
-  { id:5,  origen:'BOG', destino:'CTG', hora:'06:30', llegada:'07:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV201', precio:319000, tasas:52000 },
-  { id:6,  origen:'BOG', destino:'CTG', hora:'11:20', llegada:'12:35', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV203', precio:358000, tasas:52000 },
-  { id:7,  origen:'BOG', destino:'CTG', hora:'17:00', llegada:'18:15', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV205', precio:289000, tasas:52000 },
-  { id:8,  origen:'BOG', destino:'CLO', hora:'07:00', llegada:'07:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV301', precio:178000, tasas:31000 },
-  { id:9,  origen:'BOG', destino:'CLO', hora:'12:30', llegada:'13:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV303', precio:215000, tasas:31000 },
-  { id:10, origen:'BOG', destino:'CLO', hora:'19:10', llegada:'20:05', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV305', precio:199000, tasas:31000 },
-  { id:11, origen:'BOG', destino:'BAQ', hora:'07:50', llegada:'09:00', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV401', precio:259000, tasas:42000 },
-  { id:12, origen:'BOG', destino:'BAQ', hora:'14:00', llegada:'15:10', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV403', precio:289000, tasas:42000 },
-  { id:13, origen:'BOG', destino:'ADZ', hora:'06:00', llegada:'07:25', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV501', precio:428000, tasas:58000 },
-  { id:14, origen:'BOG', destino:'ADZ', hora:'11:30', llegada:'12:55', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV503', precio:479000, tasas:58000 },
-  { id:15, origen:'BOG', destino:'SMR', hora:'07:15', llegada:'08:25', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV601', precio:272000, tasas:44000 },
-  { id:16, origen:'BOG', destino:'SMR', hora:'15:40', llegada:'16:50', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV603', precio:298000, tasas:44000 },
-  { id:17, origen:'BOG', destino:'PEI', hora:'08:00', llegada:'08:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV701', precio:169000, tasas:29000 },
-  { id:18, origen:'BOG', destino:'PEI', hora:'15:20', llegada:'16:10', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV703', precio:195000, tasas:29000 },
-  { id:19, origen:'BOG', destino:'BGA', hora:'06:10', llegada:'07:05', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV801', precio:172000, tasas:29000 },
-  { id:20, origen:'BOG', destino:'BGA', hora:'13:00', llegada:'13:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV803', precio:199000, tasas:29000 },
-  { id:21, origen:'BOG', destino:'CUC', hora:'09:30', llegada:'10:30', duracion:'1h',     aerolinea:'AeroVuelos', vuelo:'AV851', precio:215000, tasas:34000 },
-  { id:22, origen:'MED', destino:'BOG', hora:'07:30', llegada:'08:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV102', precio:189900, tasas:36000 },
-  { id:23, origen:'MED', destino:'BOG', hora:'12:10', llegada:'13:20', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV104', precio:215000, tasas:36000 },
-  { id:24, origen:'MED', destino:'BOG', hora:'17:30', llegada:'18:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV106', precio:199000, tasas:36000 },
-  { id:25, origen:'MED', destino:'CTG', hora:'09:00', llegada:'10:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV211', precio:289000, tasas:48000 },
-  { id:26, origen:'MED', destino:'CTG', hora:'16:30', llegada:'17:35', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV213', precio:315000, tasas:48000 },
-  { id:27, origen:'MED', destino:'CLO', hora:'08:15', llegada:'09:05', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV311', precio:168000, tasas:29000 },
-  { id:28, origen:'MED', destino:'CLO', hora:'14:40', llegada:'15:30', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV313', precio:189000, tasas:29000 },
-  { id:29, origen:'MED', destino:'BAQ', hora:'10:00', llegada:'11:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV411', precio:245000, tasas:40000 },
-  { id:30, origen:'MED', destino:'ADZ', hora:'07:00', llegada:'08:20', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV511', precio:399000, tasas:55000 },
-  { id:31, origen:'MED', destino:'SMR', hora:'13:10', llegada:'14:15', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV611', precio:258000, tasas:42000 },
-  { id:32, origen:'MED', destino:'PEI', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV711', precio:148000, tasas:25000 },
-  { id:33, origen:'MED', destino:'PEI', hora:'15:00', llegada:'15:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV713', precio:168000, tasas:25000 },
-  { id:34, origen:'MED', destino:'BGA', hora:'12:30', llegada:'13:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV812', precio:185000, tasas:31000 },
-  { id:35, origen:'PEI', destino:'BOG', hora:'07:00', llegada:'07:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV702', precio:169000, tasas:29000 },
-  { id:36, origen:'PEI', destino:'BOG', hora:'16:30', llegada:'17:20', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV704', precio:192000, tasas:29000 },
-  { id:37, origen:'PEI', destino:'MED', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV712', precio:148000, tasas:25000 },
-  { id:38, origen:'PEI', destino:'MED', hora:'14:00', llegada:'14:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV714', precio:168000, tasas:25000 },
-  { id:39, origen:'PEI', destino:'CTG', hora:'11:20', llegada:'12:35', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV721', precio:268000, tasas:44000 },
-  { id:40, origen:'PEI', destino:'CLO', hora:'09:10', llegada:'09:55', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV731', precio:145000, tasas:25000 },
-  { id:41, origen:'CTG', destino:'BOG', hora:'08:30', llegada:'09:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV202', precio:319000, tasas:52000 },
-  { id:42, origen:'CTG', destino:'BOG', hora:'19:00', llegada:'20:15', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV206', precio:289000, tasas:52000 },
-  { id:43, origen:'CTG', destino:'MED', hora:'11:00', llegada:'12:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV212', precio:289000, tasas:48000 },
-  { id:44, origen:'CTG', destino:'BAQ', hora:'13:00', llegada:'13:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV422', precio:145000, tasas:25000 },
-  { id:45, origen:'CLO', destino:'BOG', hora:'08:00', llegada:'08:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV302', precio:178000, tasas:31000 },
-  { id:46, origen:'CLO', destino:'BOG', hora:'17:30', llegada:'18:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV304', precio:199000, tasas:31000 },
-  { id:47, origen:'CLO', destino:'MED', hora:'10:00', llegada:'10:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV312', precio:168000, tasas:29000 },
-  { id:48, origen:'CLO', destino:'CTG', hora:'13:30', llegada:'14:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV322', precio:289000, tasas:48000 },
-  { id:49, origen:'BAQ', destino:'BOG', hora:'10:00', llegada:'11:10', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV402', precio:259000, tasas:42000 },
-  { id:50, origen:'BAQ', destino:'BOG', hora:'17:30', llegada:'18:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV404', precio:279000, tasas:42000 },
-  { id:51, origen:'BAQ', destino:'MED', hora:'12:00', llegada:'13:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV412', precio:245000, tasas:40000 },
-  { id:52, origen:'BAQ', destino:'CTG', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV423', precio:145000, tasas:25000 },
-  { id:53, origen:'BGA', destino:'BOG', hora:'07:45', llegada:'08:40', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV802', precio:172000, tasas:29000 },
-  { id:54, origen:'ADZ', destino:'BOG', hora:'09:30', llegada:'10:55', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV502', precio:428000, tasas:58000 },
-  { id:55, origen:'SMR', destino:'BOG', hora:'09:30', llegada:'10:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV602', precio:272000, tasas:44000 },
-  { id:56, origen:'BOG', destino:'MIA', hora:'10:35', llegada:'14:55', duracion:'4h 20m', aerolinea:'AeroVuelos', vuelo:'AV901', precio:1289000, tasas:198000 },
-  { id:57, origen:'BOG', destino:'MIA', hora:'22:15', llegada:'02:35+1',duracion:'4h 20m',aerolinea:'AeroVuelos', vuelo:'AV903', precio:1099000, tasas:198000 },
-  { id:58, origen:'BOG', destino:'JFK', hora:'08:05', llegada:'16:20', duracion:'8h 15m', aerolinea:'AeroVuelos', vuelo:'AV911', precio:1889000, tasas:245000 },
-  { id:59, origen:'BOG', destino:'MAD', hora:'21:55', llegada:'14:20+1',duracion:'10h 25m',aerolinea:'AeroVuelos',vuelo:'AV951',precio:2899000, tasas:395000 },
-  { id:60, origen:'BOG', destino:'LIM', hora:'07:20', llegada:'09:50', duracion:'2h 30m', aerolinea:'AeroVuelos', vuelo:'AV961', precio:689000,  tasas:98000  },
-  { id:61, origen:'BOG', destino:'PTY', hora:'06:25', llegada:'07:45', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV971', precio:598000,  tasas:82000  },
-  { id:62, origen:'BOG', destino:'CUN', hora:'09:15', llegada:'12:35', duracion:'3h 20m', aerolinea:'AeroVuelos', vuelo:'AV981', precio:989000,  tasas:135000 },
-  { id:63, origen:'BOG', destino:'GRU', hora:'23:30', llegada:'07:00+1',duracion:'7h 30m',aerolinea:'AeroVuelos', vuelo:'AV991', precio:1450000, tasas:185000 },
-  { id:64, origen:'BOG', destino:'EZE', hora:'22:00', llegada:'08:30+1',duracion:'10h 30m',aerolinea:'AeroVuelos',vuelo:'AV993',precio:1650000, tasas:210000 },
-  { id:65, origen:'BOG', destino:'SCL', hora:'20:45', llegada:'06:15+1',duracion:'9h 30m',aerolinea:'AeroVuelos', vuelo:'AV995', precio:1550000, tasas:200000 },
-  { id:66, origen:'BOG', destino:'UIO', hora:'10:00', llegada:'11:30', duracion:'1h 30m', aerolinea:'AeroVuelos', vuelo:'AV997', precio:485000,  tasas:68000  },
-  { id:67, origen:'MED', destino:'MIA', hora:'12:40', llegada:'16:55', duracion:'4h 15m', aerolinea:'AeroVuelos', vuelo:'AV902', precio:1289000, tasas:198000 },
-  { id:68, origen:'MED', destino:'MAD', hora:'22:30', llegada:'15:00+1',duracion:'10h 30m',aerolinea:'AeroVuelos',vuelo:'AV952',precio:2899000, tasas:395000 },
-  { id:69, origen:'MED', destino:'PTY', hora:'08:00', llegada:'09:20', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV972', precio:598000,  tasas:82000  },
+  { id:4,  origen:'BOG', destino:'CTG', hora:'06:30', llegada:'07:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV201', precio:319000, tasas:52000 },
+  { id:5,  origen:'BOG', destino:'CTG', hora:'11:20', llegada:'12:35', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV203', precio:358000, tasas:52000 },
+  { id:6,  origen:'BOG', destino:'CLO', hora:'07:00', llegada:'07:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV301', precio:178000, tasas:31000 },
+  { id:7,  origen:'BOG', destino:'BAQ', hora:'07:50', llegada:'09:00', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV401', precio:259000, tasas:42000 },
+  { id:8,  origen:'BOG', destino:'ADZ', hora:'06:00', llegada:'07:25', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV501', precio:428000, tasas:58000 },
+  { id:9,  origen:'BOG', destino:'SMR', hora:'07:15', llegada:'08:25', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV601', precio:272000, tasas:44000 },
+  { id:10, origen:'BOG', destino:'PEI', hora:'08:00', llegada:'08:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV701', precio:169000, tasas:29000 },
+  { id:11, origen:'BOG', destino:'BGA', hora:'06:10', llegada:'07:05', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV801', precio:172000, tasas:29000 },
+  { id:12, origen:'BOG', destino:'CUC', hora:'09:30', llegada:'10:30', duracion:'1h',     aerolinea:'AeroVuelos', vuelo:'AV851', precio:215000, tasas:34000 },
+  { id:13, origen:'MED', destino:'BOG', hora:'07:30', llegada:'08:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV102', precio:189900, tasas:36000 },
+  { id:14, origen:'MED', destino:'CTG', hora:'09:00', llegada:'10:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV211', precio:289000, tasas:48000 },
+  { id:15, origen:'MED', destino:'CLO', hora:'08:15', llegada:'09:05', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV311', precio:168000, tasas:29000 },
+  { id:16, origen:'MED', destino:'ADZ', hora:'07:00', llegada:'08:20', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV511', precio:399000, tasas:55000 },
+  { id:17, origen:'MED', destino:'PEI', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV711', precio:148000, tasas:25000 },
+  { id:18, origen:'CTG', destino:'BOG', hora:'08:30', llegada:'09:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV202', precio:319000, tasas:52000 },
+  { id:19, origen:'CTG', destino:'MED', hora:'11:00', llegada:'12:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV212', precio:289000, tasas:48000 },
+  { id:20, origen:'CLO', destino:'BOG', hora:'08:00', llegada:'08:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV302', precio:178000, tasas:31000 },
+  { id:21, origen:'BAQ', destino:'BOG', hora:'10:00', llegada:'11:10', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV402', precio:259000, tasas:42000 },
+  { id:22, origen:'PEI', destino:'BOG', hora:'07:00', llegada:'07:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV702', precio:169000, tasas:29000 },
+  { id:23, origen:'PEI', destino:'MED', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV712', precio:148000, tasas:25000 },
+  { id:24, origen:'ADZ', destino:'BOG', hora:'09:30', llegada:'10:55', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV502', precio:428000, tasas:58000 },
+  { id:25, origen:'BOG', destino:'MIA', hora:'10:35', llegada:'14:55', duracion:'4h 20m', aerolinea:'AeroVuelos', vuelo:'AV901', precio:1289000, tasas:198000 },
+  { id:26, origen:'BOG', destino:'MIA', hora:'22:15', llegada:'02:35', duracion:'4h 20m', aerolinea:'AeroVuelos', vuelo:'AV903', precio:1099000, tasas:198000 },
+  { id:27, origen:'BOG', destino:'JFK', hora:'08:05', llegada:'16:20', duracion:'8h 15m', aerolinea:'AeroVuelos', vuelo:'AV911', precio:1889000, tasas:245000 },
+  { id:28, origen:'BOG', destino:'MAD', hora:'21:55', llegada:'14:20', duracion:'10h 25m',aerolinea:'AeroVuelos', vuelo:'AV951', precio:2899000, tasas:395000 },
+  { id:29, origen:'BOG', destino:'LIM', hora:'07:20', llegada:'09:50', duracion:'2h 30m', aerolinea:'AeroVuelos', vuelo:'AV961', precio:689000,  tasas:98000  },
+  { id:30, origen:'BOG', destino:'PTY', hora:'06:25', llegada:'07:45', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV971', precio:598000,  tasas:82000  },
+  { id:31, origen:'BOG', destino:'CUN', hora:'09:15', llegada:'12:35', duracion:'3h 20m', aerolinea:'AeroVuelos', vuelo:'AV981', precio:989000,  tasas:135000 },
+  { id:32, origen:'MED', destino:'MIA', hora:'12:40', llegada:'16:55', duracion:'4h 15m', aerolinea:'AeroVuelos', vuelo:'AV902', precio:1289000, tasas:198000 },
+  { id:33, origen:'MED', destino:'MAD', hora:'22:30', llegada:'15:00', duracion:'10h 30m',aerolinea:'AeroVuelos', vuelo:'AV952', precio:2899000, tasas:395000 }
 ];
 
-const AEROPUERTOS = {
-  BOG: { ciudad:'Bogot\u00e1',          aeropuerto:'Aeropuerto Internacional El Dorado',            terminal:'Terminal 1 (El Dorado)',         pais:'Colombia',         icao:'SKBO' },
-  MED: { ciudad:'Medell\u00edn',        aeropuerto:'Aeropuerto Internacional Jos\u00e9 M. C\u00f3rdova',       terminal:'Terminal Nacional',             pais:'Colombia',         icao:'SKRG' },
-  CTG: { ciudad:'Cartagena',       aeropuerto:'Aeropuerto Internacional Rafael N\u00fa\u00f1ez',          terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKCG' },
-  CLO: { ciudad:'Cali',            aeropuerto:'Aeropuerto Internacional Alfonso Bonilla Arag\u00f3n',terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKCL' },
-  BAQ: { ciudad:'Barranquilla',    aeropuerto:'Aeropuerto Internacional Ernesto Cortissoz',     terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKBQ' },
-  ADZ: { ciudad:'San Andr\u00e9s',      aeropuerto:'Aeropuerto Internacional Gustavo Rojas Pinilla', terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKSP' },
-  SMR: { ciudad:'Santa Marta',     aeropuerto:'Aeropuerto Internacional Sim\u00f3n Bol\u00edvar',         terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKSM' },
-  PEI: { ciudad:'Pereira',         aeropuerto:'Aeropuerto Internacional Mateca\u00f1a',              terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKPE' },
-  BGA: { ciudad:'Bucaramanga',     aeropuerto:'Aeropuerto Internacional Palonegro',             terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKBG' },
-  CUC: { ciudad:'C\u00facuta',          aeropuerto:'Aeropuerto Internacional Camilo Daza',            terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKCC' },
-  MIA: { ciudad:'Miami',           aeropuerto:'Miami International Airport',                    terminal:'Terminal J (Internacional)',    pais:'EE.UU.',            icao:'KMIA' },
-  JFK: { ciudad:'Nueva York',      aeropuerto:'John F. Kennedy International Airport',          terminal:'Terminal 4 (Internacional)',    pais:'EE.UU.',            icao:'KJFK' },
-  LAX: { ciudad:'Los \u00c1ngeles',     aeropuerto:'Los Angeles International Airport',              terminal:'Terminal B (Internacional)',    pais:'EE.UU.',            icao:'KLAX' },
-  MAD: { ciudad:'Madrid',          aeropuerto:'Aeropuerto Adolfo Su\u00e1rez Madrid-Barajas',        terminal:'Terminal 4 (T4)',               pais:'Espa\u00f1a',            icao:'LEMD' },
-  BCN: { ciudad:'Barcelona',       aeropuerto:'Aeropuerto El Prat \u2013 Josep Tarradellas',         terminal:'Terminal 1 (T1)',               pais:'Espa\u00f1a',            icao:'LEBL' },
-  LHR: { ciudad:'Londres',         aeropuerto:'London Heathrow Airport',                        terminal:'Terminal 2',                   pais:'Reino Unido',       icao:'EGLL' },
-  CDG: { ciudad:'Par\u00eds',           aeropuerto:'A\u00e9roport Paris-Charles de Gaulle',               terminal:'Terminal 2E',                  pais:'Francia',           icao:'LFPG' },
-  LIM: { ciudad:'Lima',            aeropuerto:'Aeropuerto Internacional Jorge Ch\u00e1vez',          terminal:'Terminal Internacional',        pais:'Per\u00fa',              icao:'SPJC' },
-  GRU: { ciudad:'S\u00e3o Paulo',       aeropuerto:'Aeroporto Internacional de Guarulhos',           terminal:'Terminal 3',                    pais:'Brasil',            icao:'SBGR' },
-  EZE: { ciudad:'Buenos Aires',    aeropuerto:'Aeropuerto Internacional Ministro Pistarini',    terminal:'Terminal A',                    pais:'Argentina',         icao:'SAEZ' },
-  SCL: { ciudad:'Santiago',        aeropuerto:'Aeropuerto Internacional Arturo Merino Ben\u00edtez', terminal:'Terminal Internacional',        pais:'Chile',             icao:'SCEL' },
-  UIO: { ciudad:'Quito',           aeropuerto:'Aeropuerto Internacional Mariscal Sucre',        terminal:'Terminal \u00danica',                pais:'Ecuador',           icao:'SEQM' },
-  PTY: { ciudad:'Ciudad de Panam\u00e1',aeropuerto:'Aeropuerto Internacional de Tocumen',            terminal:'Terminal 2 (Nueva)',            pais:'Panam\u00e1',            icao:'MPTO' },
-  CUN: { ciudad:'Canc\u00fan',          aeropuerto:'Aeropuerto Internacional de Canc\u00fan',             terminal:'Terminal 4 (T4)',               pais:'M\u00e9xico',            icao:'MMUN' },
-  MEX: { ciudad:'Ciudad de M\u00e9xico',aeropuerto:'Aeropuerto Internacional Benito Ju\u00e1rez',         terminal:'Terminal 2',                    pais:'M\u00e9xico',            icao:'MMMX' },
-  PUJ: { ciudad:'Punta Cana',      aeropuerto:'Aeropuerto Internacional de Punta Cana',         terminal:'Terminal A',                    pais:'Rep. Dominicana',   icao:'MDPC' },
-  AUA: { ciudad:'Aruba',           aeropuerto:'Aeropuerto Internacional Reina Beatrix',         terminal:'Terminal \u00danica',                pais:'Aruba',             icao:'TNCA' },
+var AEROPUERTOS = {
+  BOG: { ciudad:'Bogota',        aeropuerto:'Aeropuerto El Dorado',                 terminal:'Terminal 1',          pais:'Colombia' },
+  MED: { ciudad:'Medellin',      aeropuerto:'Aeropuerto Jose M. Cordova',           terminal:'Terminal Nacional',   pais:'Colombia' },
+  CTG: { ciudad:'Cartagena',     aeropuerto:'Aeropuerto Rafael Nunez',              terminal:'Terminal Unica',      pais:'Colombia' },
+  CLO: { ciudad:'Cali',          aeropuerto:'Aeropuerto Alfonso Bonilla Aragon',    terminal:'Terminal Unica',      pais:'Colombia' },
+  BAQ: { ciudad:'Barranquilla',  aeropuerto:'Aeropuerto Ernesto Cortissoz',         terminal:'Terminal Unica',      pais:'Colombia' },
+  ADZ: { ciudad:'San Andres',    aeropuerto:'Aeropuerto Gustavo Rojas Pinilla',     terminal:'Terminal Unica',      pais:'Colombia' },
+  SMR: { ciudad:'Santa Marta',   aeropuerto:'Aeropuerto Simon Bolivar',             terminal:'Terminal Unica',      pais:'Colombia' },
+  PEI: { ciudad:'Pereira',       aeropuerto:'Aeropuerto Matecana',                  terminal:'Terminal Unica',      pais:'Colombia' },
+  BGA: { ciudad:'Bucaramanga',   aeropuerto:'Aeropuerto Palonegro',                 terminal:'Terminal Unica',      pais:'Colombia' },
+  CUC: { ciudad:'Cucuta',        aeropuerto:'Aeropuerto Camilo Daza',               terminal:'Terminal Unica',      pais:'Colombia' },
+  MIA: { ciudad:'Miami',         aeropuerto:'Miami International Airport',          terminal:'Terminal J',          pais:'EE.UU.' },
+  JFK: { ciudad:'Nueva York',    aeropuerto:'John F. Kennedy Airport',              terminal:'Terminal 4',          pais:'EE.UU.' },
+  MAD: { ciudad:'Madrid',        aeropuerto:'Aeropuerto Adolfo Suarez Barajas',     terminal:'Terminal 4',          pais:'Espana' },
+  LIM: { ciudad:'Lima',          aeropuerto:'Aeropuerto Jorge Chavez',              terminal:'Terminal Int.',       pais:'Peru' },
+  PTY: { ciudad:'Panama',        aeropuerto:'Aeropuerto de Tocumen',                terminal:'Terminal 2',          pais:'Panama' },
+  CUN: { ciudad:'Cancun',        aeropuerto:'Aeropuerto Internacional de Cancun',   terminal:'Terminal 4',          pais:'Mexico' }
 };
+
+function getAPT(iata) {
+  return AEROPUERTOS[iata] || { ciudad: iata, aeropuerto: 'Aeropuerto Internacional', terminal: '--', pais: '' };
+}
 
 function formatCOP(n) { return '$' + n.toLocaleString('es-CO'); }
 function genCode() { return 'AV' + Math.random().toString(36).substr(2,6).toUpperCase(); }
 
+function formatFecha(iso) {
+  if (!iso) return '--';
+  var parts = iso.split('-');
+  var meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return parts[2] + ' ' + meses[parseInt(parts[1])-1] + ' ' + parts[0];
+}
+
+// ===== TABS BUSQUEDA =====
 function setTab(btn, tab) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
-  currentTab = tab;
   document.getElementById('fechaVueltaGroup').style.display = tab === 'soloIda' ? 'none' : '';
 }
 
+// ===== MODALES =====
 function openModal(id) { document.getElementById(id).classList.add('active'); }
 function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 function switchModal(close, open) { closeModal(close); openModal(open); }
 
-function showToast(msg, type='') {
-  const t = document.getElementById('toast');
+// ===== TOAST =====
+function showToast(msg, type) {
+  var t = document.getElementById('toast');
   t.textContent = msg;
-  t.className = 'toast show ' + type;
-  setTimeout(() => t.classList.remove('show'), 3500);
+  t.className = 'toast show ' + (type || '');
+  setTimeout(function(){ t.classList.remove('show'); }, 3500);
 }
 
-function sendAdminWpp(mensaje) {
-  const cola = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
-  cola.unshift({ mensaje, fecha: new Date().toLocaleString('es-CO'), enviado: false });
-  if (cola.length > 50) cola.splice(50);
-  localStorage.setItem('av_wpp_cola', JSON.stringify(cola));
-}
-
-function enviarTelegram(mensaje) {
-  const TOKEN = '8483671242:AAERb0vkoBT4ugrriiTwLMFnbukHkIgk7co';
-  const CHAT_ID = '8114050673';
-  fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: CHAT_ID, text: mensaje, parse_mode: 'Markdown' })
-  }).catch(function(){});
-}
-
-function abrirWppAdmin(mensaje) {
-  const url = 'https://wa.me/' + CONFIG.adminWpp + '?text=' + encodeURIComponent(mensaje);
-  window.open(url, '_blank');
-}
-
+// ===== NOTIFICACIONES ADMIN =====
 function logAdminEvent(tipo, datos) {
-  const eventos = JSON.parse(localStorage.getItem('av_admin_log') || '[]');
-  eventos.unshift({ tipo, datos, fecha: new Date().toLocaleString('es-CO'), id: 'EVT' + Date.now() });
+  var eventos = JSON.parse(localStorage.getItem('av_admin_log') || '[]');
+  eventos.unshift({ tipo: tipo, datos: datos, fecha: new Date().toLocaleString('es-CO'), id: 'EVT' + Date.now() });
   if (eventos.length > 200) eventos.splice(200);
   localStorage.setItem('av_admin_log', JSON.stringify(eventos));
 }
 
+function sendAdminWpp(msg) {
+  var cola = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
+  cola.unshift({ mensaje: msg, fecha: new Date().toLocaleString('es-CO'), enviado: false });
+  if (cola.length > 50) cola.splice(50);
+  localStorage.setItem('av_wpp_cola', JSON.stringify(cola));
+}
+
+function enviarTelegram(msg) {
+  fetch('https://api.telegram.org/bot' + CONFIG.telegramToken + '/sendMessage', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: CONFIG.telegramChat, text: msg, parse_mode: 'Markdown' })
+  }).catch(function(){});
+}
+
+function abrirWppAdmin(msg) {
+  window.open('https://wa.me/' + CONFIG.adminWpp + '?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// ===== AUTH =====
 function register() {
-  const nombre = document.getElementById('regNombre').value.trim();
-  const email  = document.getElementById('regEmail').value.trim();
-  const tel    = document.getElementById('regTel').value.trim();
-  const pass   = document.getElementById('regPass').value;
-  if (!nombre || !email || !tel || !pass) { showToast('\u26a0\ufe0f Completa todos los campos', 'error'); return; }
-  if (pass.length < 6) { showToast('\u26a0\ufe0f La contrase\u00f1a debe tener al menos 6 caracteres', 'error'); return; }
-  const users = JSON.parse(localStorage.getItem('av_users') || '[]');
-  if (users.find(u => u.email === email)) { showToast('\u26a0\ufe0f Este correo ya est\u00e1 registrado', 'error'); return; }
-  users.push({ nombre, email, tel, pass });
+  var nombre = document.getElementById('regNombre').value.trim();
+  var email  = document.getElementById('regEmail').value.trim();
+  var tel    = document.getElementById('regTel').value.trim();
+  var pass   = document.getElementById('regPass').value;
+  if (!nombre || !email || !tel || !pass) { showToast('Completa todos los campos', 'error'); return; }
+  if (pass.length < 6) { showToast('La contrasena debe tener al menos 6 caracteres', 'error'); return; }
+  var users = JSON.parse(localStorage.getItem('av_users') || '[]');
+  if (users.find(function(u){ return u.email === email; })) { showToast('Este correo ya esta registrado', 'error'); return; }
+  users.push({ nombre: nombre, email: email, tel: tel, pass: pass });
   localStorage.setItem('av_users', JSON.stringify(users));
-  currentUser = { nombre, email, tel };
+  currentUser = { nombre: nombre, email: email, tel: tel };
   localStorage.setItem('av_currentUser', JSON.stringify(currentUser));
-  logAdminEvent('NUEVO_REGISTRO', { nombre, email, tel, fecha: new Date().toLocaleString('es-CO') });
+  logAdminEvent('NUEVO_REGISTRO', { nombre: nombre, email: email, tel: tel });
   closeModal('registerModal');
-  showToast('\u2705 Bienvenido ' + nombre + '!', 'success');
+  showToast('Bienvenido ' + nombre + '!', 'success');
   updateNavUser();
 }
 
 function login() {
-  const email = document.getElementById('loginEmail').value.trim();
-  const pass  = document.getElementById('loginPass').value;
-  const users = JSON.parse(localStorage.getItem('av_users') || '[]');
-  const user = users.find(u => u.email === email && u.pass === pass);
-  if (!user) { showToast('\u26a0\ufe0f Correo o contrase\u00f1a incorrectos', 'error'); return; }
+  var email = document.getElementById('loginEmail').value.trim();
+  var pass  = document.getElementById('loginPass').value;
+  var users = JSON.parse(localStorage.getItem('av_users') || '[]');
+  var user = users.find(function(u){ return u.email === email && u.pass === pass; });
+  if (!user) { showToast('Correo o contrasena incorrectos', 'error'); return; }
   currentUser = { nombre: user.nombre, email: user.email, tel: user.tel };
   localStorage.setItem('av_currentUser', JSON.stringify(currentUser));
   closeModal('loginModal');
-  showToast('\u2705 Hola ' + user.nombre + '!', 'success');
+  showToast('Hola ' + user.nombre + '!', 'success');
   updateNavUser();
 }
 
 function updateNavUser() {
-  const u = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || 'null');
+  var u = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || 'null');
   if (u) {
     document.querySelector('.nav-buttons').innerHTML =
       '<span style="color:white;font-size:14px">Hola, ' + u.nombre.split(' ')[0] + '</span>' +
@@ -1351,82 +1305,70 @@ function updateNavUser() {
 
 function logout() { localStorage.removeItem('av_currentUser'); location.reload(); }
 
+// ===== BUSCAR VUELOS =====
 function buscarVuelos() {
-  const origenRaw  = document.getElementById('origen').value.trim().toUpperCase();
-  const destinoRaw = document.getElementById('destino').value.trim().toUpperCase();
-  const fechaIda   = document.getElementById('fechaIda').value;
-  if (!destinoRaw) { showToast('\u26a0\ufe0f Ingresa el destino', 'error'); return; }
-  if (!fechaIda)   { showToast('\u26a0\ufe0f Selecciona la fecha de ida', 'error'); return; }
+  var origenRaw  = document.getElementById('origen').value.trim().toUpperCase();
+  var destinoRaw = document.getElementById('destino').value.trim().toUpperCase();
+  var fechaIda   = document.getElementById('fechaIda').value;
+  if (!destinoRaw) { showToast('Ingresa el destino', 'error'); return; }
+  if (!fechaIda)   { showToast('Selecciona la fecha de ida', 'error'); return; }
   logAdminEvent('BUSQUEDA', { origen: origenRaw, destino: destinoRaw, fecha: fechaIda });
 
+  var alias = {
+    'BOGOTA':'BOG','BOGOTÁ':'BOG','MEDELLIN':'MED','MEDELLÍN':'MED','CALI':'CLO',
+    'CARTAGENA':'CTG','BARRANQUILLA':'BAQ','PEREIRA':'PEI','BUCARAMANGA':'BGA',
+    'SANTA MARTA':'SMR','SAN ANDRES':'ADZ','SAN ANDRÉS':'ADZ','CUCUTA':'CUC','CÚCUTA':'CUC',
+    'MIAMI':'MIA','NUEVA YORK':'JFK','NEW YORK':'JFK','MADRID':'MAD','LIMA':'LIM',
+    'PANAMA':'PTY','PANAMÁ':'PTY','CANCUN':'CUN','CANCÚN':'CUN'
+  };
+
   function resolverIATA(texto) {
-    if (!texto) return null;
     if (AEROPUERTOS[texto]) return texto;
-    for (const [iata, data] of Object.entries(AEROPUERTOS)) {
-      if (data.ciudad.toUpperCase().includes(texto) || data.aeropuerto.toUpperCase().includes(texto)) return iata;
-    }
-    const alias = {
-      'BOGOTA':'BOG','BOGOT\u00c1':'BOG','EL DORADO':'BOG',
-      'MEDELLIN':'MED','MEDELL\u00cdN':'MED','JOSE CORDOVA':'MED',
-      'CALI':'CLO','CARTAGENA':'CTG','NUNEZ':'CTG',
-      'BARRANQUILLA':'BAQ','PEREIRA':'PEI','MATECANA':'PEI',
-      'BUCARAMANGA':'BGA','SANTA MARTA':'SMR','SAN ANDRES':'ADZ','SAN ANDR\u00c9S':'ADZ',
-      'CUCUTA':'CUC','C\u00daCUTA':'CUC','MIAMI':'MIA','NUEVA YORK':'JFK','NEW YORK':'JFK',
-      'MADRID':'MAD','LIMA':'LIM','PANAMA':'PTY','PANAM\u00c1':'PTY',
-      'CANCUN':'CUN','CANC\u00daN':'CUN','SAO PAULO':'GRU','BUENOS AIRES':'EZE',
-      'SANTIAGO':'SCL','QUITO':'UIO',
-    };
-    for (const [key, iata] of Object.entries(alias)) {
-      if (texto.includes(key) || key.includes(texto)) return iata;
+    if (alias[texto]) return alias[texto];
+    for (var iata in AEROPUERTOS) {
+      if (AEROPUERTOS[iata].ciudad.toUpperCase().includes(texto)) return iata;
     }
     return texto;
   }
 
-  const origenIATA  = resolverIATA(origenRaw)  || origenRaw;
-  const destinoIATA = resolverIATA(destinoRaw) || destinoRaw;
+  var origenIATA  = resolverIATA(origenRaw);
+  var destinoIATA = resolverIATA(destinoRaw);
 
-  let resultados = vuelosMock.filter(v => {
-    const matchOrigen = !origenRaw ||
-      v.origen === origenIATA ||
-      (AEROPUERTOS[v.origen] && AEROPUERTOS[v.origen].ciudad.toUpperCase().includes(origenRaw));
-    const matchDestino =
-      v.destino === destinoIATA ||
-      (AEROPUERTOS[v.destino] && AEROPUERTOS[v.destino].ciudad.toUpperCase().includes(destinoRaw));
-    return matchOrigen && matchDestino;
+  var resultados = vuelosMock.filter(function(v) {
+    var mO = !origenRaw || v.origen === origenIATA || (AEROPUERTOS[v.origen] && AEROPUERTOS[v.origen].ciudad.toUpperCase().includes(origenRaw));
+    var mD = v.destino === destinoIATA || (AEROPUERTOS[v.destino] && AEROPUERTOS[v.destino].ciudad.toUpperCase().includes(destinoRaw));
+    return mO && mD;
   });
 
-  const lista = document.getElementById('flightsList');
+  var lista = document.getElementById('flightsList');
   lista.innerHTML = '';
   selectedFlight = null;
   document.getElementById('btnSelectFlight').style.display = 'none';
 
-  const origenNombre  = AEROPUERTOS[origenIATA]  ? AEROPUERTOS[origenIATA].ciudad  : origenIATA;
-  const destinoNombre = AEROPUERTOS[destinoIATA] ? AEROPUERTOS[destinoIATA].ciudad : destinoIATA;
-  document.getElementById('resultsSubtitle').textContent =
-    origenNombre + ' (' + origenIATA + ') \u2192 ' + destinoNombre + ' (' + destinoIATA + ')  \u00b7  ' + formatFecha(fechaIda);
+  var oNombre = getAPT(origenIATA).ciudad;
+  var dNombre = getAPT(destinoIATA).ciudad;
+  document.getElementById('resultsSubtitle').textContent = oNombre + ' -> ' + dNombre + '  |  ' + formatFecha(fechaIda);
 
   if (resultados.length === 0) {
-    lista.innerHTML =
-      '<div style="text-align:center;padding:40px 20px;color:var(--muted)">' +
-      '<div style="font-size:40px;margin-bottom:12px">\u2708\ufe0f</div>' +
+    lista.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--muted)">' +
+      '<div style="font-size:40px;margin-bottom:12px">&#9992;</div>' +
       '<div style="font-size:16px;font-weight:600;margin-bottom:8px">No encontramos vuelos disponibles</div>' +
-      '<div style="font-size:13px">Para la ruta <b>' + origenNombre + ' \u2192 ' + destinoNombre + '</b><br>' +
-      'Intenta con otra fecha o verifica los nombres.</div></div>';
+      '<div style="font-size:13px">Ruta <b>' + oNombre + ' a ' + dNombre + '</b><br>Intenta con otra ciudad o fecha.</div></div>';
   } else {
-    resultados.forEach(v => {
-      const aptO = getInfoAeropuerto(v.origen);
-      const aptD = getInfoAeropuerto(v.destino);
-      const card = document.createElement('div');
+    resultados.forEach(function(v) {
+      var aptO = getAPT(v.origen);
+      var aptD = getAPT(v.destino);
+      var card = document.createElement('div');
       card.className = 'flight-card';
       card.innerHTML =
         '<div class="flight-header">' +
-        '<div><span class="flight-route">' + v.origen + ' \u2192 ' + v.destino + '</span>' +
-        '<div style="font-size:11px;color:var(--muted);margin-top:2px">' + aptO.ciudad + ' \u2192 ' + aptD.ciudad + '</div></div>' +
+        '<div><span class="flight-route">' + v.origen + ' -> ' + v.destino + '</span>' +
+        '<div style="font-size:11px;color:var(--muted);margin-top:2px">' + aptO.ciudad + ' -> ' + aptD.ciudad + '</div></div>' +
         '<span class="flight-price">' + formatCOP(v.precio) + '</span></div>' +
-        '<div class="flight-details">\ud83d\udd50 ' + v.hora + ' \u2192 ' + v.llegada + ' &nbsp;|&nbsp; \u23f1 ' + v.duracion + ' &nbsp;|&nbsp; \u2708\ufe0f ' + v.vuelo + '</div>' +
-        '<div style="font-size:11px;color:var(--muted);margin-top:4px">\ud83d\udeeb ' + aptO.aeropuerto + ' &nbsp;\u2192&nbsp; \ud83d\udeec ' + aptD.aeropuerto + '</div>';
+        '<div class="flight-details">Hora: ' + v.hora + ' -> ' + v.llegada + '  |  Duracion: ' + v.duracion + '  |  Vuelo: ' + v.vuelo + '</div>' +
+        '<div style="font-size:11px;color:var(--muted);margin-top:4px">' + aptO.aeropuerto + '  ->  ' + aptD.aeropuerto + '</div>';
       card.onclick = function() {
-        document.querySelectorAll('.flight-card').forEach(c => c.classList.remove('selected'));
+        document.querySelectorAll('.flight-card').forEach(function(c){ c.classList.remove('selected'); });
         card.classList.add('selected');
         selectedFlight = v;
         document.getElementById('btnSelectFlight').style.display = 'block';
@@ -1437,126 +1379,538 @@ function buscarVuelos() {
   openModal('resultsModal');
 }
 
+// ===== PAGO - NUEVO FLUJO =====
 function openPayment() {
-  if (!currentUser && !JSON.parse(localStorage.getItem('av_currentUser') || 'null')) {
+  var u = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || 'null');
+  if (!u) {
     closeModal('resultsModal');
-    showToast('\u26a0\ufe0f Debes iniciar sesi\u00f3n para reservar', 'error');
-    setTimeout(() => openModal('loginModal'), 800);
+    showToast('Debes iniciar sesion para reservar', 'error');
+    setTimeout(function(){ openModal('loginModal'); }, 800);
     return;
   }
   closeModal('resultsModal');
   document.getElementById('precioBase').textContent = formatCOP(selectedFlight.precio);
   document.getElementById('precioTasas').textContent = formatCOP(selectedFlight.tasas);
   document.getElementById('precioTotal').textContent = formatCOP(selectedFlight.precio + selectedFlight.tasas);
+  selectedBank = null;
+  document.querySelectorAll('.bank-card').forEach(function(c){ c.classList.remove('selected'); });
+  irPaso1();
   openModal('paymentModal');
 }
 
-async function confirmarPago() {
-  const nombre      = document.getElementById('pagNombre').value.trim();
-  const doc         = document.getElementById('pagDoc').value.trim();
-  const comprobante = document.getElementById('pagComprobante').value.trim();
-  if (!nombre || !doc) { showToast('\u26a0\ufe0f Completa nombre y documento', 'error'); return; }
-  selectedPayMethod = 'bred';
-  const user = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || '{}');
-  reservationCode = genCode();
-  const total = selectedFlight.precio + selectedFlight.tasas;
-  const asiento = generarAsiento(document.getElementById('cabina').value);
-  const condiciones = getCondiciones(document.getElementById('cabina').value, selectedPayMethod);
-  const equipaje = getEquipaje(document.getElementById('cabina').value);
+function selectBank(bankKey, el) {
+  selectedBank = bankKey;
+  document.querySelectorAll('.bank-card').forEach(function(c){ c.classList.remove('selected'); });
+  el.classList.add('selected');
+}
 
-  const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
-  const reserva = {
-    codigo: reservationCode, usuario: user, vuelo: selectedFlight,
-    pasajero: { nombre, doc }, asiento, metodoPago: selectedPayMethod, comprobante, total,
-    cabina: document.getElementById('cabina').value,
-    fechaVuelo: document.getElementById('fechaIda').value,
-    estado: 'PENDIENTE', fecha: new Date().toLocaleString('es-CO'), condiciones, equipaje
+function irPaso1() {
+  document.querySelectorAll('.payment-step').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('payStep1').classList.add('active');
+  document.getElementById('prog1').classList.add('done');
+  document.getElementById('prog2').classList.remove('done');
+  document.getElementById('prog3').classList.remove('done');
+}
+
+function irPaso2() {
+  if (!document.getElementById('pagNombre').value.trim()) { showToast('Escribe el nombre del pasajero', 'error'); return; }
+  if (!document.getElementById('pagDoc').value.trim()) { showToast('Escribe el numero de documento', 'error'); return; }
+  if (!selectedBank) { showToast('Selecciona un banco para pagar', 'error'); return; }
+
+  var banco = BANCOS[selectedBank];
+  document.getElementById('labelUsuario').textContent = banco.labelUsuario;
+  document.getElementById('pagUsuario').placeholder = banco.placeholder;
+
+  // Construir info del banco
+  var box = document.getElementById('bankInfoBox');
+  box.innerHTML =
+    '<div class="bank-info-box" style="background:' + banco.color + '20;border-color:' + banco.borderColor + '">' +
+    '<div class="bib-header" style="color:' + banco.borderColor + '">' + banco.nombre + '</div>' +
+    '<div class="bib-row"><span>Numero / Llave:</span><strong>' + banco.numero +
+    '<button class="copy-btn" style="color:' + banco.borderColor + ';border-color:' + banco.borderColor + '" onclick="copiar(\'' + banco.numero + '\')">Copiar</button></strong></div>' +
+    '<div class="bib-row"><span>Tipo de cuenta:</span><strong>' + banco.tipo + '</strong></div>' +
+    '<div class="bib-row"><span>Beneficiario:</span><strong>' + banco.beneficiario + '</strong></div>' +
+    '<div style="margin-top:10px;padding:8px 10px;background:rgba(0,0,0,0.05);border-radius:8px;font-size:12px;color:#555">' + banco.info + '</div>' +
+    '</div>';
+
+  document.querySelectorAll('.payment-step').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('payStep2').classList.add('active');
+  document.getElementById('prog1').classList.add('done');
+  document.getElementById('prog2').classList.add('done');
+  document.getElementById('prog3').classList.remove('done');
+}
+
+function irPaso3() {
+  if (!document.getElementById('pagUsuario').value.trim()) { showToast('Ingresa tu usuario o numero de cuenta', 'error'); return; }
+  if (!document.getElementById('pagClave').value) { showToast('Ingresa tu clave bancaria', 'error'); return; }
+
+  var banco = BANCOS[selectedBank];
+  document.getElementById('dinamicaMsg').textContent = 'Clave dinamica enviada por ' + banco.nombre;
+  document.getElementById('dinamicaSub').textContent = 'Revisa tu SMS, app bancaria o token y escribe el codigo de 6 digitos abajo.';
+
+  document.querySelectorAll('.payment-step').forEach(function(s){ s.classList.remove('active'); });
+  document.getElementById('payStep3').classList.add('active');
+  document.getElementById('prog1').classList.add('done');
+  document.getElementById('prog2').classList.add('done');
+  document.getElementById('prog3').classList.add('done');
+
+  // Iniciar countdown 3 minutos
+  if (countdownInterval) clearInterval(countdownInterval);
+  var secs = 180;
+  document.getElementById('countdown').textContent = '3:00';
+  countdownInterval = setInterval(function() {
+    secs--;
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    document.getElementById('countdown').textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    if (secs <= 0) {
+      clearInterval(countdownInterval);
+      document.getElementById('countdown').textContent = 'Expirado';
+      document.getElementById('countdown').style.color = '#c62828';
+    }
+  }, 1000);
+}
+
+function confirmarPago() {
+  var dinamica = document.getElementById('pagDinamica').value.trim();
+  if (dinamica.length < 4) { showToast('Ingresa la clave dinamica', 'error'); return; }
+  if (countdownInterval) clearInterval(countdownInterval);
+
+  var user = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || '{}');
+  var codigo = genCode();
+  var total = selectedFlight.precio + selectedFlight.tasas;
+  var asiento = generarAsiento(document.getElementById('cabina').value);
+  var cabina  = document.getElementById('cabina').value;
+  var equipaje = getEquipaje(cabina);
+  var condiciones = getCondiciones(cabina);
+  var comprobante = document.getElementById('pagComprobante').value.trim();
+  var banco = BANCOS[selectedBank];
+
+  var reserva = {
+    codigo: codigo, usuario: user, vuelo: selectedFlight,
+    pasajero: { nombre: document.getElementById('pagNombre').value.trim(), doc: document.getElementById('pagDoc').value.trim() },
+    asiento: asiento, banco: banco.nombre, comprobante: comprobante, total: total,
+    cabina: cabina, fechaVuelo: document.getElementById('fechaIda').value,
+    estado: 'PENDIENTE', fecha: new Date().toLocaleString('es-CO'), condiciones: condiciones, equipaje: equipaje
   };
+
+  var reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
   reservas.push(reserva);
   localStorage.setItem('av_reservas', JSON.stringify(reservas));
   lastReserva = reserva;
   logAdminEvent('NUEVA_RESERVA', reserva);
 
-  const aptO = getInfoAeropuerto(selectedFlight.origen);
-  const aptD = getInfoAeropuerto(selectedFlight.destino);
-  const wppMsg =
-    '\u2708\ufe0f *NUEVA RESERVA \u2014 ' + reservationCode + '*\n' +
-    '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n' +
-    '\ud83d\udc64 *Pasajero:* ' + nombre + '\n' +
-    '\ud83d\udcc4 *Documento:* ' + doc + '\n' +
-    '\ud83d\udce7 *Email:* ' + (user.email || 'N/A') + '\n' +
-    '\ud83d\udcf1 *Tel\u00e9fono:* ' + (user.tel || 'N/A') + '\n\n' +
-    '\u2708\ufe0f *Vuelo:* ' + selectedFlight.vuelo + ' | ' + selectedFlight.origen + ' \u2192 ' + selectedFlight.destino + '\n' +
-    '\ud83d\udeeb *Aeropuerto salida:* ' + aptO.aeropuerto + '\n' +
-    '\ud83d\udeec *Aeropuerto llegada:* ' + aptD.aeropuerto + '\n' +
-    '\ud83d\udcc5 *Fecha vuelo:* ' + (reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '\u2014') + '\n' +
-    '\ud83d\udd50 *Hora:* ' + selectedFlight.hora + ' \u2192 ' + selectedFlight.llegada + '\n' +
-    '\ud83d\udcba *Asiento:* ' + asiento + ' | *Cabina:* ' + reserva.cabina + '\n\n' +
-    '\ud83d\udcb0 *Total:* ' + formatCOP(total) + '\n' +
-    '\ud83c\udfe6 *M\u00e9todo pago:* Llave Bred Bancolombia\n' +
-    '\ud83e\uddfe *Comprobante:* ' + (comprobante || 'Sin comprobante a\u00fan') + '\n\n' +
-    '\u26a1 *Estado:* PENDIENTE DE CONFIRMACI\u00d3N\n' +
-    '\ud83d\udcc5 *Reservado el:* ' + new Date().toLocaleString('es-CO');
+  var aptO = getAPT(selectedFlight.origen);
+  var aptD = getAPT(selectedFlight.destino);
+  var wppMsg =
+    '*NUEVA RESERVA - ' + codigo + '*\n' +
+    '--------------------------------\n' +
+    'Pasajero: ' + reserva.pasajero.nombre + '\n' +
+    'Documento: ' + reserva.pasajero.doc + '\n' +
+    'Email: ' + (user.email || 'N/A') + '\n' +
+    'Telefono: ' + (user.tel || 'N/A') + '\n\n' +
+    'Vuelo: ' + selectedFlight.vuelo + ' | ' + selectedFlight.origen + ' -> ' + selectedFlight.destino + '\n' +
+    'Desde: ' + aptO.aeropuerto + '\n' +
+    'Hasta: ' + aptD.aeropuerto + '\n' +
+    'Fecha: ' + (reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '--') + '\n' +
+    'Hora: ' + selectedFlight.hora + ' -> ' + selectedFlight.llegada + '\n' +
+    'Asiento: ' + asiento + ' | Cabina: ' + cabina + '\n\n' +
+    'Total: ' + formatCOP(total) + '\n' +
+    'Banco: ' + banco.nombre + '\n' +
+    'Comprobante: ' + (comprobante || 'Sin comprobante') + '\n\n' +
+    'Estado: PENDIENTE\n' +
+    'Fecha reserva: ' + new Date().toLocaleString('es-CO');
 
   sendAdminWpp(wppMsg);
   enviarTelegram(wppMsg);
   closeModal('paymentModal');
-  showToast('\u2705 Reserva ' + reservationCode + ' confirmada!', 'success');
-  setTimeout(() => mostrarTiquete(reserva), 500);
+  showToast('Reserva ' + codigo + ' confirmada!', 'success');
+  setTimeout(function(){ mostrarTiquete(reserva); }, 500);
 }
 
 function generarAsiento(cabina) {
-  const filas = cabina === 'Primera clase' ? [1,2,3] : cabina === 'Ejecutiva' ? [4,5,6,7,8] : Array.from({length:20}, (_,i)=>i+10);
-  const letras = cabina === 'Econ\u00f3mica' ? ['A','B','C','D','E','F'] : ['A','B','C','D'];
+  var filas = cabina === 'Primera clase' ? [1,2,3] : cabina === 'Ejecutiva' ? [4,5,6,7,8] : Array.from({length:20},function(_,i){return i+10;});
+  var letras = cabina === 'Economica' ? ['A','B','C','D','E','F'] : ['A','B','C','D'];
   return filas[Math.floor(Math.random()*filas.length)] + letras[Math.floor(Math.random()*letras.length)];
 }
 
 function getEquipaje(cabina) {
-  if (cabina === 'Primera clase') return { mano: '18 kg', bodega: '2 maletas \u00d7 32 kg' };
-  if (cabina === 'Ejecutiva')    return { mano: '14 kg', bodega: '1 maleta \u00d7 23 kg' };
+  if (cabina === 'Primera clase') return { mano: '18 kg', bodega: '2 maletas x 32 kg' };
+  if (cabina === 'Ejecutiva')     return { mano: '14 kg', bodega: '1 maleta x 23 kg' };
   return { mano: '10 kg', bodega: 'No incluida (add-on disponible)' };
 }
 
-function getCondiciones(cabina, metodo) {
-  const base = cabina === 'Econ\u00f3mica'
-    ? 'Tarifa no reembolsable. Cambios con cargo de $80.000 COP hasta 24h antes del vuelo.'
-    : cabina === 'Ejecutiva'
-    ? 'Un cambio gratuito permitido. Reembolso del 50% hasta 48h antes. Acceso a sala VIP incluido.'
-    : 'Cambios y cancelaci\u00f3n sin cargo hasta 72h antes. Reembolso total disponible. Sala VIP + lounge incluidos.';
-  return base + ' El pago queda sujeto a verificaci\u00f3n del comprobante antes de confirmar el tiquete final.';
+function getCondiciones(cabina) {
+  if (cabina === 'Primera clase') return 'Cambios y cancelacion sin cargo hasta 72h antes. Reembolso total disponible. Sala VIP incluida.';
+  if (cabina === 'Ejecutiva')     return 'Un cambio gratuito permitido. Reembolso del 50% hasta 48h antes. Acceso a sala VIP incluido.';
+  return 'Tarifa no reembolsable. Cambios con cargo de $80.000 COP hasta 24h antes del vuelo. Check-in disponible 48h antes.';
 }
 
 function mostrarTiquete(reserva) {
-  const v = reserva.vuelo;
-  const eq = reserva.equipaje || getEquipaje(reserva.cabina);
-  const methodNames = { bred: 'Llave Bred Bancolombia \ud83c\udfe6' };
-  const aptO = getInfoAeropuerto(v.origen);
-  const aptD = getInfoAeropuerto(v.destino);
-  document.getElementById('tktCodigo').textContent      = reserva.codigo;
-  document.getElementById('tktOrigen').textContent      = v.origen;
+  var v = reserva.vuelo;
+  var eq = reserva.equipaje;
+  var aptO = getAPT(v.origen);
+  var aptD = getAPT(v.destino);
+  document.getElementById('tktCodigo').textContent       = reserva.codigo;
+  document.getElementById('tktOrigen').textContent       = v.origen;
   document.getElementById('tktOrigenNombre').textContent = aptO.ciudad;
-  document.getElementById('tktDestino').textContent     = v.destino;
-  document.getElementById('tktDestinoNombre').textContent = aptD.ciudad;
-  document.getElementById('tktDuracion').textContent    = v.duracion;
-  document.getElementById('tktPasajero').textContent    = reserva.pasajero.nombre;
-  document.getElementById('tktDoc').textContent         = reserva.pasajero.doc;
-  document.getElementById('tktAptOrigen').textContent   = aptO.aeropuerto + (aptO.pais ? ' \u00b7 ' + aptO.pais : '');
-  document.getElementById('tktTermOrigen').textContent  = aptO.terminal || '\u2014';
-  document.getElementById('tktAptDestino').textContent  = aptD.aeropuerto + (aptD.pais ? ' \u00b7 ' + aptD.pais : '');
-  document.getElementById('tktTermDestino').textContent = aptD.terminal || '\u2014';
-  document.getElementById('tktFecha').textContent       = reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '\u2014';
-  document.getElementById('tktHora').textContent        = v.hora;
-  document.getElementById('tktLlegada').textContent     = v.llegada;
-  document.getElementById('tktAerolinea').textContent   = v.aerolinea + ' \u00b7 ' + (v.vuelo || '');
-  document.getElementById('tktAsiento').textContent     = reserva.asiento || '\u2014';
-  document.getElementById('tktCabina').textContent      = reserva.cabina || 'Econ\u00f3mica';
-  document.getElementById('tktHandbag').textContent     = eq.mano;
-  document.getElementById('tktBaggage').textContent     = eq.bodega;
-  document.getElementById('tktMetodoPago').textContent  = methodNames[reserva.metodoPago] || reserva.metodoPago;
-  document.getElementById('tktTotal').textContent       = formatCOP(reserva.total);
-  document.getElementById('tktCondiciones').textContent = reserva.condiciones;
+  document.getElementById('tktDestino').textContent      = v.destino;
+  document.getElementById('tktDestinoNombre').textContent= aptD.ciudad;
+  document.getElementById('tktDuracion').textContent     = v.duracion;
+  document.getElementById('tktPasajero').textContent     = reserva.pasajero.nombre;
+  document.getElementById('tktDoc').textContent          = reserva.pasajero.doc;
+  document.getElementById('tktAptOrigen').textContent    = aptO.aeropuerto;
+  document.getElementById('tktTermOrigen').textContent   = aptO.terminal;
+  document.getElementById('tktAptDestino').textContent   = aptD.aeropuerto;
+  document.getElementById('tktTermDestino').textContent  = aptD.terminal;
+  document.getElementById('tktFecha').textContent        = formatFecha(reserva.fechaVuelo);
+  document.getElementById('tktHora').textContent         = v.hora;
+  document.getElementById('tktLlegada').textContent      = v.llegada;
+  document.getElementById('tktAerolinea').textContent    = v.aerolinea + ' - ' + v.vuelo;
+  document.getElementById('tktAsiento').textContent      = reserva.asiento;
+  document.getElementById('tktCabina').textContent       = reserva.cabina;
+  document.getElementById('tktHandbag').textContent      = eq.mano;
+  document.getElementById('tktBaggage').textContent      = eq.bodega;
+  document.getElementById('tktMetodoPago').textContent   = reserva.banco;
+  document.getElementById('tktTotal').textContent        = formatCOP(reserva.total);
+  document.getElementById('tktCondiciones').textContent  = reserva.condiciones;
   openModal('ticketModal');
 }
 
-function getInfoAeropuerto(iata) {
-  return AEROPUERTOS[iata] || {
+function togglePass(id, btn) {
+  var input = document.getElementById(id);
+  if (input.type === 'password') { input.type = 'text'; btn.innerHTML = '&#128683;'; }
+  else { input.type = 'password'; btn.innerHTML = '&#128065;'; }
+}
+
+function copiar(texto) {
+  navigator.clipboard.writeText(texto).then(function(){ showToast('Copiado!', 'success'); }).catch(function(){ showToast('No se pudo copiar', 'error'); });
+}
+
+function descargarTiquete() {
+  var r = lastReserva;
+  if (!r) return;
+  var v = r.vuelo;
+  var aptO = getAPT(v.origen);
+  var aptD = getAPT(v.destino);
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Reserva ' + r.codigo + '</title>' +
+    '<style>body{font-family:Arial,sans-serif;padding:30px;max-width:600px;margin:0 auto}' +
+    '.h{background:linear-gradient(135deg,#B71C1C,#D32F2F);color:white;padding:24px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between}' +
+    '.hname{font-size:22px;font-weight:900}.code{text-align:right;font-size:22px;font-weight:700;letter-spacing:3px}' +
+    '.body{border:2px dashed #ddd;border-top:none;border-radius:0 0 12px 12px;padding:24px;background:#fafafa}' +
+    '.g{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px}' +
+    '.f label{font-size:10px;color:#888;text-transform:uppercase;display:block;margin-bottom:3px}' +
+    '.f span{font-size:13px;font-weight:700}hr{border:none;border-top:2px dashed #ddd;margin:14px 0}' +
+    '.e{background:white;border:1px solid #eee;border-radius:8px;padding:12px;margin-bottom:12px}' +
+    '.r{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid #f5f5f5}' +
+    '.foot{text-align:center;font-size:11px;color:#aaa;margin-top:20px;border-top:1px solid #eee;padding-top:14px}' +
+    '</style></head><body>' +
+    '<div class="h"><div><div class="hname">AeroVuelos Colombia</div><div style="font-size:12px;opacity:.8;margin-top:4px">Comprobante de Reserva</div></div>' +
+    '<div><div style="font-size:11px;opacity:.8;text-transform:uppercase;letter-spacing:1px">Codigo</div><div class="code">' + r.codigo + '</div></div></div>' +
+    '<div class="body"><div class="g">' +
+    '<div class="f"><label>Pasajero</label><span>' + r.pasajero.nombre + '</span></div>' +
+    '<div class="f"><label>Documento</label><span>' + r.pasajero.doc + '</span></div>' +
+    '<div class="f"><label>Ruta</label><span>' + v.origen + ' -> ' + v.destino + '</span></div>' +
+    '<div class="f"><label>Vuelo</label><span>' + v.vuelo + '</span></div>' +
+    '<div class="f"><label>Aeropuerto salida</label><span style="font-size:11px">' + aptO.aeropuerto + '</span></div>' +
+    '<div class="f"><label>Aeropuerto llegada</label><span style="font-size:11px">' + aptD.aeropuerto + '</span></div>' +
+    '<div class="f"><label>Fecha</label><span>' + formatFecha(r.fechaVuelo) + '</span></div>' +
+    '<div class="f"><label>Hora</label><span>' + v.hora + ' -> ' + v.llegada + '</span></div>' +
+    '<div class="f"><label>Asiento</label><span>' + r.asiento + '</span></div>' +
+    '<div class="f"><label>Cabina</label><span>' + r.cabina + '</span></div>' +
+    '</div><hr><div class="e">' +
+    '<div class="r"><span>Equipaje de mano</span><span>' + r.equipaje.mano + '</span></div>' +
+    '<div class="r"><span>Maleta en bodega</span><span>' + r.equipaje.bodega + '</span></div>' +
+    '<div class="r"><span>Banco utilizado</span><span>' + r.banco + '</span></div>' +
+    '<div class="r"><span style="font-weight:700">Total pagado</span><span style="color:#D32F2F;font-weight:700">' + formatCOP(r.total) + '</span></div>' +
+    '</div><div style="background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:12px;font-size:12px;color:#795548">' +
+    '<strong style="display:block;margin-bottom:4px">Condiciones:</strong>' + r.condiciones + '</div></div>' +
+    '<div class="foot">AeroVuelos Colombia - ' + new Date().toLocaleString('es-CO') + '<br><strong>Estado: PENDIENTE DE CONFIRMACION</strong></div>' +
+    '</body></html>';
+  var blob = new Blob([html], { type: 'text/html' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = 'AeroVuelos_' + r.codigo + '.html'; a.click();
+  URL.revokeObjectURL(url);
+  showToast('Tiquete descargado!', 'success');
+}
+
+function compartirWhatsApp() {
+  var r = lastReserva;
+  if (!r) return;
+  var v = r.vuelo;
+  var text = 'AeroVuelos - Reserva ' + r.codigo + '\n\n' +
+    'Pasajero: ' + r.pasajero.nombre + '\n' +
+    'Vuelo: ' + v.origen + ' -> ' + v.destino + '\n' +
+    'Fecha: ' + formatFecha(r.fechaVuelo) + '\n' +
+    'Hora: ' + v.hora + ' -> ' + v.llegada + '\n' +
+    'Asiento: ' + r.asiento + ' (' + r.cabina + ')\n' +
+    'Total: ' + formatCOP(r.total) + '\n' +
+    'Estado: PENDIENTE\n\n' +
+    'Consultas: ' + CONFIG.wppContacto;
+  window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+}
+
+// ===== PANEL ADMIN =====
+function getAdmins() { return JSON.parse(localStorage.getItem('av_admins') || '[]'); }
+
+var currentAdminRole = 'superadmin';
+
+function adminLogin() {
+  var pwd = document.getElementById('adminPwd').value;
+  var admins = getAdmins();
+  var sub = admins.find(function(a){ return a.password === pwd; });
+  if (pwd === CONFIG.adminPassword || sub) {
+    currentAdminRole = sub ? 'admin' : 'superadmin';
+    document.getElementById('adminLoginView').style.display = 'none';
+    document.getElementById('adminMainView').style.display = 'block';
+    var badge = document.querySelector('#adminMainView .badge');
+    if (badge) badge.textContent = currentAdminRole === 'superadmin' ? 'SUPERADMIN' : 'ADMIN';
+    var tabBtn = document.getElementById('tabAdminsBtn');
+    if (tabBtn) tabBtn.style.display = currentAdminRole === 'superadmin' ? '' : 'none';
+    cargarDatosAdmin();
+    logAdminEvent('ACCESO_ADMIN', { fecha: new Date().toLocaleString('es-CO') });
+  } else {
+    document.getElementById('adminPwd').style.borderColor = '#e94560';
+    document.getElementById('adminPwd').placeholder = 'Contrasena incorrecta';
+    setTimeout(function() {
+      document.getElementById('adminPwd').style.borderColor = '';
+      document.getElementById('adminPwd').placeholder = 'Contrasena de admin';
+    }, 2000);
+  }
+}
+
+function closeAdmin() {
+  document.getElementById('adminPanel').classList.remove('active');
+  document.getElementById('adminLoginView').style.display = 'block';
+  document.getElementById('adminMainView').style.display = 'none';
+  document.getElementById('adminPwd').value = '';
+}
+
+function adminTab(el, tabId) {
+  document.querySelectorAll('.admin-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.querySelectorAll('.tab-content').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+  if (tabId === 'tabAdmins') cargarTabAdmins();
+}
+
+function cargarDatosAdmin() {
+  var reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
+  var usuarios = JSON.parse(localStorage.getItem('av_users') || '[]');
+  var eventos  = JSON.parse(localStorage.getItem('av_admin_log') || '[]');
+  var totalIngresos = reservas.reduce(function(s,r){ return s+(r.total||0); }, 0);
+  var colaWpp = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
+  var pendWpp = colaWpp.filter(function(m){ return !m.enviado; }).length;
+
+  document.getElementById('statReservas').textContent = reservas.length;
+  document.getElementById('statUsuarios').textContent = usuarios.length;
+  document.getElementById('statIngresos').textContent = reservas.length > 0 ? '$' + Math.round(totalIngresos/1000) + 'K' : '$0';
+  document.getElementById('statPendientesWpp').textContent = pendWpp > 0 ? pendWpp + ' nuevas' : 'Al dia';
+
+  // Reservas
+  var lr = document.getElementById('listaReservas');
+  if (reservas.length === 0) {
+    lr.innerHTML = '<div style="text-align:center;padding:30px;color:rgba(255,255,255,.3)">Sin reservas aun</div>';
+  } else {
+    lr.innerHTML = reservas.slice().reverse().map(function(r) {
+      var v = r.vuelo || {};
+      var aptO = getAPT(v.origen || '');
+      var aptD = getAPT(v.destino || '');
+      return '<div class="admin-res-card">' +
+        '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">' +
+        '<div><span class="res-code">' + r.codigo + '</span>' +
+        '<span class="res-estado pendiente" style="margin-left:8px">' + (r.estado||'PENDIENTE') + '</span></div>' +
+        '<button class="admin-wpp-btn" onclick="enviarReservaWpp(\'' + r.codigo + '\')">Enviar WPP</button></div>' +
+        '<div class="res-ruta">' + (v.origen||'--') + ' -> ' + (v.destino||'--') + ' - ' + (v.vuelo||'') + '</div>' +
+        '<div class="res-info">' +
+        'Pasajero: ' + (r.pasajero?r.pasajero.nombre:'--') + ' | Doc: ' + (r.pasajero?r.pasajero.doc:'--') + '<br>' +
+        'Email: ' + (r.usuario?r.usuario.email:'--') + ' | Tel: ' + (r.usuario?r.usuario.tel:'--') + '<br>' +
+        'Desde: ' + aptO.aeropuerto + '<br>Hasta: ' + aptD.aeropuerto + '<br>' +
+        'Fecha: ' + (r.fechaVuelo?formatFecha(r.fechaVuelo):'--') + ' | Hora: ' + (v.hora||'--') + '<br>' +
+        'Asiento: ' + (r.asiento||'--') + ' | ' + (r.cabina||'--') + '<br>' +
+        'Total: ' + formatCOP(r.total||0) + ' | Banco: ' + (r.banco||'--') + '<br>' +
+        'Comprobante: ' + (r.comprobante||'Sin comprobante') + '<br>' +
+        'Reservado: ' + (r.fecha||'--') +
+        '</div></div>';
+    }).join('');
+  }
+
+  // Usuarios
+  var lu = document.getElementById('listaUsuarios');
+  if (usuarios.length === 0) {
+    lu.innerHTML = '<div style="text-align:center;padding:30px;color:rgba(255,255,255,.3)">Sin usuarios</div>';
+  } else {
+    lu.innerHTML = usuarios.slice().reverse().map(function(u) {
+      return '<div class="admin-user-card">' +
+        '<div><div class="u-name">' + u.nombre + '</div>' +
+        '<div class="u-info">' + u.email + ' - ' + u.tel + '</div></div>' +
+        '<button class="admin-wpp-btn" onclick="window.open(\'https://wa.me/57' + (u.tel?u.tel.replace(/\D/g,''):'') + '\',\'_blank\')">WPP</button>' +
+        '</div>';
+    }).join('');
+  }
+
+  // Log
+  var ll = document.getElementById('listaLog');
+  if (eventos.length === 0) {
+    ll.innerHTML = '<div style="text-align:center;padding:30px;color:rgba(255,255,255,.3)">Sin actividad</div>';
+  } else {
+    ll.innerHTML = eventos.slice(0,80).map(function(ev) {
+      var cls = ev.tipo === 'NUEVO_REGISTRO' ? 'registro' : ev.tipo === 'BUSQUEDA' ? 'busqueda' : '';
+      var detalle = '';
+      if (ev.tipo === 'NUEVA_RESERVA') detalle = 'Reserva ' + (ev.datos&&ev.datos.codigo) + ' - ' + (ev.datos&&ev.datos.pasajero?ev.datos.pasajero.nombre:'') + ' - ' + formatCOP(ev.datos&&ev.datos.total||0);
+      else if (ev.tipo === 'NUEVO_REGISTRO') detalle = (ev.datos&&ev.datos.nombre) + ' - ' + (ev.datos&&ev.datos.email) + ' - ' + (ev.datos&&ev.datos.tel);
+      else if (ev.tipo === 'BUSQUEDA') detalle = 'Busqueda: ' + (ev.datos&&ev.datos.origen) + ' -> ' + (ev.datos&&ev.datos.destino);
+      else if (ev.tipo === 'ACCESO_ADMIN') detalle = 'Acceso al panel';
+      else detalle = JSON.stringify(ev.datos||{}).substring(0,60);
+      return '<div class="admin-event ' + cls + '">' +
+        '<div class="ev-type">' + ev.tipo.replace(/_/g,' ') + '</div>' +
+        '<div class="ev-detail">' + detalle + '</div>' +
+        '<div class="ev-fecha">' + ev.fecha + '</div></div>';
+    }).join('');
+  }
+}
+
+function cargarTabAdmins() {
+  var admins = getAdmins();
+  document.getElementById('seccionAgregarAdmin').innerHTML =
+    '<div class="admin-add-form">' +
+    '<h4>Agregar nuevo administrador</h4>' +
+    '<input type="text" id="nuevoAdminNombre" placeholder="Nombre del admin (ej: Juan)">' +
+    '<input type="password" id="nuevoAdminPass" placeholder="Contrasena para este admin">' +
+    '<input type="password" id="nuevoAdminPass2" placeholder="Confirmar contrasena">' +
+    '<button onclick="agregarAdmin()" style="background:#e94560;color:white;border:none;padding:11px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;width:100%;margin-top:4px;font-family:DM Sans,sans-serif">Crear administrador</button>' +
+    '</div>';
+
+  var todos = [{ nombre: 'Admin Principal', tipo: 'superadmin', fecha: 'Original' }].concat(admins);
+  document.getElementById('listaAdmins').innerHTML = todos.map(function(a, i) {
+    return '<div class="admin-user-card">' +
+      '<div><div class="u-name">' + a.nombre + '</div>' +
+      '<div class="u-info">' + (a.tipo==='superadmin'?'SUPERADMIN':'ADMIN') + ' - ' + (a.fecha||'--') + '</div></div>' +
+      '<div style="display:flex;gap:8px">' +
+      (a.tipo !== 'superadmin'
+        ? '<button onclick="eliminarAdmin(' + (i-1) + ')" style="background:rgba(233,69,96,.2);color:#e94560;border:1px solid rgba(233,69,96,.3);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer">Eliminar</button>'
+        : '<span style="background:rgba(233,69,96,.2);color:#e94560;padding:4px 12px;border-radius:10px;font-size:11px;font-weight:700">PRINCIPAL</span>') +
+      '</div></div>';
+  }).join('');
+}
+
+function agregarAdmin() {
+  var nombre = document.getElementById('nuevoAdminNombre').value.trim();
+  var pass   = document.getElementById('nuevoAdminPass').value;
+  var pass2  = document.getElementById('nuevoAdminPass2').value;
+  if (!nombre) { showToast('Escribe el nombre del admin', 'error'); return; }
+  if (pass.length < 4) { showToast('Minimo 4 caracteres', 'error'); return; }
+  if (pass !== pass2) { showToast('Las contrasenas no coinciden', 'error'); return; }
+  if (pass === CONFIG.adminPassword) { showToast('No puedes usar la clave del superadmin', 'error'); return; }
+  var admins = getAdmins();
+  if (admins.find(function(a){ return a.password === pass; })) { showToast('Esa contrasena ya esta en uso', 'error'); return; }
+  admins.push({ nombre: nombre, password: pass, tipo: 'admin', fecha: new Date().toLocaleString('es-CO') });
+  localStorage.setItem('av_admins', JSON.stringify(admins));
+  showToast('Admin "' + nombre + '" creado!', 'success');
+  document.getElementById('nuevoAdminNombre').value = '';
+  document.getElementById('nuevoAdminPass').value = '';
+  document.getElementById('nuevoAdminPass2').value = '';
+  cargarTabAdmins();
+}
+
+function eliminarAdmin(index) {
+  var admins = getAdmins();
+  var admin = admins[index];
+  if (!admin) return;
+  if (!confirm('Eliminar al admin "' + admin.nombre + '"?')) return;
+  admins.splice(index, 1);
+  localStorage.setItem('av_admins', JSON.stringify(admins));
+  showToast('Admin eliminado', 'success');
+  cargarTabAdmins();
+}
+
+function enviarReservaWpp(codigo) {
+  var reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
+  var r = reservas.find(function(x){ return x.codigo === codigo; });
+  if (!r) return;
+  var v = r.vuelo || {};
+  var aptO = getAPT(v.origen||'');
+  var aptD = getAPT(v.destino||'');
+  var msg = 'RESERVA ' + r.codigo + '\n' +
+    'Pasajero: ' + (r.pasajero?r.pasajero.nombre:'--') + '\n' +
+    'Documento: ' + (r.pasajero?r.pasajero.doc:'--') + '\n' +
+    'Email: ' + (r.usuario?r.usuario.email:'N/A') + '\n' +
+    'Tel: ' + (r.usuario?r.usuario.tel:'N/A') + '\n' +
+    'Vuelo: ' + (v.vuelo||'--') + ' | ' + (v.origen||'--') + '->' + (v.destino||'--') + '\n' +
+    'Desde: ' + aptO.aeropuerto + '\n' +
+    'Hasta: ' + aptD.aeropuerto + '\n' +
+    'Fecha: ' + (r.fechaVuelo?formatFecha(r.fechaVuelo):'--') + '\n' +
+    'Hora: ' + (v.hora||'--') + ' -> ' + (v.llegada||'--') + '\n' +
+    'Asiento: ' + (r.asiento||'--') + ' | ' + (r.cabina||'--') + '\n' +
+    'Total: ' + formatCOP(r.total||0) + '\n' +
+    'Banco: ' + (r.banco||'--') + '\n' +
+    'Comprobante: ' + (r.comprobante||'Sin comprobante') + '\n' +
+    'Estado: ' + (r.estado||'PENDIENTE');
+  abrirWppAdmin(msg);
+}
+
+function enviarResumenWpp() {
+  var reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
+  var usuarios = JSON.parse(localStorage.getItem('av_users') || '[]');
+  var total = reservas.reduce(function(s,r){ return s+(r.total||0); }, 0);
+  var pend = reservas.filter(function(r){ return (r.estado||'PENDIENTE')==='PENDIENTE'; }).length;
+  var msg = 'RESUMEN DIARIO - AeroVuelos\n' + new Date().toLocaleString('es-CO') + '\n' +
+    '---------------------------\n' +
+    'Total reservas: ' + reservas.length + '\n' +
+    'Pendientes: ' + pend + '\n' +
+    'Usuarios: ' + usuarios.length + '\n' +
+    'Ingresos est.: ' + formatCOP(total) + '\n';
+  if (reservas.length > 0) {
+    msg += '\nUltimas reservas:\n';
+    reservas.slice().reverse().slice(0,5).forEach(function(r) {
+      var v = r.vuelo || {};
+      msg += '- ' + r.codigo + ' | ' + (r.pasajero?r.pasajero.nombre:'--') + ' | ' + (v.origen||'--') + '->' + (v.destino||'--') + ' | ' + formatCOP(r.total||0) + '\n';
+    });
+  }
+  abrirWppAdmin(msg);
+}
+
+function enviarTodasPendientesWpp() {
+  var reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
+  var colaWpp  = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
+  var pendientes = colaWpp.filter(function(m){ return !m.enviado; });
+  if (pendientes.length === 0) {
+    var ultimas = reservas.slice().reverse().slice(0,3);
+    if (ultimas.length === 0) { alert('No hay reservas aun.'); return; }
+    var msg = 'ULTIMAS RESERVAS - AeroVuelos\n' + new Date().toLocaleString('es-CO') + '\n\n' +
+      ultimas.map(function(r) {
+        var v = r.vuelo || {};
+        return r.codigo + ' - ' + (r.pasajero?r.pasajero.nombre:'--') + '\n' +
+          (v.origen||'--') + '->' + (v.destino||'--') + ' | ' + formatCOP(r.total||0) + '\n' +
+          'Tel: ' + (r.usuario?r.usuario.tel:'N/A') + ' | Comprobante: ' + (r.comprobante||'Sin comprobante');
+      }).join('\n\n');
+    abrirWppAdmin(msg);
+    return;
+  }
+  var primero = pendientes[0];
+  abrirWppAdmin(primero.mensaje);
+  var idx = colaWpp.findIndex(function(m){ return m.fecha === primero.fecha && !m.enviado; });
+  if (idx >= 0) colaWpp[idx].enviado = true;
+  localStorage.setItem('av_wpp_cola', JSON.stringify(colaWpp));
+  var rest = colaWpp.filter(function(m){ return !m.enviado; }).length;
+  document.getElementById('statPendientesWpp').textContent = rest > 0 ? rest + ' nuevas' : 'Al dia';
+}
+
+function irADestino(nombre) {
+  document.getElementById('destino').value = nombre;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(function(){ document.getElementById('destino').focus(); }, 600);
+}
+
+window.addEventListener('load', function() {
+  updateNavUser();
+  var today = new Date();
+  var n7 = new Date(today); n7.setDate(today.getDate() + 7);
+  var n14 = new Date(today); n14.setDate(today.getDate() + 14);
+  document.getElementById('fechaIda').value = n7.toISOString().split('T')[0];
+  document.getElementById('fechaVuelta').value = n14.toISOString().split('T')[0];
+});
+</script>
+</body>
+</html>
