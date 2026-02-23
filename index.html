@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AeroVuelos Colombia — Descubre el mundo</title>
+<title>AeroVuelos Colombia \u2014 Descubre el mundo</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -185,7 +185,7 @@
   .feature-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
   .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-  /* ===== SECCIÓN DESTINOS DESTACADOS ===== */
+  /* ===== SECCI\u00d3N DESTINOS DESTACADOS ===== */
   .section-destinos {
     padding: 80px 40px;
     background: white;
@@ -253,7 +253,7 @@
     width: fit-content;
   }
 
-  /* ===== SECCIÓN PLAYAS ===== */
+  /* ===== SECCI\u00d3N PLAYAS ===== */
   .section-playas { padding: 0 40px 80px; background: white; }
   .playas-scroll {
     display: flex; gap: 20px; overflow-x: auto; padding-bottom: 12px;
@@ -467,7 +467,6 @@
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 14px; margin-bottom: 16px;
   }
-  .ticket-field { }
   .ticket-field .t-label { font-size: 10px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px; }
   .ticket-field .t-val { font-size: 14px; font-weight: 600; color: var(--text); }
 
@@ -515,7 +514,6 @@
     #ticketPrintArea { display: block !important; }
   }
 
-
   /* ===== PANEL ADMIN ===== */
   .admin-overlay {
     display: none; position: fixed; inset: 0;
@@ -536,11 +534,11 @@
   }
   .admin-header h2 { font-family: 'Playfair Display', serif; font-size: 20px; color: white; }
   .admin-header .badge { background: #e94560; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; }
-  .admin-tabs { display: flex; background: #16213e; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .admin-tabs { display: flex; background: #16213e; border-bottom: 1px solid rgba(255,255,255,0.1); overflow-x: auto; }
   .admin-tab {
     flex: 1; padding: 12px; text-align: center; font-size: 13px; font-weight: 600;
     cursor: pointer; color: rgba(255,255,255,0.5); transition: all 0.2s;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; white-space: nowrap;
   }
   .admin-tab.active { color: #e94560; border-bottom-color: #e94560; background: rgba(233,69,96,0.08); }
   .admin-tab:hover { color: white; }
@@ -610,10 +608,17 @@
   #adminNoData { text-align:center; padding:30px; color:rgba(255,255,255,0.3); font-size:14px; }
 
   /* ===== ESTILOS ADMINS ===== */
-  .admin-tabs { overflow-x: auto; }
-  .admin-add-form { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.1); }
+  .admin-add-form {
+    background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px;
+    margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.1);
+  }
   .admin-add-form h4 { color: white; margin-bottom: 14px; font-size: 15px; }
-  .admin-add-form input { width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px 14px; color: white; font-size: 13px; margin-bottom: 10px; outline: none; font-family: 'DM Sans', sans-serif; box-sizing: border-box; }
+  .admin-add-form input {
+    width: 100%; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px; padding: 10px 14px; color: white; font-size: 13px;
+    margin-bottom: 10px; outline: none; font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+  }
   .admin-add-form input::placeholder { color: rgba(255,255,255,0.3); }
 
   @keyframes fadeInDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
@@ -635,7 +640,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#" ondblclick="document.getElementById('adminPanel').classList.add('active')">✈ AeroVuelos</a>
+  <a class="nav-logo" href="#" ondblclick="document.getElementById('adminPanel').classList.add('active')">\u2708 AeroVuelos</a>
   <div class="nav-links">
     <a href="#">Destinos</a>
     <a href="#">Vuelos</a>
@@ -644,33 +649,31 @@
     <a href="#">Check-in</a>
   </div>
   <div class="nav-buttons">
-    <button class="btn-outline" onclick="openModal('loginModal')">Iniciar sesión</button>
+    <button class="btn-outline" onclick="openModal('loginModal')">Iniciar sesi\u00f3n</button>
     <button class="btn-white" onclick="openModal('registerModal')">Registrarse</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">✦ FLY SMARTER. FLY AEROVUELOS.</div>
+  <div class="hero-badge">\u2726 FLY SMARTER. FLY AEROVUELOS.</div>
   <h1>Descubre el mundo<br>desde Colombia</h1>
-  <p>Más de 100 destinos nacionales e internacionales te esperan</p>
+  <p>M\u00e1s de 100 destinos nacionales e internacionales te esperan</p>
 
-  <!-- SEARCH BOX -->
   <div class="search-box">
     <div class="tab-btns">
       <button class="tab-btn active" onclick="setTab(this,'idaVuelta')">Ida y vuelta</button>
       <button class="tab-btn" onclick="setTab(this,'soloIda')">Solo ida</button>
       <button class="tab-btn" onclick="setTab(this,'multi')">Multidestino</button>
     </div>
-
     <div class="search-fields">
       <div class="field-group">
         <label class="field-label">Origen</label>
-        <input class="field-input" id="origen" type="text" placeholder="Ej: Bogotá o BOG" value="Bogotá">
+        <input class="field-input" id="origen" type="text" placeholder="Ej: Bogot\u00e1 o BOG" value="Bogot\u00e1">
       </div>
       <div class="field-group">
         <label class="field-label">Destino</label>
-        <input class="field-input" id="destino" type="text" placeholder="Ej: Medellín o MED">
+        <input class="field-input" id="destino" type="text" placeholder="Ej: Medell\u00edn o MED">
       </div>
       <div class="field-group">
         <label class="field-label">Fecha de ida</label>
@@ -681,7 +684,6 @@
         <input class="field-input" id="fechaVuelta" type="date">
       </div>
     </div>
-
     <div class="search-bottom">
       <div class="pax-cabin">
         <div class="field-group">
@@ -696,15 +698,13 @@
         <div class="field-group">
           <label class="field-label">Cabina</label>
           <select class="field-input" id="cabina">
-            <option>Económica</option>
+            <option>Econ\u00f3mica</option>
             <option>Ejecutiva</option>
             <option>Primera clase</option>
           </select>
         </div>
       </div>
-      <button class="btn-search" onclick="buscarVuelos()">
-        🔍 Buscar vuelos →
-      </button>
+      <button class="btn-search" onclick="buscarVuelos()">\ud83d\udd0d Buscar vuelos \u2192</button>
     </div>
   </div>
 </section>
@@ -712,195 +712,182 @@
 <!-- FEATURES STRIP -->
 <div class="features">
   <div class="feature-card">
-    <div class="feature-icon">✈️</div>
+    <div class="feature-icon">\u2708\ufe0f</div>
     <h3>Rutas directas</h3>
-    <p>Vuelos sin escalas a los destinos más populares de América y Europa</p>
+    <p>Vuelos sin escalas a los destinos m\u00e1s populares de Am\u00e9rica y Europa</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">⭐</div>
+    <div class="feature-icon">\u2b50</div>
     <h3>Millas</h3>
-    <p>Acumula millas en cada vuelo y canjéalas por tiquetes y beneficios</p>
+    <p>Acumula millas en cada vuelo y canj\u00e9alas por tiquetes y beneficios</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">🔄</div>
+    <div class="feature-icon">\ud83d\udd04</div>
     <h3>Cambios flexibles</h3>
     <p>Modifica tu reserva sin cargos adicionales con tarifas flex</p>
   </div>
   <div class="feature-card">
-    <div class="feature-icon">📱</div>
+    <div class="feature-icon">\ud83d\udcf1</div>
     <h3>Check-in digital</h3>
     <p>Realiza tu check-in desde la app y llega directo a la puerta</p>
   </div>
 </div>
 
-<!-- ===== DESTINOS DESTACADOS ===== -->
+<!-- DESTINOS DESTACADOS -->
 <section class="section-destinos">
   <div class="section-header">
-    <div class="badge">✈ Destinos populares</div>
-    <h2>¿A dónde quieres volar?</h2>
-    <p>Los destinos más reservados por colombianos esta temporada</p>
+    <div class="badge">\u2708 Destinos populares</div>
+    <h2>\u00bfA d\u00f3nde quieres volar?</h2>
+    <p>Los destinos m\u00e1s reservados por colombianos esta temporada</p>
   </div>
-
   <div class="destinos-grid">
-    <!-- Grande izquierda -->
     <div class="destino-card big" onclick="irADestino('Cartagena')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1583000507497-7a3ae9e3ebf7?w=600&q=80" alt="Cartagena" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🏖 Playa</span>
+        <span class="destino-tag">\ud83c\udfd6 Playa</span>
         <div class="destino-nombre">Cartagena</div>
-        <div class="destino-pais">Colombia · Costa Caribe</div>
-        <div class="destino-precio">✈ Desde $310.000 COP</div>
+        <div class="destino-pais">Colombia \u00b7 Costa Caribe</div>
+        <div class="destino-precio">\u2708 Desde $310.000 COP</div>
       </div>
     </div>
-
-    <!-- Columna derecha top -->
-    <div class="destino-card" onclick="irADestino('Medellín')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?w=500&q=80" alt="Medellín" loading="lazy">
+    <div class="destino-card" onclick="irADestino('Medell\u00edn')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1596451190630-186aff535bf2?w=500&q=80" alt="Medell\u00edn" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🌆 Ciudad</span>
-        <div class="destino-nombre">Medellín</div>
-        <div class="destino-pais">Colombia · Antioquia</div>
-        <div class="destino-precio">✈ Desde $180.000 COP</div>
+        <span class="destino-tag">\ud83c\udf06 Ciudad</span>
+        <div class="destino-nombre">Medell\u00edn</div>
+        <div class="destino-pais">Colombia \u00b7 Antioquia</div>
+        <div class="destino-precio">\u2708 Desde $180.000 COP</div>
       </div>
     </div>
-    <div class="destino-card" onclick="irADestino('San Andrés')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=500&q=80" alt="San Andrés" loading="lazy">
+    <div class="destino-card" onclick="irADestino('San Andr\u00e9s')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=500&q=80" alt="San Andr\u00e9s" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🏝 Isla</span>
-        <div class="destino-nombre">San Andrés</div>
-        <div class="destino-pais">Colombia · Caribe insular</div>
-        <div class="destino-precio">✈ Desde $420.000 COP</div>
+        <span class="destino-tag">\ud83c\udfdd Isla</span>
+        <div class="destino-nombre">San Andr\u00e9s</div>
+        <div class="destino-pais">Colombia \u00b7 Caribe insular</div>
+        <div class="destino-precio">\u2708 Desde $420.000 COP</div>
       </div>
     </div>
-
-    <!-- Fila inferior 3 tarjetas -->
     <div class="destino-card" onclick="irADestino('Miami')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Miami" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🇺🇸 Internacional</span>
+        <span class="destino-tag">\ud83c\uddfa\ud83c\uddf8 Internacional</span>
         <div class="destino-nombre">Miami</div>
-        <div class="destino-pais">Estados Unidos · Florida</div>
-        <div class="destino-precio">✈ Desde $1.200.000 COP</div>
+        <div class="destino-pais">Estados Unidos \u00b7 Florida</div>
+        <div class="destino-precio">\u2708 Desde $1.200.000 COP</div>
       </div>
     </div>
-    <div class="destino-card" onclick="irADestino('Cancún')">
-      <img class="destino-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=500&q=80" alt="Cancún" loading="lazy">
+    <div class="destino-card" onclick="irADestino('Canc\u00fan')">
+      <img class="destino-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=500&q=80" alt="Canc\u00fan" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🏖 Playa</span>
-        <div class="destino-nombre">Cancún</div>
-        <div class="destino-pais">México · Quintana Roo</div>
-        <div class="destino-precio">✈ Desde $980.000 COP</div>
+        <span class="destino-tag">\ud83c\udfd6 Playa</span>
+        <div class="destino-nombre">Canc\u00fan</div>
+        <div class="destino-pais">M\u00e9xico \u00b7 Quintana Roo</div>
+        <div class="destino-precio">\u2708 Desde $980.000 COP</div>
       </div>
     </div>
     <div class="destino-card" onclick="irADestino('Madrid')">
       <img class="destino-img" src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&q=80" alt="Madrid" loading="lazy">
       <div class="destino-overlay">
-        <span class="destino-tag">🇪🇸 Europa</span>
+        <span class="destino-tag">\ud83c\uddea\ud83c\uddf8 Europa</span>
         <div class="destino-nombre">Madrid</div>
-        <div class="destino-pais">España · Europa</div>
-        <div class="destino-precio">✈ Desde $2.800.000 COP</div>
+        <div class="destino-pais">Espa\u00f1a \u00b7 Europa</div>
+        <div class="destino-precio">\u2708 Desde $2.800.000 COP</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PLAYAS PARADISÍACAS ===== -->
+<!-- PLAYAS PARADIS\u00cdACAS -->
 <section class="section-playas">
   <div class="section-header">
-    <div class="badge">🌊 Especial playas</div>
-    <h2>Paraísos de arena y mar</h2>
+    <div class="badge">\ud83c\udf0a Especial playas</div>
+    <h2>Para\u00edsos de arena y mar</h2>
     <p>Los mejores destinos de playa te esperan</p>
   </div>
-
   <div class="playas-scroll">
     <div class="playa-card" onclick="irADestino('Playa Blanca')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80" alt="Playa Blanca" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe 🇨🇴</span>
+        <span class="playa-badge">Caribe \ud83c\udde8\ud83c\uddf4</span>
         <div class="playa-nombre">Playa Blanca</div>
-        <div class="playa-pais">Bolívar, Colombia</div>
-        <div class="playa-temp">🌡 <span>27–31°C</span> &nbsp; 🌊 <span>Aguas turquesa</span></div>
+        <div class="playa-pais">Bol\u00edvar, Colombia</div>
+        <div class="playa-temp">\ud83c\udf21 <span>27\u201331\u00b0C</span> &nbsp; \ud83c\udf0a <span>Aguas turquesa</span></div>
       </div>
     </div>
-
     <div class="playa-card" onclick="irADestino('Punta Cana')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=400&q=80" alt="Punta Cana" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe 🇩🇴</span>
+        <span class="playa-badge">Caribe \ud83c\udde9\ud83c\uddf4</span>
         <div class="playa-nombre">Punta Cana</div>
-        <div class="playa-pais">República Dominicana</div>
-        <div class="playa-temp">🌡 <span>28–33°C</span> &nbsp; 🌴 <span>All inclusive</span></div>
+        <div class="playa-pais">Rep\u00fablica Dominicana</div>
+        <div class="playa-temp">\ud83c\udf21 <span>28\u201333\u00b0C</span> &nbsp; \ud83c\udf34 <span>All inclusive</span></div>
       </div>
     </div>
-
-    <div class="playa-card" onclick="irADestino('Cancún')">
-      <img class="playa-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&q=80" alt="Cancún" loading="lazy">
+    <div class="playa-card" onclick="irADestino('Canc\u00fan')">
+      <img class="playa-img" src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=400&q=80" alt="Canc\u00fan" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe 🇲🇽</span>
-        <div class="playa-nombre">Cancún</div>
-        <div class="playa-pais">México</div>
-        <div class="playa-temp">🌡 <span>26–30°C</span> &nbsp; 🐠 <span>Arrecifes</span></div>
+        <span class="playa-badge">Caribe \ud83c\uddf2\ud83c\uddfd</span>
+        <div class="playa-nombre">Canc\u00fan</div>
+        <div class="playa-pais">M\u00e9xico</div>
+        <div class="playa-temp">\ud83c\udf21 <span>26\u201330\u00b0C</span> &nbsp; \ud83d\udc20 <span>Arrecifes</span></div>
       </div>
     </div>
-
-    <div class="playa-card" onclick="irADestino('San Andrés')">
-      <img class="playa-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=400&q=80" alt="San Andrés" loading="lazy">
+    <div class="playa-card" onclick="irADestino('San Andr\u00e9s')">
+      <img class="playa-img" src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=400&q=80" alt="San Andr\u00e9s" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Isla 🇨🇴</span>
-        <div class="playa-nombre">San Andrés</div>
+        <span class="playa-badge">Isla \ud83c\udde8\ud83c\uddf4</span>
+        <div class="playa-nombre">San Andr\u00e9s</div>
         <div class="playa-pais">Colombia</div>
-        <div class="playa-temp">🌡 <span>28–32°C</span> &nbsp; 🤿 <span>Buceo</span></div>
+        <div class="playa-temp">\ud83c\udf21 <span>28\u201332\u00b0C</span> &nbsp; \ud83e\udd3f <span>Buceo</span></div>
       </div>
     </div>
-
     <div class="playa-card" onclick="irADestino('Aruba')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80" alt="Aruba" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">Caribe 🇦🇼</span>
+        <span class="playa-badge">Caribe \ud83c\udde6\ud83c\uddfc</span>
         <div class="playa-nombre">Aruba</div>
         <div class="playa-pais">Aruba, Caribe</div>
-        <div class="playa-temp">🌡 <span>29–34°C</span> &nbsp; 🏄 <span>Surf</span></div>
+        <div class="playa-temp">\ud83c\udf21 <span>29\u201334\u00b0C</span> &nbsp; \ud83c\udfc4 <span>Surf</span></div>
       </div>
     </div>
-
     <div class="playa-card" onclick="irADestino('Miami Beach')">
       <img class="playa-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Miami Beach" loading="lazy">
       <div class="playa-overlay">
-        <span class="playa-badge">USA 🇺🇸</span>
+        <span class="playa-badge">USA \ud83c\uddfa\ud83c\uddf8</span>
         <div class="playa-nombre">Miami Beach</div>
         <div class="playa-pais">Florida, EE.UU.</div>
-        <div class="playa-temp">🌡 <span>25–30°C</span> &nbsp; 🎉 <span>Nightlife</span></div>
+        <div class="playa-temp">\ud83c\udf21 <span>25\u201330\u00b0C</span> &nbsp; \ud83c\udf89 <span>Nightlife</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BANNER OFERTA ===== -->
+<!-- BANNER OFERTA -->
 <div style="padding: 0 40px 80px; max-width:1180px; margin:0 auto">
   <div class="oferta-banner">
     <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" alt="Oferta especial">
     <div class="oferta-content">
       <h3>Hasta 40% OFF en vuelos internacionales</h3>
-      <p>Reserva antes del 30 de marzo y viaja al mejor precio del año</p>
-      <button class="btn-oferta" onclick="document.getElementById('destino').focus(); window.scrollTo({top:0,behavior:'smooth'})">Ver ofertas ahora →</button>
+      <p>Reserva antes del 30 de marzo y viaja al mejor precio del a\u00f1o</p>
+      <button class="btn-oferta" onclick="document.getElementById('destino').focus(); window.scrollTo({top:0,behavior:'smooth'})">Ver ofertas ahora \u2192</button>
     </div>
   </div>
 </div>
 
-<!-- ===== PANEL ADMINISTRADOR ===== -->
+<!-- PANEL ADMINISTRADOR -->
 <div class="admin-overlay" id="adminPanel">
   <div class="admin-panel">
-
     <!-- Login admin -->
     <div id="adminLoginView">
       <div class="admin-header">
-        <h2>🛡️ Panel Administrador</h2>
-        <button class="admin-close" onclick="closeAdmin()">×</button>
+        <h2>\ud83d\udee1\ufe0f Panel Administrador</h2>
+        <button class="admin-close" onclick="closeAdmin()">\u00d7</button>
       </div>
       <div class="admin-login">
         <h3>Acceso Administrador</h3>
-        <input type="password" id="adminPwd" placeholder="Contraseña de admin" onkeydown="if(event.key==='Enter') adminLogin()">
-        <button class="btn-admin-login" onclick="adminLogin()">🔐 Ingresar al panel</button>
+        <input type="password" id="adminPwd" placeholder="Contrase\u00f1a de admin" onkeydown="if(event.key==='Enter') adminLogin()">
+        <button class="btn-admin-login" onclick="adminLogin()">\ud83d\udd10 Ingresar al panel</button>
       </div>
     </div>
 
@@ -908,12 +895,12 @@
     <div id="adminMainView" style="display:none">
       <div class="admin-header">
         <div>
-          <h2>🛡️ Panel AeroVuelos Admin</h2>
-          <div style="font-size:12px;opacity:0.6;margin-top:2px">Control total · Actualización en tiempo real</div>
+          <h2>\ud83d\udee1\ufe0f Panel AeroVuelos Admin</h2>
+          <div style="font-size:12px;opacity:0.6;margin-top:2px">Control total \u00b7 Actualizaci\u00f3n en tiempo real</div>
         </div>
         <div style="display:flex;gap:10px;align-items:center">
           <span class="badge">ADMIN</span>
-          <button class="admin-close" onclick="closeAdmin()">×</button>
+          <button class="admin-close" onclick="closeAdmin()">\u00d7</button>
         </div>
       </div>
 
@@ -922,151 +909,124 @@
         <div class="admin-stat-grid">
           <div class="admin-stat">
             <div class="num" id="statReservas">0</div>
-            <div class="lbl">✈️ Reservas</div>
+            <div class="lbl">\u2708\ufe0f Reservas</div>
           </div>
           <div class="admin-stat">
             <div class="num" id="statUsuarios">0</div>
-            <div class="lbl">👤 Usuarios</div>
+            <div class="lbl">\ud83d\udc64 Usuarios</div>
           </div>
           <div class="admin-stat">
             <div class="num" id="statIngresos">$0</div>
-            <div class="lbl">💰 Ingresos est.</div>
+            <div class="lbl">\ud83d\udcb0 Ingresos est.</div>
           </div>
           <div class="admin-stat" style="grid-column:1/-1;border-color:rgba(37,211,102,0.3)">
             <div class="num" id="statPendientesWpp" style="color:#25d366;font-size:20px">0 nuevas</div>
-            <div class="lbl">📋 Reservas sin enviar a WPP</div>
+            <div class="lbl">\ud83d\udccb Reservas sin enviar a WPP</div>
           </div>
         </div>
-
-        <!-- Botones WPP admin -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
-          <button onclick="enviarResumenWpp()" style="background:#25d366;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">
-            📊 Resumen diario
-          </button>
-          <button onclick="enviarTodasPendientesWpp()" style="background:#128c7e;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">
-            📲 Ver reservas nuevas
-          </button>
+          <button onclick="enviarResumenWpp()" style="background:#25d366;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">\ud83d\udcca Resumen diario</button>
+          <button onclick="enviarTodasPendientesWpp()" style="background:#128c7e;color:white;border:none;padding:11px;border-radius:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif">\ud83d\udcf2 Ver reservas nuevas</button>
         </div>
       </div>
 
       <!-- Tabs -->
       <div class="admin-tabs">
-        <div class="admin-tab active" onclick="adminTab(this,'tabReservas')">✈️ Reservas</div>
-        <div class="admin-tab" onclick="adminTab(this,'tabUsuarios')">👤 Usuarios</div>
-        <div class="admin-tab" onclick="adminTab(this,'tabLog')">📋 Actividad</div>
-        <div class="admin-tab" id="tabAdminsBtn" onclick="adminTab(this,'tabAdmins')">🔐 Admins</div>
+        <div class="admin-tab active" onclick="adminTab(this,'tabReservas')">\u2708\ufe0f Reservas</div>
+        <div class="admin-tab" onclick="adminTab(this,'tabUsuarios')">\ud83d\udc64 Usuarios</div>
+        <div class="admin-tab" onclick="adminTab(this,'tabLog')">\ud83d\udccb Actividad</div>
+        <div class="admin-tab" id="tabAdminsBtn" onclick="adminTab(this,'tabAdmins')">\ud83d\udd10 Admins</div>
       </div>
 
       <div class="admin-body">
-
-        <!-- TAB RESERVAS -->
         <div class="tab-content active" id="tabReservas">
-          <div id="listaReservas"><div id="adminNoData">Sin reservas aún</div></div>
+          <div id="listaReservas"><div id="adminNoData">Sin reservas a\u00fan</div></div>
         </div>
-
-        <!-- TAB USUARIOS -->
         <div class="tab-content" id="tabUsuarios">
           <div id="listaUsuarios"><div id="adminNoData">Sin usuarios registrados</div></div>
         </div>
-
-        <!-- TAB ADMINS -->
         <div class="tab-content" id="tabAdmins">
           <div id="seccionAgregarAdmin"></div>
           <div id="listaAdmins"></div>
         </div>
-
-        <!-- TAB ADMINS -->
-        <div class="tab-content" id="tabAdmins">
-          <div id="seccionAgregarAdmin"></div>
-          <div id="listaAdmins"></div>
-        </div>
-
-        <!-- TAB LOG ACTIVIDAD -->
         <div class="tab-content" id="tabLog">
           <div id="listaLog"><div id="adminNoData">Sin actividad registrada</div></div>
         </div>
-
       </div>
     </div>
-
   </div>
 </div>
-
-<!-- =========== MODALES =========== -->
 
 <!-- LOGIN -->
 <div class="modal-overlay" id="loginModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('loginModal')">×</button>
-    <h2>Iniciar sesión</h2>
+    <button class="modal-close" onclick="closeModal('loginModal')">\u00d7</button>
+    <h2>Iniciar sesi\u00f3n</h2>
     <p class="subtitle">Bienvenido de vuelta, viajero</p>
     <div class="form-group">
-      <label class="form-label">Correo electrónico</label>
+      <label class="form-label">Correo electr\u00f3nico</label>
       <input class="form-input" id="loginEmail" type="email" placeholder="tu@correo.com">
     </div>
     <div class="form-group">
-      <label class="form-label">Contraseña</label>
-      <input class="form-input" id="loginPass" type="password" placeholder="••••••••">
+      <label class="form-label">Contrase\u00f1a</label>
+      <input class="form-input" id="loginPass" type="password" placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022">
     </div>
     <button class="btn-red" onclick="login()">Entrar a mi cuenta</button>
-    <p class="switch-text">¿No tienes cuenta? <a onclick="switchModal('loginModal','registerModal')">Regístrate gratis</a></p>
+    <p class="switch-text">\u00bfNo tienes cuenta? <a onclick="switchModal('loginModal','registerModal')">Reg\u00edstrate gratis</a></p>
   </div>
 </div>
 
 <!-- REGISTRO -->
 <div class="modal-overlay" id="registerModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('registerModal')">×</button>
+    <button class="modal-close" onclick="closeModal('registerModal')">\u00d7</button>
     <h2>Crear cuenta</h2>
-    <p class="subtitle">Únete y empieza a volar</p>
+    <p class="subtitle">\u00danete y empieza a volar</p>
     <div class="form-group">
       <label class="form-label">Nombre completo</label>
-      <input class="form-input" id="regNombre" type="text" placeholder="Juan Pérez">
+      <input class="form-input" id="regNombre" type="text" placeholder="Juan P\u00e9rez">
     </div>
     <div class="form-group">
-      <label class="form-label">Correo electrónico</label>
+      <label class="form-label">Correo electr\u00f3nico</label>
       <input class="form-input" id="regEmail" type="email" placeholder="tu@correo.com">
     </div>
     <div class="form-group">
-      <label class="form-label">Teléfono (WhatsApp)</label>
+      <label class="form-label">Tel\u00e9fono (WhatsApp)</label>
       <input class="form-input" id="regTel" type="tel" placeholder="+57 300 000 0000">
     </div>
     <div class="form-group">
-      <label class="form-label">Contraseña</label>
-      <input class="form-input" id="regPass" type="password" placeholder="Mínimo 6 caracteres">
+      <label class="form-label">Contrase\u00f1a</label>
+      <input class="form-input" id="regPass" type="password" placeholder="M\u00ednimo 6 caracteres">
     </div>
     <button class="btn-red" onclick="register()">Crear mi cuenta</button>
-    <p class="switch-text">¿Ya tienes cuenta? <a onclick="switchModal('registerModal','loginModal')">Inicia sesión</a></p>
+    <p class="switch-text">\u00bfYa tienes cuenta? <a onclick="switchModal('registerModal','loginModal')">Inicia sesi\u00f3n</a></p>
   </div>
 </div>
 
 <!-- RESULTADOS DE VUELOS -->
 <div class="modal-overlay results-modal" id="resultsModal">
   <div class="modal" style="max-width:640px">
-    <button class="modal-close" onclick="closeModal('resultsModal')">×</button>
+    <button class="modal-close" onclick="closeModal('resultsModal')">\u00d7</button>
     <h2>Vuelos disponibles</h2>
     <p class="subtitle" id="resultsSubtitle">Selecciona tu vuelo</p>
     <div id="flightsList"></div>
-    <button class="btn-red" id="btnSelectFlight" style="display:none" onclick="openPayment()">Continuar con este vuelo →</button>
+    <button class="btn-red" id="btnSelectFlight" style="display:none" onclick="openPayment()">Continuar con este vuelo \u2192</button>
   </div>
 </div>
 
 <!-- PAGO -->
 <div class="modal-overlay" id="paymentModal">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('paymentModal')">×</button>
+    <button class="modal-close" onclick="closeModal('paymentModal')">\u00d7</button>
     <h2>Pagar reserva</h2>
     <p class="subtitle">Transfiere y confirma tu reserva</p>
-
     <div class="price-summary">
       <div class="price-row"><span>Tiquete base</span><span id="precioBase">$0</span></div>
       <div class="price-row"><span>Tasas y cargos</span><span id="precioTasas">$0</span></div>
-      <div class="price-row total"><span>💰 Total a pagar</span><span id="precioTotal">$0</span></div>
+      <div class="price-row total"><span>\ud83d\udcb0 Total a pagar</span><span id="precioTotal">$0</span></div>
     </div>
-
-    <!-- Solo Llave Bred Bancolombia -->
     <div class="info-box" style="background:#fff3e0;border-color:#ffb74d;margin-bottom:20px">
-      <strong style="color:#e65100;font-size:14px">🏦 Pago por Llave Bred — Bancolombia</strong>
+      <strong style="color:#e65100;font-size:14px">\ud83c\udfe6 Pago por Llave Bred \u2014 Bancolombia</strong>
       <div style="margin-top:10px;display:grid;gap:6px">
         <div style="display:flex;justify-content:space-between;font-size:13px">
           <span style="color:#666">Llave Bred:</span>
@@ -1086,276 +1046,172 @@
         </div>
       </div>
       <div style="margin-top:10px;padding:8px 12px;background:rgba(230,81,0,0.08);border-radius:8px;font-size:12px;color:#bf360c">
-        ⚠️ Escribe en el concepto tu <b>nombre completo + código de reserva</b><br>
-        Una vez realizado el pago, sube el número de comprobante abajo.
+        \u26a0\ufe0f Escribe en el concepto tu <b>nombre completo + c\u00f3digo de reserva</b><br>
+        Una vez realizado el pago, sube el n\u00famero de comprobante abajo.
       </div>
     </div>
-
     <div class="form-group">
       <label class="form-label">Nombre del pasajero (titular)</label>
       <input class="form-input" id="pagNombre" type="text" placeholder="Como aparece en el documento">
     </div>
     <div class="form-group">
-      <label class="form-label">Número de documento</label>
-      <input class="form-input" id="pagDoc" type="text" placeholder="Cédula o pasaporte">
+      <label class="form-label">N\u00famero de documento</label>
+      <input class="form-input" id="pagDoc" type="text" placeholder="C\u00e9dula o pasaporte">
     </div>
     <div class="form-group">
-      <label class="form-label">N° de comprobante de pago <span style="color:var(--red)">*</span></label>
-      <input class="form-input" id="pagComprobante" type="text" placeholder="Número de transacción Bancolombia">
+      <label class="form-label">N\u00b0 de comprobante de pago <span style="color:var(--red)">*</span></label>
+      <input class="form-input" id="pagComprobante" type="text" placeholder="N\u00famero de transacci\u00f3n Bancolombia">
     </div>
-
-    <button class="btn-red" onclick="confirmarPago()">✅ Confirmar reserva y pago</button>
+    <button class="btn-red" onclick="confirmarPago()">\u2705 Confirmar reserva y pago</button>
     <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:10px">
-      Al confirmar, tu reserva llegará al administrador por WhatsApp para verificación.
+      Al confirmar, tu reserva llegar\u00e1 al administrador por WhatsApp para verificaci\u00f3n.
     </p>
   </div>
 </div>
 
-<!-- TIQUETE / COMPROBANTE -->
+<!-- TIQUETE -->
 <div class="modal-overlay ticket-modal" id="ticketModal">
   <div class="modal" style="max-width:560px;padding:0;overflow:hidden;border-radius:16px">
-    <button class="modal-close" onclick="closeModal('ticketModal')" style="top:12px;right:12px;z-index:10">×</button>
-
-    <!-- Header del tiquete -->
+    <button class="modal-close" onclick="closeModal('ticketModal')" style="top:12px;right:12px;z-index:10">\u00d7</button>
     <div class="ticket-header">
       <div>
-        <div class="airline">✈ AeroVuelos</div>
+        <div class="airline">\u2708 AeroVuelos</div>
         <div style="font-size:12px;opacity:0.8;margin-top:4px">Comprobante de reserva</div>
       </div>
       <div style="text-align:right">
-        <div class="code-label">Código de reserva</div>
-        <div class="code-val" id="tktCodigo">—</div>
+        <div class="code-label">C\u00f3digo de reserva</div>
+        <div class="code-val" id="tktCodigo">\u2014</div>
       </div>
     </div>
-
-    <!-- Cuerpo del tiquete -->
     <div class="ticket-body">
-
-      <!-- Ruta -->
       <div class="ticket-route">
         <div class="ticket-city">
           <div class="iata" id="tktOrigen">BOG</div>
-          <div class="name" id="tktOrigenNombre">Bogotá</div>
+          <div class="name" id="tktOrigenNombre">Bogot\u00e1</div>
         </div>
         <div style="flex:1;text-align:center">
-          <div class="ticket-arrow">✈</div>
-          <div style="font-size:11px;color:var(--muted)" id="tktDuracion">—</div>
+          <div class="ticket-arrow">\u2708</div>
+          <div style="font-size:11px;color:var(--muted)" id="tktDuracion">\u2014</div>
         </div>
         <div class="ticket-city">
-          <div class="iata" id="tktDestino">—</div>
+          <div class="iata" id="tktDestino">\u2014</div>
           <div class="name" id="tktDestinoNombre">Destino</div>
         </div>
       </div>
-
-      <!-- Campos principales -->
       <div class="ticket-grid">
-        <div class="ticket-field">
-          <div class="t-label">Pasajero</div>
-          <div class="t-val" id="tktPasajero">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Documento</div>
-          <div class="t-val" id="tktDoc">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Aeropuerto de salida</div>
-          <div class="t-val" id="tktAptOrigen" style="font-size:12px">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Terminal salida</div>
-          <div class="t-val" id="tktTermOrigen" style="font-size:12px">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Aeropuerto de llegada</div>
-          <div class="t-val" id="tktAptDestino" style="font-size:12px">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Terminal llegada</div>
-          <div class="t-val" id="tktTermDestino" style="font-size:12px">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Fecha de vuelo</div>
-          <div class="t-val" id="tktFecha">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Hora de salida</div>
-          <div class="t-val" id="tktHora">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Llegada</div>
-          <div class="t-val" id="tktLlegada">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Aerolínea</div>
-          <div class="t-val" id="tktAerolinea">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Asiento</div>
-          <div class="t-val" id="tktAsiento">—</div>
-        </div>
-        <div class="ticket-field">
-          <div class="t-label">Cabina</div>
-          <div class="t-val" id="tktCabina">—</div>
-        </div>
+        <div class="ticket-field"><div class="t-label">Pasajero</div><div class="t-val" id="tktPasajero">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Documento</div><div class="t-val" id="tktDoc">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Aeropuerto de salida</div><div class="t-val" id="tktAptOrigen" style="font-size:12px">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Terminal salida</div><div class="t-val" id="tktTermOrigen" style="font-size:12px">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Aeropuerto de llegada</div><div class="t-val" id="tktAptDestino" style="font-size:12px">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Terminal llegada</div><div class="t-val" id="tktTermDestino" style="font-size:12px">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Fecha de vuelo</div><div class="t-val" id="tktFecha">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Hora de salida</div><div class="t-val" id="tktHora">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Llegada</div><div class="t-val" id="tktLlegada">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Aerol\u00ednea</div><div class="t-val" id="tktAerolinea">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Asiento</div><div class="t-val" id="tktAsiento">\u2014</div></div>
+        <div class="ticket-field"><div class="t-label">Cabina</div><div class="t-val" id="tktCabina">\u2014</div></div>
       </div>
-
       <hr class="ticket-divider">
-
-      <!-- Equipaje y servicios -->
       <div class="ticket-extras">
-        <h4>🧳 Equipaje y servicios incluidos</h4>
+        <h4>\ud83e\uddf3 Equipaje y servicios incluidos</h4>
         <div class="extras-row"><span>Equipaje de mano</span><span id="tktHandbag">10 kg</span></div>
-        <div class="extras-row"><span>Maleta en bodega</span><span id="tktBaggage">—</span></div>
-        <div class="extras-row"><span>Método de pago</span><span id="tktMetodoPago">—</span></div>
-        <div class="extras-row"><span>Total pagado</span><span id="tktTotal" style="color:var(--red)">—</span></div>
+        <div class="extras-row"><span>Maleta en bodega</span><span id="tktBaggage">\u2014</span></div>
+        <div class="extras-row"><span>M\u00e9todo de pago</span><span id="tktMetodoPago">\u2014</span></div>
+        <div class="extras-row"><span>Total pagado</span><span id="tktTotal" style="color:var(--red)">\u2014</span></div>
       </div>
-
-      <!-- Condiciones especiales -->
       <div class="ticket-conditions">
-        <strong>📋 Condiciones especiales</strong>
-        <span id="tktCondiciones">—</span>
+        <strong>\ud83d\udccb Condiciones especiales</strong>
+        <span id="tktCondiciones">\u2014</span>
       </div>
-
-      <!-- Botones -->
       <div class="ticket-actions">
-        <button class="btn-download" onclick="descargarTiquetePDF()">⬇️ Descargar PDF</button>
-        <button class="btn-share" onclick="compartirWhatsApp()">📲 Enviar por WhatsApp</button>
+        <button class="btn-download" onclick="descargarTiquetePDF()">\u2b07\ufe0f Descargar PDF</button>
+        <button class="btn-share" onclick="compartirWhatsApp()">\ud83d\udcf2 Enviar por WhatsApp</button>
       </div>
-
       <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:12px">
-        📧 Tu reserva también fue enviada a tu correo y notificada por Telegram.
+        \ud83d\udce7 Tu reserva tambi\u00e9n fue enviada a tu correo y notificada por Telegram.
       </p>
     </div>
   </div>
 </div>
 
-<!-- Área de impresión/PDF -->
 <div id="ticketPrintArea"></div>
-
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
-// ===== CONFIG - PERSONALIZA AQUÍ =====
 const CONFIG = {
-  // ── ADMIN WhatsApp — aquí llegan TODOS los movimientos ──
   adminWpp: '573018614849',
   adminPassword: 'admin123',
-  // ── PAGO: Solo Llave Bred (Bancolombia) ─────────────────
   bredNombre:  'AeroVuelos Colombia',
   bredLlave:   '1005753450',
   bredTipoCta: 'Ahorros Bancolombia',
   wppContacto: '3018614849',
 };
 
-// ===== DATOS =====
 let currentTab = 'idaVuelta';
 let selectedFlight = null;
 let selectedPayMethod = null;
 let currentUser = null;
 let reservationCode = '';
 let lastReserva = null;
+let currentAdminRole = 'superadmin';
 
-// ═══════════════════════════════════════════════════════════════
-// VUELOS REALES — Precios competitivos (referencia Avianca 2025)
-// ═══════════════════════════════════════════════════════════════
 const vuelosMock = [
-  // BOG → MED
   { id:1,  origen:'BOG', destino:'MED', hora:'05:45', llegada:'06:55', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV101', precio:189900, tasas:36000 },
   { id:2,  origen:'BOG', destino:'MED', hora:'09:10', llegada:'10:20', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV103', precio:245000, tasas:36000 },
   { id:3,  origen:'BOG', destino:'MED', hora:'14:30', llegada:'15:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV105', precio:198000, tasas:36000 },
   { id:4,  origen:'BOG', destino:'MED', hora:'18:50', llegada:'20:00', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV107', precio:229000, tasas:36000 },
-  // BOG → CTG
   { id:5,  origen:'BOG', destino:'CTG', hora:'06:30', llegada:'07:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV201', precio:319000, tasas:52000 },
   { id:6,  origen:'BOG', destino:'CTG', hora:'11:20', llegada:'12:35', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV203', precio:358000, tasas:52000 },
   { id:7,  origen:'BOG', destino:'CTG', hora:'17:00', llegada:'18:15', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV205', precio:289000, tasas:52000 },
-  // BOG → CLO
   { id:8,  origen:'BOG', destino:'CLO', hora:'07:00', llegada:'07:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV301', precio:178000, tasas:31000 },
   { id:9,  origen:'BOG', destino:'CLO', hora:'12:30', llegada:'13:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV303', precio:215000, tasas:31000 },
   { id:10, origen:'BOG', destino:'CLO', hora:'19:10', llegada:'20:05', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV305', precio:199000, tasas:31000 },
-  // BOG → BAQ
   { id:11, origen:'BOG', destino:'BAQ', hora:'07:50', llegada:'09:00', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV401', precio:259000, tasas:42000 },
   { id:12, origen:'BOG', destino:'BAQ', hora:'14:00', llegada:'15:10', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV403', precio:289000, tasas:42000 },
-  // BOG → ADZ
   { id:13, origen:'BOG', destino:'ADZ', hora:'06:00', llegada:'07:25', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV501', precio:428000, tasas:58000 },
   { id:14, origen:'BOG', destino:'ADZ', hora:'11:30', llegada:'12:55', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV503', precio:479000, tasas:58000 },
-  // BOG → SMR
   { id:15, origen:'BOG', destino:'SMR', hora:'07:15', llegada:'08:25', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV601', precio:272000, tasas:44000 },
   { id:16, origen:'BOG', destino:'SMR', hora:'15:40', llegada:'16:50', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV603', precio:298000, tasas:44000 },
-  // BOG → PEI
   { id:17, origen:'BOG', destino:'PEI', hora:'08:00', llegada:'08:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV701', precio:169000, tasas:29000 },
   { id:18, origen:'BOG', destino:'PEI', hora:'15:20', llegada:'16:10', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV703', precio:195000, tasas:29000 },
-  // BOG → BGA
   { id:19, origen:'BOG', destino:'BGA', hora:'06:10', llegada:'07:05', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV801', precio:172000, tasas:29000 },
   { id:20, origen:'BOG', destino:'BGA', hora:'13:00', llegada:'13:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV803', precio:199000, tasas:29000 },
-  // BOG → CUC
   { id:21, origen:'BOG', destino:'CUC', hora:'09:30', llegada:'10:30', duracion:'1h',     aerolinea:'AeroVuelos', vuelo:'AV851', precio:215000, tasas:34000 },
-
-  // MED → BOG
   { id:22, origen:'MED', destino:'BOG', hora:'07:30', llegada:'08:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV102', precio:189900, tasas:36000 },
   { id:23, origen:'MED', destino:'BOG', hora:'12:10', llegada:'13:20', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV104', precio:215000, tasas:36000 },
   { id:24, origen:'MED', destino:'BOG', hora:'17:30', llegada:'18:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV106', precio:199000, tasas:36000 },
-  // MED → CTG
   { id:25, origen:'MED', destino:'CTG', hora:'09:00', llegada:'10:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV211', precio:289000, tasas:48000 },
   { id:26, origen:'MED', destino:'CTG', hora:'16:30', llegada:'17:35', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV213', precio:315000, tasas:48000 },
-  // MED → CLO
   { id:27, origen:'MED', destino:'CLO', hora:'08:15', llegada:'09:05', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV311', precio:168000, tasas:29000 },
   { id:28, origen:'MED', destino:'CLO', hora:'14:40', llegada:'15:30', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV313', precio:189000, tasas:29000 },
-  // MED → BAQ
   { id:29, origen:'MED', destino:'BAQ', hora:'10:00', llegada:'11:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV411', precio:245000, tasas:40000 },
-  // MED → ADZ
   { id:30, origen:'MED', destino:'ADZ', hora:'07:00', llegada:'08:20', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV511', precio:399000, tasas:55000 },
-  // MED → SMR
   { id:31, origen:'MED', destino:'SMR', hora:'13:10', llegada:'14:15', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV611', precio:258000, tasas:42000 },
-  // MED → PEI
   { id:32, origen:'MED', destino:'PEI', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV711', precio:148000, tasas:25000 },
   { id:33, origen:'MED', destino:'PEI', hora:'15:00', llegada:'15:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV713', precio:168000, tasas:25000 },
-  // MED → BGA
   { id:34, origen:'MED', destino:'BGA', hora:'12:30', llegada:'13:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV812', precio:185000, tasas:31000 },
-
-  // PEI → BOG
   { id:35, origen:'PEI', destino:'BOG', hora:'07:00', llegada:'07:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV702', precio:169000, tasas:29000 },
   { id:36, origen:'PEI', destino:'BOG', hora:'16:30', llegada:'17:20', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV704', precio:192000, tasas:29000 },
-  // PEI → MED
   { id:37, origen:'PEI', destino:'MED', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV712', precio:148000, tasas:25000 },
   { id:38, origen:'PEI', destino:'MED', hora:'14:00', llegada:'14:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV714', precio:168000, tasas:25000 },
-  // PEI → CTG
   { id:39, origen:'PEI', destino:'CTG', hora:'11:20', llegada:'12:35', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV721', precio:268000, tasas:44000 },
-  // PEI → CLO
   { id:40, origen:'PEI', destino:'CLO', hora:'09:10', llegada:'09:55', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV731', precio:145000, tasas:25000 },
-
-  // CTG → BOG
   { id:41, origen:'CTG', destino:'BOG', hora:'08:30', llegada:'09:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV202', precio:319000, tasas:52000 },
   { id:42, origen:'CTG', destino:'BOG', hora:'19:00', llegada:'20:15', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV206', precio:289000, tasas:52000 },
-  // CTG → MED
   { id:43, origen:'CTG', destino:'MED', hora:'11:00', llegada:'12:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV212', precio:289000, tasas:48000 },
-  // CTG → BAQ
   { id:44, origen:'CTG', destino:'BAQ', hora:'13:00', llegada:'13:45', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV422', precio:145000, tasas:25000 },
-
-  // CLO → BOG
   { id:45, origen:'CLO', destino:'BOG', hora:'08:00', llegada:'08:55', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV302', precio:178000, tasas:31000 },
   { id:46, origen:'CLO', destino:'BOG', hora:'17:30', llegada:'18:25', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV304', precio:199000, tasas:31000 },
-  // CLO → MED
   { id:47, origen:'CLO', destino:'MED', hora:'10:00', llegada:'10:50', duracion:'50m',    aerolinea:'AeroVuelos', vuelo:'AV312', precio:168000, tasas:29000 },
-  // CLO → CTG
   { id:48, origen:'CLO', destino:'CTG', hora:'13:30', llegada:'14:45', duracion:'1h 15m', aerolinea:'AeroVuelos', vuelo:'AV322', precio:289000, tasas:48000 },
-
-  // BAQ → BOG
   { id:49, origen:'BAQ', destino:'BOG', hora:'10:00', llegada:'11:10', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV402', precio:259000, tasas:42000 },
   { id:50, origen:'BAQ', destino:'BOG', hora:'17:30', llegada:'18:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV404', precio:279000, tasas:42000 },
-  // BAQ → MED
   { id:51, origen:'BAQ', destino:'MED', hora:'12:00', llegada:'13:05', duracion:'1h 05m', aerolinea:'AeroVuelos', vuelo:'AV412', precio:245000, tasas:40000 },
-  // BAQ → CTG
   { id:52, origen:'BAQ', destino:'CTG', hora:'08:30', llegada:'09:15', duracion:'45m',    aerolinea:'AeroVuelos', vuelo:'AV423', precio:145000, tasas:25000 },
-
-  // BGA → BOG
   { id:53, origen:'BGA', destino:'BOG', hora:'07:45', llegada:'08:40', duracion:'55m',    aerolinea:'AeroVuelos', vuelo:'AV802', precio:172000, tasas:29000 },
-  // ADZ → BOG
   { id:54, origen:'ADZ', destino:'BOG', hora:'09:30', llegada:'10:55', duracion:'1h 25m', aerolinea:'AeroVuelos', vuelo:'AV502', precio:428000, tasas:58000 },
-  // SMR → BOG
   { id:55, origen:'SMR', destino:'BOG', hora:'09:30', llegada:'10:40', duracion:'1h 10m', aerolinea:'AeroVuelos', vuelo:'AV602', precio:272000, tasas:44000 },
-
-  // INTERNACIONALES desde BOG
   { id:56, origen:'BOG', destino:'MIA', hora:'10:35', llegada:'14:55', duracion:'4h 20m', aerolinea:'AeroVuelos', vuelo:'AV901', precio:1289000, tasas:198000 },
   { id:57, origen:'BOG', destino:'MIA', hora:'22:15', llegada:'02:35+1',duracion:'4h 20m',aerolinea:'AeroVuelos', vuelo:'AV903', precio:1099000, tasas:198000 },
   { id:58, origen:'BOG', destino:'JFK', hora:'08:05', llegada:'16:20', duracion:'8h 15m', aerolinea:'AeroVuelos', vuelo:'AV911', precio:1889000, tasas:245000 },
@@ -1367,21 +1223,44 @@ const vuelosMock = [
   { id:64, origen:'BOG', destino:'EZE', hora:'22:00', llegada:'08:30+1',duracion:'10h 30m',aerolinea:'AeroVuelos',vuelo:'AV993',precio:1650000, tasas:210000 },
   { id:65, origen:'BOG', destino:'SCL', hora:'20:45', llegada:'06:15+1',duracion:'9h 30m',aerolinea:'AeroVuelos', vuelo:'AV995', precio:1550000, tasas:200000 },
   { id:66, origen:'BOG', destino:'UIO', hora:'10:00', llegada:'11:30', duracion:'1h 30m', aerolinea:'AeroVuelos', vuelo:'AV997', precio:485000,  tasas:68000  },
-  // INTERNACIONALES desde MED
   { id:67, origen:'MED', destino:'MIA', hora:'12:40', llegada:'16:55', duracion:'4h 15m', aerolinea:'AeroVuelos', vuelo:'AV902', precio:1289000, tasas:198000 },
   { id:68, origen:'MED', destino:'MAD', hora:'22:30', llegada:'15:00+1',duracion:'10h 30m',aerolinea:'AeroVuelos',vuelo:'AV952',precio:2899000, tasas:395000 },
   { id:69, origen:'MED', destino:'PTY', hora:'08:00', llegada:'09:20', duracion:'1h 20m', aerolinea:'AeroVuelos', vuelo:'AV972', precio:598000,  tasas:82000  },
 ];
 
-function formatCOP(n) {
-  return '$' + n.toLocaleString('es-CO');
-}
+const AEROPUERTOS = {
+  BOG: { ciudad:'Bogot\u00e1',          aeropuerto:'Aeropuerto Internacional El Dorado',            terminal:'Terminal 1 (El Dorado)',         pais:'Colombia',         icao:'SKBO' },
+  MED: { ciudad:'Medell\u00edn',        aeropuerto:'Aeropuerto Internacional Jos\u00e9 M. C\u00f3rdova',       terminal:'Terminal Nacional',             pais:'Colombia',         icao:'SKRG' },
+  CTG: { ciudad:'Cartagena',       aeropuerto:'Aeropuerto Internacional Rafael N\u00fa\u00f1ez',          terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKCG' },
+  CLO: { ciudad:'Cali',            aeropuerto:'Aeropuerto Internacional Alfonso Bonilla Arag\u00f3n',terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKCL' },
+  BAQ: { ciudad:'Barranquilla',    aeropuerto:'Aeropuerto Internacional Ernesto Cortissoz',     terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKBQ' },
+  ADZ: { ciudad:'San Andr\u00e9s',      aeropuerto:'Aeropuerto Internacional Gustavo Rojas Pinilla', terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKSP' },
+  SMR: { ciudad:'Santa Marta',     aeropuerto:'Aeropuerto Internacional Sim\u00f3n Bol\u00edvar',         terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKSM' },
+  PEI: { ciudad:'Pereira',         aeropuerto:'Aeropuerto Internacional Mateca\u00f1a',              terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKPE' },
+  BGA: { ciudad:'Bucaramanga',     aeropuerto:'Aeropuerto Internacional Palonegro',             terminal:'Terminal \u00danica',                pais:'Colombia',         icao:'SKBG' },
+  CUC: { ciudad:'C\u00facuta',          aeropuerto:'Aeropuerto Internacional Camilo Daza',            terminal:'Terminal \u00danica',               pais:'Colombia',         icao:'SKCC' },
+  MIA: { ciudad:'Miami',           aeropuerto:'Miami International Airport',                    terminal:'Terminal J (Internacional)',    pais:'EE.UU.',            icao:'KMIA' },
+  JFK: { ciudad:'Nueva York',      aeropuerto:'John F. Kennedy International Airport',          terminal:'Terminal 4 (Internacional)',    pais:'EE.UU.',            icao:'KJFK' },
+  LAX: { ciudad:'Los \u00c1ngeles',     aeropuerto:'Los Angeles International Airport',              terminal:'Terminal B (Internacional)',    pais:'EE.UU.',            icao:'KLAX' },
+  MAD: { ciudad:'Madrid',          aeropuerto:'Aeropuerto Adolfo Su\u00e1rez Madrid-Barajas',        terminal:'Terminal 4 (T4)',               pais:'Espa\u00f1a',            icao:'LEMD' },
+  BCN: { ciudad:'Barcelona',       aeropuerto:'Aeropuerto El Prat \u2013 Josep Tarradellas',         terminal:'Terminal 1 (T1)',               pais:'Espa\u00f1a',            icao:'LEBL' },
+  LHR: { ciudad:'Londres',         aeropuerto:'London Heathrow Airport',                        terminal:'Terminal 2',                   pais:'Reino Unido',       icao:'EGLL' },
+  CDG: { ciudad:'Par\u00eds',           aeropuerto:'A\u00e9roport Paris-Charles de Gaulle',               terminal:'Terminal 2E',                  pais:'Francia',           icao:'LFPG' },
+  LIM: { ciudad:'Lima',            aeropuerto:'Aeropuerto Internacional Jorge Ch\u00e1vez',          terminal:'Terminal Internacional',        pais:'Per\u00fa',              icao:'SPJC' },
+  GRU: { ciudad:'S\u00e3o Paulo',       aeropuerto:'Aeroporto Internacional de Guarulhos',           terminal:'Terminal 3',                    pais:'Brasil',            icao:'SBGR' },
+  EZE: { ciudad:'Buenos Aires',    aeropuerto:'Aeropuerto Internacional Ministro Pistarini',    terminal:'Terminal A',                    pais:'Argentina',         icao:'SAEZ' },
+  SCL: { ciudad:'Santiago',        aeropuerto:'Aeropuerto Internacional Arturo Merino Ben\u00edtez', terminal:'Terminal Internacional',        pais:'Chile',             icao:'SCEL' },
+  UIO: { ciudad:'Quito',           aeropuerto:'Aeropuerto Internacional Mariscal Sucre',        terminal:'Terminal \u00danica',                pais:'Ecuador',           icao:'SEQM' },
+  PTY: { ciudad:'Ciudad de Panam\u00e1',aeropuerto:'Aeropuerto Internacional de Tocumen',            terminal:'Terminal 2 (Nueva)',            pais:'Panam\u00e1',            icao:'MPTO' },
+  CUN: { ciudad:'Canc\u00fan',          aeropuerto:'Aeropuerto Internacional de Canc\u00fan',             terminal:'Terminal 4 (T4)',               pais:'M\u00e9xico',            icao:'MMUN' },
+  MEX: { ciudad:'Ciudad de M\u00e9xico',aeropuerto:'Aeropuerto Internacional Benito Ju\u00e1rez',         terminal:'Terminal 2',                    pais:'M\u00e9xico',            icao:'MMMX' },
+  PUJ: { ciudad:'Punta Cana',      aeropuerto:'Aeropuerto Internacional de Punta Cana',         terminal:'Terminal A',                    pais:'Rep. Dominicana',   icao:'MDPC' },
+  AUA: { ciudad:'Aruba',           aeropuerto:'Aeropuerto Internacional Reina Beatrix',         terminal:'Terminal \u00danica',                pais:'Aruba',             icao:'TNCA' },
+};
 
-function genCode() {
-  return 'AV' + Math.random().toString(36).substr(2,6).toUpperCase();
-}
+function formatCOP(n) { return '$' + n.toLocaleString('es-CO'); }
+function genCode() { return 'AV' + Math.random().toString(36).substr(2,6).toUpperCase(); }
 
-// ===== TABS =====
 function setTab(btn, tab) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
@@ -1389,18 +1268,10 @@ function setTab(btn, tab) {
   document.getElementById('fechaVueltaGroup').style.display = tab === 'soloIda' ? 'none' : '';
 }
 
-// ===== MODALES =====
-function openModal(id) {
-  document.getElementById(id).classList.add('active');
-}
-function closeModal(id) {
-  document.getElementById(id).classList.remove('active');
-}
-function switchModal(close, open) {
-  closeModal(close); openModal(open);
-}
+function openModal(id) { document.getElementById(id).classList.add('active'); }
+function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+function switchModal(close, open) { closeModal(close); openModal(open); }
 
-// ===== TOAST =====
 function showToast(msg, type='') {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -1408,19 +1279,13 @@ function showToast(msg, type='') {
   setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-// ===== WHATSAPP ADMIN — Panel de control =====
-// Guarda el mensaje internamente y lo envía de forma invisible al admin
 function sendAdminWpp(mensaje) {
-  // Guardar en cola de mensajes pendientes para admin
   const cola = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
   cola.unshift({ mensaje, fecha: new Date().toLocaleString('es-CO'), enviado: false });
   if (cola.length > 50) cola.splice(50);
   localStorage.setItem('av_wpp_cola', JSON.stringify(cola));
-  // Notificar al admin sin interrumpir al cliente
-  // (El admin puede ver y enviar desde el panel admin)
 }
 
-// ===== TELEGRAM ADMIN NOTIFICATION =====
 function enviarTelegram(mensaje) {
   const TOKEN = '8483671242:AAERb0vkoBT4ugrriiTwLMFnbukHkIgk7co';
   const CHAT_ID = '8114050673';
@@ -1431,167 +1296,102 @@ function enviarTelegram(mensaje) {
   }).catch(function(){});
 }
 
-// Esta función SÍ abre WhatsApp — solo la usa el admin desde su panel
 function abrirWppAdmin(mensaje) {
-  const url = `https://wa.me/${CONFIG.adminWpp}?text=${encodeURIComponent(mensaje)}`;
+  const url = 'https://wa.me/' + CONFIG.adminWpp + '?text=' + encodeURIComponent(mensaje);
   window.open(url, '_blank');
 }
 
-// Versión silenciosa: guarda en localStorage para el historial admin
 function logAdminEvent(tipo, datos) {
   const eventos = JSON.parse(localStorage.getItem('av_admin_log') || '[]');
-  eventos.unshift({
-    tipo,
-    datos,
-    fecha: new Date().toLocaleString('es-CO'),
-    id: 'EVT' + Date.now()
-  });
-  // Máximo 200 eventos en log
+  eventos.unshift({ tipo, datos, fecha: new Date().toLocaleString('es-CO'), id: 'EVT' + Date.now() });
   if (eventos.length > 200) eventos.splice(200);
   localStorage.setItem('av_admin_log', JSON.stringify(eventos));
 }
 
-// ===== REGISTRO =====
 function register() {
   const nombre = document.getElementById('regNombre').value.trim();
   const email  = document.getElementById('regEmail').value.trim();
   const tel    = document.getElementById('regTel').value.trim();
   const pass   = document.getElementById('regPass').value;
-
-  if (!nombre || !email || !tel || !pass) {
-    showToast('⚠️ Completa todos los campos', 'error'); return;
-  }
-  if (pass.length < 6) {
-    showToast('⚠️ La contraseña debe tener al menos 6 caracteres', 'error'); return;
-  }
-
-  // Guardar usuario (localStorage para demo)
+  if (!nombre || !email || !tel || !pass) { showToast('\u26a0\ufe0f Completa todos los campos', 'error'); return; }
+  if (pass.length < 6) { showToast('\u26a0\ufe0f La contrase\u00f1a debe tener al menos 6 caracteres', 'error'); return; }
   const users = JSON.parse(localStorage.getItem('av_users') || '[]');
-  if (users.find(u => u.email === email)) {
-    showToast('⚠️ Este correo ya está registrado', 'error'); return;
-  }
+  if (users.find(u => u.email === email)) { showToast('\u26a0\ufe0f Este correo ya est\u00e1 registrado', 'error'); return; }
   users.push({ nombre, email, tel, pass });
   localStorage.setItem('av_users', JSON.stringify(users));
-
   currentUser = { nombre, email, tel };
   localStorage.setItem('av_currentUser', JSON.stringify(currentUser));
-
-  // Log admin
   logAdminEvent('NUEVO_REGISTRO', { nombre, email, tel, fecha: new Date().toLocaleString('es-CO') });
-
   closeModal('registerModal');
-  showToast(`✅ Bienvenido ${nombre}!`, 'success');
+  showToast('\u2705 Bienvenido ' + nombre + '!', 'success');
   updateNavUser();
 }
 
-// ===== LOGIN =====
 function login() {
   const email = document.getElementById('loginEmail').value.trim();
   const pass  = document.getElementById('loginPass').value;
-
-  // Admin check
-  if (email === 'admin' && pass === CONFIG.adminPassword) {
-    window.location.href = 'admin.html';
-    return;
-  }
-
   const users = JSON.parse(localStorage.getItem('av_users') || '[]');
   const user = users.find(u => u.email === email && u.pass === pass);
-
-  if (!user) {
-    showToast('⚠️ Correo o contraseña incorrectos', 'error'); return;
-  }
-
+  if (!user) { showToast('\u26a0\ufe0f Correo o contrase\u00f1a incorrectos', 'error'); return; }
   currentUser = { nombre: user.nombre, email: user.email, tel: user.tel };
   localStorage.setItem('av_currentUser', JSON.stringify(currentUser));
-
   closeModal('loginModal');
-  showToast(`✅ Hola ${user.nombre}!`, 'success');
+  showToast('\u2705 Hola ' + user.nombre + '!', 'success');
   updateNavUser();
 }
 
 function updateNavUser() {
   const u = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || 'null');
   if (u) {
-    document.querySelector('.nav-buttons').innerHTML = `
-      <span style="color:white;font-size:14px">Hola, ${u.nombre.split(' ')[0]}</span>
-      <button class="btn-outline" onclick="logout()">Salir</button>
-    `;
+    document.querySelector('.nav-buttons').innerHTML =
+      '<span style="color:white;font-size:14px">Hola, ' + u.nombre.split(' ')[0] + '</span>' +
+      '<button class="btn-outline" onclick="logout()">Salir</button>';
   }
 }
 
-function logout() {
-  localStorage.removeItem('av_currentUser');
-  location.reload();
-}
+function logout() { localStorage.removeItem('av_currentUser'); location.reload(); }
 
-// ===== BUSCAR VUELOS — FILTRO REAL =====
 function buscarVuelos() {
   const origenRaw  = document.getElementById('origen').value.trim().toUpperCase();
   const destinoRaw = document.getElementById('destino').value.trim().toUpperCase();
   const fechaIda   = document.getElementById('fechaIda').value;
-
-  if (!destinoRaw) { showToast('⚠️ Ingresa el destino', 'error'); return; }
-  if (!fechaIda)   { showToast('⚠️ Selecciona la fecha de ida', 'error'); return; }
-
-  // Log de búsqueda al admin
+  if (!destinoRaw) { showToast('\u26a0\ufe0f Ingresa el destino', 'error'); return; }
+  if (!fechaIda)   { showToast('\u26a0\ufe0f Selecciona la fecha de ida', 'error'); return; }
   logAdminEvent('BUSQUEDA', { origen: origenRaw, destino: destinoRaw, fecha: fechaIda });
 
-  // Función que convierte texto a código IATA (acepta nombre o IATA directo)
   function resolverIATA(texto) {
     if (!texto) return null;
-    // Si ya es IATA válido (3 letras)
     if (AEROPUERTOS[texto]) return texto;
-    // Buscar por nombre de ciudad
     for (const [iata, data] of Object.entries(AEROPUERTOS)) {
-      if (data.ciudad.toUpperCase().includes(texto) ||
-          data.aeropuerto.toUpperCase().includes(texto)) {
-        return iata;
-      }
+      if (data.ciudad.toUpperCase().includes(texto) || data.aeropuerto.toUpperCase().includes(texto)) return iata;
     }
-    // Mapeo de nombres comunes colombianos
     const alias = {
-      'BOGOTA':'BOG','BOGOTÁ':'BOG','EL DORADO':'BOG',
-      'MEDELLIN':'MED','MEDELLÍN':'MED','CORDOBA':'MED','CÓRDOVA':'MED','JOSE CORDOVA':'MED',
-      'CALI':'CLO','BONILLA':'CLO',
-      'CARTAGENA':'CTG','NUNEZ':'CTG','NÚÑEZ':'CTG',
-      'BARRANQUILLA':'BAQ','CORTISSOZ':'BAQ',
-      'PEREIRA':'PEI','MATECANA':'PEI','MATECAÑA':'PEI',
-      'BUCARAMANGA':'BGA','PALONEGRO':'BGA',
-      'SANTA MARTA':'SMR','SIMON BOLIVAR':'SMR','SIMÓN BOLÍVAR':'SMR',
-      'SAN ANDRES':'ADZ','SAN ANDRÉS':'ADZ','GUSTAVO ROJAS':'ADZ',
-      'CUCUTA':'CUC','CÚCUTA':'CUC','CAMILO DAZA':'CUC',
-      'MIAMI':'MIA','NUEVA YORK':'JFK','NEW YORK':'JFK',
-      'MADRID':'MAD','BARAJAS':'MAD',
-      'LIMA':'LIM','JORGE CHAVEZ':'LIM','JORGE CHÁVEZ':'LIM',
-      'PANAMA':'PTY','PANAMÁ':'PTY','TOCUMEN':'PTY',
-      'CANCUN':'CUN','CANCÚN':'CUN',
-      'SAO PAULO':'GRU','SÃO PAULO':'GRU','GUARULHOS':'GRU',
-      'BUENOS AIRES':'EZE','EZEIZA':'EZE',
-      'SANTIAGO':'SCL','MERINO':'SCL',
-      'QUITO':'UIO','MARISCAL SUCRE':'UIO',
+      'BOGOTA':'BOG','BOGOT\u00c1':'BOG','EL DORADO':'BOG',
+      'MEDELLIN':'MED','MEDELL\u00cdN':'MED','JOSE CORDOVA':'MED',
+      'CALI':'CLO','CARTAGENA':'CTG','NUNEZ':'CTG',
+      'BARRANQUILLA':'BAQ','PEREIRA':'PEI','MATECANA':'PEI',
+      'BUCARAMANGA':'BGA','SANTA MARTA':'SMR','SAN ANDRES':'ADZ','SAN ANDR\u00c9S':'ADZ',
+      'CUCUTA':'CUC','C\u00daCUTA':'CUC','MIAMI':'MIA','NUEVA YORK':'JFK','NEW YORK':'JFK',
+      'MADRID':'MAD','LIMA':'LIM','PANAMA':'PTY','PANAM\u00c1':'PTY',
+      'CANCUN':'CUN','CANC\u00daN':'CUN','SAO PAULO':'GRU','BUENOS AIRES':'EZE',
+      'SANTIAGO':'SCL','QUITO':'UIO',
     };
     for (const [key, iata] of Object.entries(alias)) {
       if (texto.includes(key) || key.includes(texto)) return iata;
     }
-    return texto; // devuelve el texto para comparación directa
+    return texto;
   }
 
   const origenIATA  = resolverIATA(origenRaw)  || origenRaw;
   const destinoIATA = resolverIATA(destinoRaw) || destinoRaw;
 
-  // Filtrar vuelos que coincidan
   let resultados = vuelosMock.filter(v => {
     const matchOrigen = !origenRaw ||
       v.origen === origenIATA ||
-      v.origen.includes(origenIATA) ||
-      AEROPUERTOS[v.origen]?.ciudad.toUpperCase().includes(origenRaw);
-
+      (AEROPUERTOS[v.origen] && AEROPUERTOS[v.origen].ciudad.toUpperCase().includes(origenRaw));
     const matchDestino =
       v.destino === destinoIATA ||
-      v.destino.includes(destinoIATA) ||
-      AEROPUERTOS[v.destino]?.ciudad.toUpperCase().includes(destinoRaw);
-
+      (AEROPUERTOS[v.destino] && AEROPUERTOS[v.destino].ciudad.toUpperCase().includes(destinoRaw));
     return matchOrigen && matchDestino;
   });
 
@@ -1600,42 +1400,32 @@ function buscarVuelos() {
   selectedFlight = null;
   document.getElementById('btnSelectFlight').style.display = 'none';
 
-  const origenNombre  = AEROPUERTOS[origenIATA]?.ciudad  || origenIATA;
-  const destinoNombre = AEROPUERTOS[destinoIATA]?.ciudad || destinoIATA;
+  const origenNombre  = AEROPUERTOS[origenIATA]  ? AEROPUERTOS[origenIATA].ciudad  : origenIATA;
+  const destinoNombre = AEROPUERTOS[destinoIATA] ? AEROPUERTOS[destinoIATA].ciudad : destinoIATA;
   document.getElementById('resultsSubtitle').textContent =
-    `${origenNombre} (${origenIATA}) → ${destinoNombre} (${destinoIATA})  ·  ${formatFecha(fechaIda)}`;
+    origenNombre + ' (' + origenIATA + ') \u2192 ' + destinoNombre + ' (' + destinoIATA + ')  \u00b7  ' + formatFecha(fechaIda);
 
   if (resultados.length === 0) {
-    lista.innerHTML = `
-      <div style="text-align:center;padding:40px 20px;color:var(--muted)">
-        <div style="font-size:40px;margin-bottom:12px">✈️</div>
-        <div style="font-size:16px;font-weight:600;margin-bottom:8px">No encontramos vuelos disponibles</div>
-        <div style="font-size:13px">Para la ruta <b>${origenNombre} → ${destinoNombre}</b><br>
-        Intenta con otra fecha o verifica los nombres de las ciudades.</div>
-        <div style="margin-top:16px;font-size:12px;color:#aaa">Ciudades disponibles: Bogotá, Medellín, Cali, Cartagena, Barranquilla, Pereira, Santa Marta, San Andrés, Bucaramanga, Cúcuta, Miami, Nueva York, Madrid, Lima, Panamá, Cancún y más.</div>
-      </div>`;
+    lista.innerHTML =
+      '<div style="text-align:center;padding:40px 20px;color:var(--muted)">' +
+      '<div style="font-size:40px;margin-bottom:12px">\u2708\ufe0f</div>' +
+      '<div style="font-size:16px;font-weight:600;margin-bottom:8px">No encontramos vuelos disponibles</div>' +
+      '<div style="font-size:13px">Para la ruta <b>' + origenNombre + ' \u2192 ' + destinoNombre + '</b><br>' +
+      'Intenta con otra fecha o verifica los nombres.</div></div>';
   } else {
     resultados.forEach(v => {
       const aptO = getInfoAeropuerto(v.origen);
       const aptD = getInfoAeropuerto(v.destino);
       const card = document.createElement('div');
       card.className = 'flight-card';
-      card.innerHTML = `
-        <div class="flight-header">
-          <div>
-            <span class="flight-route">${v.origen} → ${v.destino}</span>
-            <div style="font-size:11px;color:var(--muted);margin-top:2px">${aptO.ciudad} → ${aptD.ciudad}</div>
-          </div>
-          <span class="flight-price">${formatCOP(v.precio)}</span>
-        </div>
-        <div class="flight-details">
-          🕐 ${v.hora} → ${v.llegada} &nbsp;|&nbsp; ⏱ ${v.duracion} &nbsp;|&nbsp; ✈️ ${v.vuelo}
-        </div>
-        <div style="font-size:11px;color:var(--muted);margin-top:4px">
-          🛫 ${aptO.aeropuerto} &nbsp;→&nbsp; 🛬 ${aptD.aeropuerto}
-        </div>
-      `;
-      card.onclick = () => {
+      card.innerHTML =
+        '<div class="flight-header">' +
+        '<div><span class="flight-route">' + v.origen + ' \u2192 ' + v.destino + '</span>' +
+        '<div style="font-size:11px;color:var(--muted);margin-top:2px">' + aptO.ciudad + ' \u2192 ' + aptD.ciudad + '</div></div>' +
+        '<span class="flight-price">' + formatCOP(v.precio) + '</span></div>' +
+        '<div class="flight-details">\ud83d\udd50 ' + v.hora + ' \u2192 ' + v.llegada + ' &nbsp;|&nbsp; \u23f1 ' + v.duracion + ' &nbsp;|&nbsp; \u2708\ufe0f ' + v.vuelo + '</div>' +
+        '<div style="font-size:11px;color:var(--muted);margin-top:4px">\ud83d\udeeb ' + aptO.aeropuerto + ' &nbsp;\u2192&nbsp; \ud83d\udeec ' + aptD.aeropuerto + '</div>';
+      card.onclick = function() {
         document.querySelectorAll('.flight-card').forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
         selectedFlight = v;
@@ -1644,706 +1434,129 @@ function buscarVuelos() {
       lista.appendChild(card);
     });
   }
-
   openModal('resultsModal');
 }
 
-// ===== PAGO =====
 function openPayment() {
   if (!currentUser && !JSON.parse(localStorage.getItem('av_currentUser') || 'null')) {
     closeModal('resultsModal');
-    showToast('⚠️ Debes iniciar sesión para reservar', 'error');
+    showToast('\u26a0\ufe0f Debes iniciar sesi\u00f3n para reservar', 'error');
     setTimeout(() => openModal('loginModal'), 800);
     return;
   }
   closeModal('resultsModal');
-
   document.getElementById('precioBase').textContent = formatCOP(selectedFlight.precio);
   document.getElementById('precioTasas').textContent = formatCOP(selectedFlight.tasas);
   document.getElementById('precioTotal').textContent = formatCOP(selectedFlight.precio + selectedFlight.tasas);
-
   openModal('paymentModal');
-}
-
-function selectPayment(method, el) {
-  // Solo Llave Bred — esta función queda por compatibilidad
-  selectedPayMethod = 'bred';
 }
 
 async function confirmarPago() {
   const nombre      = document.getElementById('pagNombre').value.trim();
   const doc         = document.getElementById('pagDoc').value.trim();
   const comprobante = document.getElementById('pagComprobante').value.trim();
-
-  if (!nombre || !doc) { showToast('⚠️ Completa nombre y documento', 'error'); return; }
-  selectedPayMethod = 'bred'; // Solo Llave Bred
-
+  if (!nombre || !doc) { showToast('\u26a0\ufe0f Completa nombre y documento', 'error'); return; }
+  selectedPayMethod = 'bred';
   const user = currentUser || JSON.parse(localStorage.getItem('av_currentUser') || '{}');
   reservationCode = genCode();
   const total = selectedFlight.precio + selectedFlight.tasas;
-
-  // Asiento aleatorio
   const asiento = generarAsiento(document.getElementById('cabina').value);
-
-  // Condiciones según cabina
   const condiciones = getCondiciones(document.getElementById('cabina').value, selectedPayMethod);
-
-  // Equipaje según cabina
   const equipaje = getEquipaje(document.getElementById('cabina').value);
 
-  // Guardar reserva
   const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
   const reserva = {
-    codigo: reservationCode,
-    usuario: user,
-    vuelo: selectedFlight,
-    pasajero: { nombre, doc },
-    asiento,
-    metodoPago: selectedPayMethod,
-    comprobante,
-    total,
+    codigo: reservationCode, usuario: user, vuelo: selectedFlight,
+    pasajero: { nombre, doc }, asiento, metodoPago: selectedPayMethod, comprobante, total,
     cabina: document.getElementById('cabina').value,
     fechaVuelo: document.getElementById('fechaIda').value,
-    estado: 'PENDIENTE',
-    fecha: new Date().toLocaleString('es-CO'),
-    condiciones,
-    equipaje
+    estado: 'PENDIENTE', fecha: new Date().toLocaleString('es-CO'), condiciones, equipaje
   };
   reservas.push(reserva);
   localStorage.setItem('av_reservas', JSON.stringify(reservas));
   lastReserva = reserva;
-
-  // Guardar evento en log admin
   logAdminEvent('NUEVA_RESERVA', reserva);
 
-  // Mensaje completo al WhatsApp del Admin
   const aptO = getInfoAeropuerto(selectedFlight.origen);
   const aptD = getInfoAeropuerto(selectedFlight.destino);
   const wppMsg =
-`✈️ *NUEVA RESERVA — ${reservationCode}*
-━━━━━━━━━━━━━━━━━━━━
-👤 *Pasajero:* ${nombre}
-📄 *Documento:* ${doc}
-📧 *Email:* ${user.email || 'N/A'}
-📱 *Teléfono:* ${user.tel || 'N/A'}
+    '\u2708\ufe0f *NUEVA RESERVA \u2014 ' + reservationCode + '*\n' +
+    '\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n' +
+    '\ud83d\udc64 *Pasajero:* ' + nombre + '\n' +
+    '\ud83d\udcc4 *Documento:* ' + doc + '\n' +
+    '\ud83d\udce7 *Email:* ' + (user.email || 'N/A') + '\n' +
+    '\ud83d\udcf1 *Tel\u00e9fono:* ' + (user.tel || 'N/A') + '\n\n' +
+    '\u2708\ufe0f *Vuelo:* ' + selectedFlight.vuelo + ' | ' + selectedFlight.origen + ' \u2192 ' + selectedFlight.destino + '\n' +
+    '\ud83d\udeeb *Aeropuerto salida:* ' + aptO.aeropuerto + '\n' +
+    '\ud83d\udeec *Aeropuerto llegada:* ' + aptD.aeropuerto + '\n' +
+    '\ud83d\udcc5 *Fecha vuelo:* ' + (reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '\u2014') + '\n' +
+    '\ud83d\udd50 *Hora:* ' + selectedFlight.hora + ' \u2192 ' + selectedFlight.llegada + '\n' +
+    '\ud83d\udcba *Asiento:* ' + asiento + ' | *Cabina:* ' + reserva.cabina + '\n\n' +
+    '\ud83d\udcb0 *Total:* ' + formatCOP(total) + '\n' +
+    '\ud83c\udfe6 *M\u00e9todo pago:* Llave Bred Bancolombia\n' +
+    '\ud83e\uddfe *Comprobante:* ' + (comprobante || 'Sin comprobante a\u00fan') + '\n\n' +
+    '\u26a1 *Estado:* PENDIENTE DE CONFIRMACI\u00d3N\n' +
+    '\ud83d\udcc5 *Reservado el:* ' + new Date().toLocaleString('es-CO');
 
-✈️ *Vuelo:* ${selectedFlight.vuelo} | ${selectedFlight.origen} → ${selectedFlight.destino}
-🛫 *Aeropuerto salida:* ${aptO.aeropuerto}
-🛬 *Aeropuerto llegada:* ${aptD.aeropuerto}
-📅 *Fecha vuelo:* ${reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '—'}
-🕐 *Hora:* ${selectedFlight.hora} → ${selectedFlight.llegada}
-⏱ *Duración:* ${selectedFlight.duracion}
-💺 *Asiento:* ${asiento} | *Cabina:* ${reserva.cabina}
-
-🧳 *Equipaje mano:* ${equipaje.mano}
-🧳 *Bodega:* ${equipaje.bodega}
-
-💰 *Total:* ${formatCOP(total)}
-🏦 *Método pago:* Llave Bred Bancolombia
-🧾 *Comprobante:* ${comprobante || 'Sin comprobante aún'}
-
-⚡ *Estado:* PENDIENTE DE CONFIRMACIÓN
-📅 *Reservado el:* ${new Date().toLocaleString('es-CO')}`;
-
-  // Guardar silenciosamente para el admin (sin interrumpir al cliente)
   sendAdminWpp(wppMsg);
-
-  // Enviar notificación a Telegram del admin
   enviarTelegram(wppMsg);
-
   closeModal('paymentModal');
-  showToast(`✅ Reserva ${reservationCode} confirmada!`, 'success');
-
-  // Mostrar tiquete al cliente
+  showToast('\u2705 Reserva ' + reservationCode + ' confirmada!', 'success');
   setTimeout(() => mostrarTiquete(reserva), 500);
 }
 
-// ===== GENERAR ASIENTO =====
 function generarAsiento(cabina) {
   const filas = cabina === 'Primera clase' ? [1,2,3] : cabina === 'Ejecutiva' ? [4,5,6,7,8] : Array.from({length:20}, (_,i)=>i+10);
-  const letras = cabina === 'Económica' ? ['A','B','C','D','E','F'] : ['A','B','C','D'];
-  const fila = filas[Math.floor(Math.random()*filas.length)];
-  const letra = letras[Math.floor(Math.random()*letras.length)];
-  return `${fila}${letra}`;
+  const letras = cabina === 'Econ\u00f3mica' ? ['A','B','C','D','E','F'] : ['A','B','C','D'];
+  return filas[Math.floor(Math.random()*filas.length)] + letras[Math.floor(Math.random()*letras.length)];
 }
 
-// ===== EQUIPAJE SEGÚN CABINA =====
 function getEquipaje(cabina) {
-  if (cabina === 'Primera clase') return { mano: '18 kg', bodega: '2 maletas × 32 kg' };
-  if (cabina === 'Ejecutiva')    return { mano: '14 kg', bodega: '1 maleta × 23 kg' };
+  if (cabina === 'Primera clase') return { mano: '18 kg', bodega: '2 maletas \u00d7 32 kg' };
+  if (cabina === 'Ejecutiva')    return { mano: '14 kg', bodega: '1 maleta \u00d7 23 kg' };
   return { mano: '10 kg', bodega: 'No incluida (add-on disponible)' };
 }
 
-// ===== CONDICIONES ESPECIALES =====
 function getCondiciones(cabina, metodo) {
-  const base = cabina === 'Económica'
-    ? 'Tarifa no reembolsable. Cambios con cargo de $80.000 COP hasta 24h antes del vuelo. Check-in disponible desde 48h antes.'
+  const base = cabina === 'Econ\u00f3mica'
+    ? 'Tarifa no reembolsable. Cambios con cargo de $80.000 COP hasta 24h antes del vuelo.'
     : cabina === 'Ejecutiva'
     ? 'Un cambio gratuito permitido. Reembolso del 50% hasta 48h antes. Acceso a sala VIP incluido.'
-    : 'Cambios y cancelación sin cargo hasta 72h antes. Reembolso total disponible. Sala VIP + lounge incluidos.';
-  return base + ' El pago queda sujeto a verificación del comprobante antes de confirmar el tiquete final.';
+    : 'Cambios y cancelaci\u00f3n sin cargo hasta 72h antes. Reembolso total disponible. Sala VIP + lounge incluidos.';
+  return base + ' El pago queda sujeto a verificaci\u00f3n del comprobante antes de confirmar el tiquete final.';
 }
 
-// ===== MOSTRAR TIQUETE =====
 function mostrarTiquete(reserva) {
   const v = reserva.vuelo;
   const eq = reserva.equipaje || getEquipaje(reserva.cabina);
-  const methodNames = { nequi:'Nequi 💜', daviplata:'Daviplata 💛', transferencia:'Transferencia 🏦' };
-
+  const methodNames = { bred: 'Llave Bred Bancolombia \ud83c\udfe6' };
   const aptO = getInfoAeropuerto(v.origen);
   const aptD = getInfoAeropuerto(v.destino);
-
-  document.getElementById('tktCodigo').textContent     = reserva.codigo;
-  document.getElementById('tktOrigen').textContent     = v.origen;
+  document.getElementById('tktCodigo').textContent      = reserva.codigo;
+  document.getElementById('tktOrigen').textContent      = v.origen;
   document.getElementById('tktOrigenNombre').textContent = aptO.ciudad;
-  document.getElementById('tktDestino').textContent    = v.destino;
+  document.getElementById('tktDestino').textContent     = v.destino;
   document.getElementById('tktDestinoNombre').textContent = aptD.ciudad;
-  document.getElementById('tktDuracion').textContent   = v.duracion;
-  document.getElementById('tktPasajero').textContent   = reserva.pasajero.nombre;
-  document.getElementById('tktDoc').textContent        = reserva.pasajero.doc;
-  document.getElementById('tktAptOrigen').textContent  = aptO.aeropuerto + (aptO.pais ? ' · ' + aptO.pais : '');
-  document.getElementById('tktTermOrigen').textContent = aptO.terminal || '—';
-  document.getElementById('tktAptDestino').textContent = aptD.aeropuerto + (aptD.pais ? ' · ' + aptD.pais : '');
-  document.getElementById('tktTermDestino').textContent = aptD.terminal || '—';
-  document.getElementById('tktFecha').textContent      = reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '—';
-  document.getElementById('tktHora').textContent       = v.hora;
-  document.getElementById('tktLlegada').textContent    = v.llegada;
-  document.getElementById('tktAerolinea').textContent  = v.aerolinea + ' · ' + (v.vuelo || '');
-  document.getElementById('tktAsiento').textContent    = reserva.asiento || '—';
-  document.getElementById('tktCabina').textContent     = reserva.cabina || 'Económica';
-  document.getElementById('tktHandbag').textContent    = eq.mano;
-  document.getElementById('tktBaggage').textContent    = eq.bodega;
-  document.getElementById('tktMetodoPago').textContent = methodNames[reserva.metodoPago] || reserva.metodoPago;
-  document.getElementById('tktTotal').textContent      = formatCOP(reserva.total);
+  document.getElementById('tktDuracion').textContent    = v.duracion;
+  document.getElementById('tktPasajero').textContent    = reserva.pasajero.nombre;
+  document.getElementById('tktDoc').textContent         = reserva.pasajero.doc;
+  document.getElementById('tktAptOrigen').textContent   = aptO.aeropuerto + (aptO.pais ? ' \u00b7 ' + aptO.pais : '');
+  document.getElementById('tktTermOrigen').textContent  = aptO.terminal || '\u2014';
+  document.getElementById('tktAptDestino').textContent  = aptD.aeropuerto + (aptD.pais ? ' \u00b7 ' + aptD.pais : '');
+  document.getElementById('tktTermDestino').textContent = aptD.terminal || '\u2014';
+  document.getElementById('tktFecha').textContent       = reserva.fechaVuelo ? formatFecha(reserva.fechaVuelo) : '\u2014';
+  document.getElementById('tktHora').textContent        = v.hora;
+  document.getElementById('tktLlegada').textContent     = v.llegada;
+  document.getElementById('tktAerolinea').textContent   = v.aerolinea + ' \u00b7 ' + (v.vuelo || '');
+  document.getElementById('tktAsiento').textContent     = reserva.asiento || '\u2014';
+  document.getElementById('tktCabina').textContent      = reserva.cabina || 'Econ\u00f3mica';
+  document.getElementById('tktHandbag').textContent     = eq.mano;
+  document.getElementById('tktBaggage').textContent     = eq.bodega;
+  document.getElementById('tktMetodoPago').textContent  = methodNames[reserva.metodoPago] || reserva.metodoPago;
+  document.getElementById('tktTotal').textContent       = formatCOP(reserva.total);
   document.getElementById('tktCondiciones').textContent = reserva.condiciones;
-
   openModal('ticketModal');
 }
 
-// ===== BASE DE DATOS AEROPUERTOS — IATA OFICIALES =====
-const AEROPUERTOS = {
-  // ── COLOMBIA ──────────────────────────────────────────────────────────
-  BOG: { ciudad:'Bogotá',          aeropuerto:'Aeropuerto Internacional El Dorado',           terminal:'Terminal 1 (El Dorado)',         pais:'Colombia',         icao:'SKBO' },
-  MED: { ciudad:'Medellín',        aeropuerto:'Aeropuerto Internacional José M. Córdova',      terminal:'Terminal Nacional',             pais:'Colombia',         icao:'SKRG' },
-  CTG: { ciudad:'Cartagena',       aeropuerto:'Aeropuerto Internacional Rafael Núñez',         terminal:'Terminal Única',                pais:'Colombia',         icao:'SKCG' },
-  CLO: { ciudad:'Cali',            aeropuerto:'Aeropuerto Internacional Alfonso Bonilla Aragón',terminal:'Terminal Única',               pais:'Colombia',         icao:'SKCL' },
-  BAQ: { ciudad:'Barranquilla',    aeropuerto:'Aeropuerto Internacional Ernesto Cortissoz',    terminal:'Terminal Única',                pais:'Colombia',         icao:'SKBQ' },
-  ADZ: { ciudad:'San Andrés',      aeropuerto:'Aeropuerto Internacional Gustavo Rojas Pinilla',terminal:'Terminal Única',               pais:'Colombia',         icao:'SKSP' },
-  SMR: { ciudad:'Santa Marta',     aeropuerto:'Aeropuerto Internacional Simón Bolívar',        terminal:'Terminal Única',                pais:'Colombia',         icao:'SKSM' },
-  PEI: { ciudad:'Pereira',         aeropuerto:'Aeropuerto Internacional Matecaña',             terminal:'Terminal Única',                pais:'Colombia',         icao:'SKPE' },
-  BGA: { ciudad:'Bucaramanga',     aeropuerto:'Aeropuerto Internacional Palonegro',            terminal:'Terminal Única',                pais:'Colombia',         icao:'SKBG' },
-  EOH: { ciudad:'Medellín',        aeropuerto:'Aeropuerto Olaya Herrera',                      terminal:'Terminal Única (vuelos regionales)',pais:'Colombia',     icao:'SKMD' },
-  VVC: { ciudad:'Villavicencio',   aeropuerto:'Aeropuerto Vanguardia',                         terminal:'Terminal Única',                pais:'Colombia',         icao:'SVVP' },
-  CUC: { ciudad:'Cúcuta',          aeropuerto:'Aeropuerto Internacional Camilo Daza',           terminal:'Terminal Única',               pais:'Colombia',         icao:'SKCC' },
-  IBE: { ciudad:'Ibagué',          aeropuerto:'Aeropuerto Nacional Perales',                   terminal:'Terminal Única',                pais:'Colombia',         icao:'SKIB' },
-  MZL: { ciudad:'Manizales',       aeropuerto:'Aeropuerto La Nubia',                           terminal:'Terminal Única',                pais:'Colombia',         icao:'SKMZ' },
-  NVA: { ciudad:'Neiva',           aeropuerto:'Aeropuerto Benito Salas',                       terminal:'Terminal Única',                pais:'Colombia',         icao:'SKNV' },
-
-  // ── ESTADOS UNIDOS ────────────────────────────────────────────────────
-  MIA: { ciudad:'Miami',           aeropuerto:'Miami International Airport',                   terminal:'Terminal J (Internacional)',    pais:'EE.UU.',            icao:'KMIA' },
-  JFK: { ciudad:'Nueva York',      aeropuerto:'John F. Kennedy International Airport',         terminal:'Terminal 4 (Internacional)',    pais:'EE.UU.',            icao:'KJFK' },
-  LAX: { ciudad:'Los Ángeles',     aeropuerto:'Los Angeles International Airport',             terminal:'Terminal B (Internacional)',    pais:'EE.UU.',            icao:'KLAX' },
-  ORD: { ciudad:'Chicago',         aeropuerto:"Chicago O'Hare International Airport",          terminal:'Terminal 5 (Internacional)',    pais:'EE.UU.',            icao:'KORD' },
-  MCO: { ciudad:'Orlando',         aeropuerto:'Orlando International Airport',                 terminal:'Terminal A/B',                  pais:'EE.UU.',            icao:'KMCO' },
-
-  // ── EUROPA ────────────────────────────────────────────────────────────
-  MAD: { ciudad:'Madrid',          aeropuerto:'Aeropuerto Adolfo Suárez Madrid-Barajas',       terminal:'Terminal 4 (T4)',               pais:'España',            icao:'LEMD' },
-  BCN: { ciudad:'Barcelona',       aeropuerto:'Aeropuerto El Prat – Josep Tarradellas',        terminal:'Terminal 1 (T1)',               pais:'España',            icao:'LEBL' },
-  LHR: { ciudad:'Londres',         aeropuerto:'London Heathrow Airport',                       terminal:'Terminal 2 (Queen\'s)',         pais:'Reino Unido',       icao:'EGLL' },
-  CDG: { ciudad:'París',           aeropuerto:'Aéroport Paris-Charles de Gaulle',              terminal:'Terminal 2E',                   pais:'Francia',           icao:'LFPG' },
-  FCO: { ciudad:'Roma',            aeropuerto:'Aeroporto di Roma Fiumicino',                   terminal:'Terminal 3 (Internazionale)',   pais:'Italia',            icao:'LIRF' },
-
-  // ── LATINOAMÉRICA ─────────────────────────────────────────────────────
-  LIM: { ciudad:'Lima',            aeropuerto:'Aeropuerto Internacional Jorge Chávez',         terminal:'Terminal Internacional',        pais:'Perú',              icao:'SPJC' },
-  GRU: { ciudad:'São Paulo',       aeropuerto:'Aeroporto Internacional de Guarulhos',          terminal:'Terminal 3',                    pais:'Brasil',            icao:'SBGR' },
-  EZE: { ciudad:'Buenos Aires',    aeropuerto:'Aeropuerto Internacional Ministro Pistarini',   terminal:'Terminal A',                    pais:'Argentina',         icao:'SAEZ' },
-  GIG: { ciudad:'Río de Janeiro',  aeropuerto:'Aeroporto Internacional do Galeão',             terminal:'Terminal 2',                    pais:'Brasil',            icao:'SBGL' },
-  SCL: { ciudad:'Santiago',        aeropuerto:'Aeropuerto Internacional Arturo Merino Benítez',terminal:'Terminal Internacional',        pais:'Chile',             icao:'SCEL' },
-  UIO: { ciudad:'Quito',           aeropuerto:'Aeropuerto Internacional Mariscal Sucre',       terminal:'Terminal Única',                pais:'Ecuador',           icao:'SEQM' },
-  GYE: { ciudad:'Guayaquil',       aeropuerto:'Aeropuerto Internacional José Joaquín de Olmedo',terminal:'Terminal Única',              pais:'Ecuador',           icao:'SEGU' },
-  PTY: { ciudad:'Ciudad de Panamá',aeropuerto:'Aeropuerto Internacional de Tocumen',           terminal:'Terminal 2 (Nueva)',            pais:'Panamá',            icao:'MPTO' },
-  CCS: { ciudad:'Caracas',         aeropuerto:'Aeropuerto Internacional Simón Bolívar',        terminal:'Terminal Nacional',             pais:'Venezuela',         icao:'SVMI' },
-  BOG_VE: { ciudad:'Caracas',      aeropuerto:'Aeropuerto Internacional Simón Bolívar',        terminal:'Terminal Nacional',             pais:'Venezuela',         icao:'SVMI' },
-  ASU: { ciudad:'Asunción',        aeropuerto:'Aeropuerto Internacional Silvio Pettirossi',    terminal:'Terminal Única',                pais:'Paraguay',          icao:'SGAS' },
-
-  // ── CARIBE ────────────────────────────────────────────────────────────
-  CUN: { ciudad:'Cancún',          aeropuerto:'Aeropuerto Internacional de Cancún',            terminal:'Terminal 4 (T4)',               pais:'México',            icao:'MMUN' },
-  MEX: { ciudad:'Ciudad de México',aeropuerto:'Aeropuerto Internacional Benito Juárez',        terminal:'Terminal 2',                    pais:'México',            icao:'MMMX' },
-  PUJ: { ciudad:'Punta Cana',      aeropuerto:'Aeropuerto Internacional de Punta Cana',        terminal:'Terminal A',                    pais:'Rep. Dominicana',   icao:'MDPC' },
-  SDQ: { ciudad:'Santo Domingo',   aeropuerto:'Aeropuerto Internacional Las Américas',         terminal:'Terminal A',                    pais:'Rep. Dominicana',   icao:'MDSD' },
-  HAV: { ciudad:'La Habana',       aeropuerto:'Aeropuerto Internacional José Martí',           terminal:'Terminal 2 (Internacional)',    pais:'Cuba',              icao:'MUHA' },
-  AUA: { ciudad:'Aruba',           aeropuerto:'Aeropuerto Internacional Reina Beatrix',        terminal:'Terminal Única',                pais:'Aruba',             icao:'TNCA' },
-  SJU: { ciudad:'San Juan',        aeropuerto:'Aeropuerto Internacional Luis Muñoz Marín',     terminal:'Terminal D (JetBlue)',          pais:'Puerto Rico',       icao:'TJSJ' },
-};
-
-function getNombreCiudad(iata) {
-  return AEROPUERTOS[iata] ? AEROPUERTOS[iata].ciudad : iata;
-}
-
 function getInfoAeropuerto(iata) {
-  return AEROPUERTOS[iata] || { ciudad: iata, aeropuerto: 'Aeropuerto Internacional', terminal: '—', pais: '', icao: '' };
-}
-
-function formatFecha(iso) {
-  if (!iso) return '—';
-  const [y,m,d] = iso.split('-');
-  const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  return `${d} ${meses[parseInt(m)-1]} ${y}`;
-}
-
-// ===== DESCARGAR PDF =====
-function descargarTiquetePDF() {
-  const r = lastReserva;
-  if (!r) return;
-  const v = r.vuelo;
-  const eq = r.equipaje || getEquipaje(r.cabina);
-  const methodNames = { nequi:'Nequi', daviplata:'Daviplata', transferencia:'Transferencia bancaria' };
-  const aptO = getInfoAeropuerto(v.origen);
-  const aptD = getInfoAeropuerto(v.destino);
-
-  const html = `<!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 30px; color: #1a1a1a; background:#fff; }
-  .header { background: linear-gradient(135deg,#B71C1C,#D32F2F); color: white; padding: 24px 28px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; }
-  .header .airline { font-size: 24px; font-weight: 900; }
-  .header .code { text-align: right; }
-  .header .code small { font-size: 11px; opacity: 0.8; display: block; text-transform: uppercase; letter-spacing: 1px; }
-  .header .code span { font-size: 26px; font-weight: 700; letter-spacing: 3px; }
-  .body { border: 2px dashed #ddd; border-top: none; border-radius: 0 0 12px 12px; padding: 24px 28px; background: #fafafa; }
-  .route { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; text-align: center; }
-  .iata { font-size: 36px; font-weight: 900; }
-  .city-name { font-size: 13px; font-weight: 700; color: #222; }
-  .apt-name { font-size: 11px; color: #888; max-width: 160px; }
-  .terminal { font-size: 11px; color: #D32F2F; font-weight: 600; }
-  .arrow { font-size: 28px; color: #D32F2F; }
-  .dur { font-size: 11px; color: #888; }
-  .flight-num { background: #D32F2F; color: white; display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; margin-top: 4px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
-  .field label { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 3px; }
-  .field span { font-size: 13px; font-weight: 700; }
-  .field span.small { font-size: 11px; }
-  hr { border: none; border-top: 2px dashed #ddd; margin: 16px 0; }
-  .extras { background: white; border: 1px solid #e8e8e8; border-radius: 8px; padding: 12px; margin-bottom: 14px; }
-  .extras h4 { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 10px 0; }
-  .row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid #f0f0f0; }
-  .row:last-child { border-bottom: none; }
-  .cond { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 12px; font-size: 12px; color: #795548; line-height: 1.6; }
-  .cond strong { display: block; color: #5D4037; margin-bottom: 4px; font-size: 10px; text-transform: uppercase; }
-  .footer { text-align: center; margin-top: 20px; font-size: 11px; color: #aaa; border-top: 1px solid #eee; padding-top: 14px; }
-</style></head><body>
-<div class="header">
-  <div>
-    <div class="airline">✈ AeroVuelos Colombia</div>
-    <div style="font-size:12px;opacity:0.8;margin-top:4px">Comprobante de Reserva — Estado: PENDIENTE</div>
-  </div>
-  <div class="code"><small>Código de Reserva</small><span>${r.codigo}</span></div>
-</div>
-<div class="body">
-  <div class="route">
-    <div>
-      <div class="iata">${v.origen}</div>
-      <div class="city-name">${aptO.ciudad}</div>
-      <div class="apt-name">${aptO.aeropuerto}</div>
-      <div class="terminal">${aptO.terminal}</div>
-    </div>
-    <div style="flex:1;text-align:center;padding:0 12px">
-      <div class="arrow">✈</div>
-      <div class="dur">${v.duracion}</div>
-      <div class="flight-num">${v.vuelo || ''}</div>
-    </div>
-    <div>
-      <div class="iata">${v.destino}</div>
-      <div class="city-name">${aptD.ciudad}</div>
-      <div class="apt-name">${aptD.aeropuerto}</div>
-      <div class="terminal">${aptD.terminal}</div>
-    </div>
-  </div>
-  <div class="grid">
-    <div class="field"><label>Pasajero</label><span>${r.pasajero.nombre}</span></div>
-    <div class="field"><label>Documento</label><span>${r.pasajero.doc}</span></div>
-    <div class="field"><label>Aeropuerto de salida</label><span class="small">${aptO.aeropuerto}</span></div>
-    <div class="field"><label>Terminal de salida</label><span class="small">${aptO.terminal} · ${aptO.icao || ''}</span></div>
-    <div class="field"><label>Aeropuerto de llegada</label><span class="small">${aptD.aeropuerto}</span></div>
-    <div class="field"><label>Terminal de llegada</label><span class="small">${aptD.terminal} · ${aptD.icao || ''}</span></div>
-    <div class="field"><label>Fecha de vuelo</label><span>${r.fechaVuelo ? formatFecha(r.fechaVuelo) : '—'}</span></div>
-    <div class="field"><label>Hora de salida</label><span>${v.hora} (${aptO.pais})</span></div>
-    <div class="field"><label>Hora de llegada</label><span>${v.llegada} (${aptD.pais})</span></div>
-    <div class="field"><label>N° de vuelo</label><span>${v.vuelo || '—'}</span></div>
-    <div class="field"><label>Aerolínea</label><span>${v.aerolinea}</span></div>
-    <div class="field"><label>Asiento</label><span>${r.asiento || '—'}</span></div>
-    <div class="field"><label>Cabina</label><span>${r.cabina || 'Económica'}</span></div>
-  </div>
-  <hr>
-  <div class="extras">
-    <h4>🧳 Equipaje y servicios incluidos</h4>
-    <div class="row"><span>Equipaje de mano</span><span>${eq.mano}</span></div>
-    <div class="row"><span>Maleta en bodega</span><span>${eq.bodega}</span></div>
-    <div class="row"><span>Método de pago</span><span>${methodNames[r.metodoPago] || r.metodoPago}</span></div>
-    <div class="row"><span style="font-weight:700">Total pagado</span><span style="color:#D32F2F;font-weight:700">${formatCOP(r.total)}</span></div>
-  </div>
-  <div class="cond">
-    <strong>📋 Condiciones especiales de la tarifa</strong>
-    ${r.condiciones}
-  </div>
-</div>
-<div class="footer">
-  AeroVuelos Colombia &nbsp;·&nbsp; Reserva generada el ${new Date().toLocaleString('es-CO')}<br>
-  Este documento es válido como comprobante de reserva · <strong>Estado: PENDIENTE DE CONFIRMACIÓN</strong>
-</div>
-</body></html>`;
-
-  const blob = new Blob([html], { type: 'text/html' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = `AeroVuelos_Reserva_${r.codigo}.html`;
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('📄 Tiquete descargado!', 'success');
-}
-
-// ===== COMPARTIR POR WHATSAPP =====
-function compartirWhatsApp() {
-  const r = lastReserva;
-  if (!r) return;
-  const v = r.vuelo;
-  const text = encodeURIComponent(
-    `✈️ *AeroVuelos — Reserva ${r.codigo}*\n\n` +
-    `👤 Pasajero: ${r.pasajero.nombre}\n` +
-    `✈️ Vuelo: ${v.origen} → ${v.destino}\n` +
-    `📅 Fecha: ${r.fechaVuelo ? formatFecha(r.fechaVuelo) : '—'}\n` +
-    `🕐 Hora: ${v.hora} → ${v.llegada}\n` +
-    `💺 Asiento: ${r.asiento} (${r.cabina})\n` +
-    `💰 Total: ${formatCOP(r.total)}\n` +
-    `⚡ Estado: PENDIENTE DE CONFIRMACIÓN\n\n` +
-    `¿Tienes dudas? Escríbenos al WhatsApp: ${CONFIG.wppContacto}`
-  );
-  window.open(`https://wa.me/?text=${text}`, '_blank');
-}
-
-
-// ═══════════════════════════════════════════════════════
-// PANEL ADMINISTRADOR — Control total por WhatsApp
-// ═══════════════════════════════════════════════════════
-
-function adminLogin() {
-  const pwd = document.getElementById('adminPwd').value;
-  const admins = getAdmins();
-  const subAdmin = admins.find(function(a){ return a.password === pwd; });
-  if (pwd === CONFIG.adminPassword || subAdmin) {
-    currentAdminRole = subAdmin ? 'admin' : 'superadmin';
-    document.getElementById('adminLoginView').style.display = 'none';
-    document.getElementById('adminMainView').style.display = 'block';
-    // Mostrar badge correcto
-    const badge = document.querySelector('#adminMainView .badge');
-    if (badge) badge.textContent = currentAdminRole === 'superadmin' ? 'SUPERADMIN' : 'ADMIN';
-    // Ocultar tab Admins si no es superadmin
-    const tabAdminsBtn = document.getElementById('tabAdminsBtn');
-    if (tabAdminsBtn) tabAdminsBtn.style.display = currentAdminRole === 'superadmin' ? '' : 'none';
-    cargarDatosAdmin();
-    logAdminEvent('ACCESO_ADMIN', { fecha: new Date().toLocaleString('es-CO') });
-  } else {
-    document.getElementById('adminPwd').style.borderColor = '#e94560';
-    document.getElementById('adminPwd').placeholder = '❌ Contraseña incorrecta';
-    setTimeout(() => {
-      document.getElementById('adminPwd').style.borderColor = '';
-      document.getElementById('adminPwd').placeholder = 'Contraseña de admin';
-    }, 2000);
-  }
-}
-
-function closeAdmin() {
-  document.getElementById('adminPanel').classList.remove('active');
-  document.getElementById('adminLoginView').style.display = 'block';
-  document.getElementById('adminMainView').style.display = 'none';
-  document.getElementById('adminPwd').value = '';
-}
-
-function adminTab(el, tabId) {
-  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
-  if (tabId === 'tabAdmins') cargarTabAdmins();
-}
-
-function cargarDatosAdmin() {
-  const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
-  const usuarios = JSON.parse(localStorage.getItem('av_users') || '[]');
-  const eventos  = JSON.parse(localStorage.getItem('av_admin_log') || '[]');
-
-  // Stats
-  const totalIngresos = reservas.reduce((s, r) => s + (r.total || 0), 0);
-  const colaWpp = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
-  const pendientesWpp = colaWpp.filter(m => !m.enviado).length;
-  document.getElementById('statReservas').textContent = reservas.length;
-  document.getElementById('statUsuarios').textContent = usuarios.length;
-  document.getElementById('statIngresos').textContent = reservas.length > 0
-    ? '$' + Math.round(totalIngresos/1000) + 'K'
-    : '$0';
-  if (document.getElementById('statPendientesWpp')) {
-    document.getElementById('statPendientesWpp').textContent = pendientesWpp > 0
-      ? pendientesWpp + ' nuevas 🔴'
-      : '✅ Al día';
-  }
-
-  // Lista reservas
-  const lr = document.getElementById('listaReservas');
-  if (reservas.length === 0) {
-    lr.innerHTML = '<div id="adminNoData">Sin reservas aún</div>';
-  } else {
-    lr.innerHTML = [...reservas].reverse().map(r => {
-      const v = r.vuelo || {};
-      const aptO = getInfoAeropuerto(v.origen || '');
-      const aptD = getInfoAeropuerto(v.destino || '');
-      return `
-      <div class="admin-res-card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-          <div>
-            <span class="res-code">${r.codigo}</span>
-            <span class="res-estado pendiente" style="margin-left:8px">${r.estado || 'PENDIENTE'}</span>
-          </div>
-          <button class="admin-wpp-btn" onclick="enviarReservaWpp('${r.codigo}')">📲 Enviar a mi WPP</button>
-        </div>
-        <div class="res-ruta">${v.origen || '—'} → ${v.destino || '—'} · ${v.vuelo || ''}</div>
-        <div class="res-info">
-          👤 ${r.pasajero?.nombre || '—'} · 📄 ${r.pasajero?.doc || '—'}<br>
-          📧 ${r.usuario?.email || '—'} · 📱 ${r.usuario?.tel || '—'}<br>
-          🛫 ${aptO.aeropuerto}<br>
-          🛬 ${aptD.aeropuerto}<br>
-          📅 ${r.fechaVuelo ? formatFecha(r.fechaVuelo) : '—'} · 🕐 ${v.hora || '—'} → ${v.llegada || '—'}<br>
-          💺 Asiento: ${r.asiento || '—'} · Cabina: ${r.cabina || '—'}<br>
-          💰 Total: <b style="color:#e94560">${formatCOP(r.total || 0)}</b> · 🏦 Llave Bred<br>
-          🧾 Comprobante: ${r.comprobante || 'Sin comprobante'}<br>
-          📋 Reservado: ${r.fecha || '—'}
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  // Lista usuarios
-  const lu = document.getElementById('listaUsuarios');
-  if (usuarios.length === 0) {
-    lu.innerHTML = '<div id="adminNoData">Sin usuarios registrados</div>';
-  } else {
-    lu.innerHTML = [...usuarios].reverse().map(u => `
-      <div class="admin-user-card">
-        <div>
-          <div class="u-name">👤 ${u.nombre}</div>
-          <div class="u-info">📧 ${u.email} · 📱 ${u.tel}</div>
-        </div>
-        <button class="admin-wpp-btn" onclick="window.open('https://wa.me/57${u.tel?.replace(/\D/g,'')}','_blank')">
-          💬 WPP
-        </button>
-      </div>`).join('');
-  }
-
-  // Log actividad
-  const ll = document.getElementById('listaLog');
-  if (eventos.length === 0) {
-    ll.innerHTML = '<div id="adminNoData">Sin actividad registrada</div>';
-  } else {
-    const iconos = {
-      NUEVA_RESERVA: { icon:'✈️', cls:''},
-      NUEVO_REGISTRO: { icon:'👤', cls:'registro'},
-      BUSQUEDA: { icon:'🔍', cls:'busqueda'},
-      ACCESO_ADMIN: { icon:'🔐', cls:''},
-    };
-    ll.innerHTML = eventos.slice(0, 80).map(ev => {
-      const info = iconos[ev.tipo] || { icon:'📌', cls:'' };
-      let detalle = '';
-      if (ev.tipo === 'NUEVA_RESERVA') {
-        detalle = `Reserva <b>${ev.datos?.codigo}</b> — ${ev.datos?.pasajero?.nombre} — ${ev.datos?.vuelo?.origen}→${ev.datos?.vuelo?.destino} — ${formatCOP(ev.datos?.total||0)}`;
-      } else if (ev.tipo === 'NUEVO_REGISTRO') {
-        detalle = `${ev.datos?.nombre} · ${ev.datos?.email} · ${ev.datos?.tel}`;
-      } else if (ev.tipo === 'BUSQUEDA') {
-        detalle = `Búsqueda: ${ev.datos?.origen} → ${ev.datos?.destino} | ${ev.datos?.fecha}`;
-      } else if (ev.tipo === 'ACCESO_ADMIN') {
-        detalle = `Acceso al panel administrador`;
-      } else {
-        detalle = JSON.stringify(ev.datos || {}).substring(0, 80);
-      }
-      return `
-      <div class="admin-event ${info.cls}">
-        <div class="ev-type">${info.icon} ${ev.tipo.replace(/_/g,' ')}</div>
-        <div class="ev-detail">${detalle}</div>
-        <div class="ev-fecha">🕐 ${ev.fecha}</div>
-      </div>`;
-    }).join('');
-  }
-}
-
-// Enviar reserva específica a WPP admin
-function enviarReservaWpp(codigo) {
-  const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
-  const r = reservas.find(x => x.codigo === codigo);
-  if (!r) return;
-  const v = r.vuelo || {};
-  const aptO = getInfoAeropuerto(v.origen || '');
-  const aptD = getInfoAeropuerto(v.destino || '');
-  const msg =
-`✈️ *RESERVA ${r.codigo}*
-👤 *Pasajero:* ${r.pasajero?.nombre}
-📄 *Documento:* ${r.pasajero?.doc}
-📧 *Email:* ${r.usuario?.email || 'N/A'}
-📱 *Teléfono:* ${r.usuario?.tel || 'N/A'}
-✈️ *Vuelo:* ${v.vuelo} | ${v.origen} → ${v.destino}
-🛫 ${aptO.aeropuerto}
-🛬 ${aptD.aeropuerto}
-📅 *Fecha:* ${r.fechaVuelo ? formatFecha(r.fechaVuelo) : '—'}
-🕐 *Hora:* ${v.hora} → ${v.llegada}
-💺 *Asiento:* ${r.asiento} | ${r.cabina}
-💰 *Total:* ${formatCOP(r.total || 0)}
-🏦 *Pago:* Llave Bred Bancolombia
-🧾 *Comprobante:* ${r.comprobante || 'Sin comprobante'}
-📋 *Estado:* ${r.estado || 'PENDIENTE'}`;
-  abrirWppAdmin(msg);
-}
-
-// Enviar resumen diario al WPP del admin
-function enviarResumenWpp() {
-  const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
-  const usuarios = JSON.parse(localStorage.getItem('av_users') || '[]');
-  const total = reservas.reduce((s, r) => s + (r.total || 0), 0);
-  const pendientes = reservas.filter(r => (r.estado || 'PENDIENTE') === 'PENDIENTE').length;
-
-  let msg = `📊 *RESUMEN DIARIO — AeroVuelos*
-📅 ${new Date().toLocaleString('es-CO')}
-━━━━━━━━━━━━━━━━━━
-✈️ Total reservas: *${reservas.length}*
-⏳ Pendientes: *${pendientes}*
-👤 Usuarios registrados: *${usuarios.length}*
-💰 Ingresos estimados: *${formatCOP(total)}*
-━━━━━━━━━━━━━━━━━━
-`;
-
-  if (reservas.length > 0) {
-    msg += `\n*Últimas reservas:*\n`;
-    [...reservas].reverse().slice(0, 5).forEach(r => {
-      const v = r.vuelo || {};
-      msg += `• ${r.codigo} — ${r.pasajero?.nombre} — ${v.origen}→${v.destino} — ${formatCOP(r.total||0)}\n`;
-    });
-  }
-  abrirWppAdmin(msg);
-}
-
-
-// Ver y enviar reservas nuevas pendientes al WPP del admin
-function enviarTodasPendientesWpp() {
-  const reservas = JSON.parse(localStorage.getItem('av_reservas') || '[]');
-  const colaWpp  = JSON.parse(localStorage.getItem('av_wpp_cola') || '[]');
-  const pendientes = colaWpp.filter(m => !m.enviado);
-
-  if (pendientes.length === 0) {
-    // Mostrar las últimas 3 reservas si no hay pendientes
-    const ultimas = [...reservas].reverse().slice(0, 3);
-    if (ultimas.length === 0) { alert('No hay reservas aún.'); return; }
-    const r = ultimas[0];
-    const v = r.vuelo || {};
-    const msg = `📋 *ÚLTIMAS RESERVAS — AeroVuelos*\n📅 ${new Date().toLocaleString('es-CO')}\n\n` +
-      ultimas.map(r => {
-        const v = r.vuelo || {};
-        return `• *${r.codigo}* — ${r.pasajero?.nombre}\n  ${v.origen}→${v.destino} · ${formatCOP(r.total||0)}\n  📱 ${r.usuario?.tel || 'N/A'} · 🧾 ${r.comprobante || 'Sin comprobante'}`;
-      }).join('\n\n');
-    abrirWppAdmin(msg);
-    return;
-  }
-
-  // Enviar la primera pendiente y marcarla como enviada
-  const primero = pendientes[0];
-  abrirWppAdmin(primero.mensaje);
-
-  // Marcar como enviado
-  const idx = colaWpp.findIndex(m => m === primero || (m.fecha === primero.fecha && !m.enviado));
-  if (idx >= 0) colaWpp[idx].enviado = true;
-  localStorage.setItem('av_wpp_cola', JSON.stringify(colaWpp));
-
-  // Actualizar contador
-  const restantes = colaWpp.filter(m => !m.enviado).length;
-  if (document.getElementById('statPendientesWpp')) {
-    document.getElementById('statPendientesWpp').textContent = restantes > 0
-      ? restantes + ' nuevas 🔴' : '✅ Al día';
-  }
-}
-
-// ===== IR A DESTINO (desde tarjetas) =====
-function irADestino(nombre) {
-  document.getElementById('destino').value = nombre;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  setTimeout(() => document.getElementById('destino').focus(), 600);
-}
-
-// ===== INIT =====
-window.addEventListener('load', () => {
-  updateNavUser();
-  // Set default dates
-  const today = new Date();
-  const next7 = new Date(today);
-  next7.setDate(today.getDate() + 7);
-  const next14 = new Date(today);
-  next14.setDate(today.getDate() + 14);
-  document.getElementById('fechaIda').value = next7.toISOString().split('T')[0];
-  document.getElementById('fechaVuelta').value = next14.toISOString().split('T')[0];
-});
-
-// ===== GESTIÓN DE MÚLTIPLES ADMINS =====
-let currentAdminRole = "superadmin";
-
-function getAdmins() {
-  return JSON.parse(localStorage.getItem("av_admins") || "[]");
-}
-
-function cargarTabAdmins() {
-  const admins = getAdmins();
-  document.getElementById("seccionAgregarAdmin").innerHTML =
-    "<div class="admin-add-form">" +
-    "<h4>➕ Agregar nuevo administrador</h4>" +
-    "<input type="text" id="nuevoAdminNombre" placeholder="Nombre del admin (ej: Juan)">" +
-    "<input type="password" id="nuevoAdminPass" placeholder="Contraseña para este admin">" +
-    "<input type="password" id="nuevoAdminPass2" placeholder="Confirmar contraseña">" +
-    "<button onclick="agregarAdmin()" style="background:#e94560;color:white;border:none;padding:11px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;width:100%;margin-top:4px;font-family:DM Sans,sans-serif">✅ Crear administrador</button>" +
-    "</div>";
-
-  const todos = [{ nombre: "Andres (Principal)", tipo: "superadmin", fecha: "Original" }].concat(admins);
-  document.getElementById("listaAdmins").innerHTML = todos.map(function(a, i) {
-    return "<div class="admin-user-card">" +
-      "<div><div class="u-name">🔐 " + a.nombre + "</div><div class="u-info">" + (a.tipo === "superadmin" ? "SUPERADMIN" : "ADMIN") + " · " + (a.fecha || "—") + "</div></div>" +
-      "<div style="display:flex;gap:8px">" +
-      (a.tipo !== "superadmin" ? "<button onclick="eliminarAdmin(" + (i-1) + ")" style="background:rgba(233,69,96,.2);color:#e94560;border:1px solid rgba(233,69,96,.3);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer">🗑️ Eliminar</button>" : "<span style="background:rgba(233,69,96,.2);color:#e94560;padding:4px 12px;border-radius:10px;font-size:11px;font-weight:700">PRINCIPAL</span>") +
-      "</div></div>";
-  }).join("");
-}
-
-function agregarAdmin() {
-  const nombre = document.getElementById("nuevoAdminNombre").value.trim();
-  const pass   = document.getElementById("nuevoAdminPass").value;
-  const pass2  = document.getElementById("nuevoAdminPass2").value;
-  if (!nombre) { showToast("⚠️ Escribe el nombre del admin", "error"); return; }
-  if (pass.length < 4) { showToast("⚠️ Mínimo 4 caracteres", "error"); return; }
-  if (pass !== pass2) { showToast("⚠️ Las contraseñas no coinciden", "error"); return; }
-  if (pass === CONFIG.adminPassword) { showToast("⚠️ No puedes usar la clave del superadmin", "error"); return; }
-  const admins = getAdmins();
-  if (admins.find(function(a){ return a.password === pass; })) { showToast("⚠️ Esa contraseña ya está en uso", "error"); return; }
-  admins.push({ nombre: nombre, password: pass, tipo: "admin", fecha: new Date().toLocaleString("es-CO") });
-  localStorage.setItem("av_admins", JSON.stringify(admins));
-  showToast("✅ Admin "" + nombre + "" creado!", "success");
-  document.getElementById("nuevoAdminNombre").value = "";
-  document.getElementById("nuevoAdminPass").value = "";
-  document.getElementById("nuevoAdminPass2").value = "";
-  cargarTabAdmins();
-}
-
-function eliminarAdmin(index) {
-  const admins = getAdmins();
-  const admin = admins[index];
-  if (!admin) return;
-  if (!confirm("¿Eliminar al admin "" + admin.nombre + ""?")) return;
-  admins.splice(index, 1);
-  localStorage.setItem("av_admins", JSON.stringify(admins));
-  showToast("🗑️ Admin eliminado", "success");
-  cargarTabAdmins();
-}
-</script>
-</body>
-</html>
+  return AEROPUERTOS[iata] || {
